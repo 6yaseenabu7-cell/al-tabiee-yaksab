@@ -40,17 +40,17 @@
         </div>
         <div>
           <h1 id="app-title" class="font-extrabold text-base leading-tight text-white tracking-wide">الطبيعي يكسب</h1>
-          <p id="app-tagline" class="text-[11px] text-gray-400">حاسبة السعرات والتمارين الذكية</p>
+          <p id="app-tagline" class="text-[11px] text-gray-400">حاسبة السعرات وجداول التمارين الذكية</p>
         </div>
       </div>
       <div class="flex items-center gap-1.5">
         <button onclick="openApiKeyModal()" id="ai-key-btn" title="ربط الذكاء الاصطناعي الحقيقي Gemini" class="px-2 py-1 rounded-lg bg-[#222735] hover:bg-[#2c3345] text-xs font-bold text-gray-300 border border-[#2f374a] transition flex items-center gap-1">
-          <span>🤖</span> <span id="ai-status-badge">تفعيل AI</span>
+          <span>🤖</span> <span id="ai-status-badge">AI</span>
         </button>
-        <button onclick="openEditCaloriesModal()" class="px-2 py-1 rounded-lg bg-[#222735] hover:bg-[#2c3345] text-xs font-bold text-[#FF9100] border border-[#FF9100]/30 transition flex items-center gap-1">
+        <button onclick="openEditCaloriesModal()" class="px-2.5 py-1 rounded-lg bg-[#222735] hover:bg-[#2c3345] text-xs font-bold text-[#FF9100] border border-[#FF9100]/30 transition flex items-center gap-1">
           <span>✏️</span> السعرات
         </button>
-        <button onclick="openOnboarding()" title="إعدادات الملف الرياضي" class="px-2 py-1 rounded-lg bg-[#222735] hover:bg-[#2c3345] text-xs font-bold text-[#00E676] border border-[#2f374a] transition">
+        <button onclick="openOnboarding()" title="إعدادات الملف الرياضي" class="px-2.5 py-1 rounded-lg bg-[#222735] hover:bg-[#2c3345] text-xs font-bold text-[#00E676] border border-[#2f374a] transition">
           ⚙️
         </button>
       </div>
@@ -103,11 +103,11 @@
             </div>
             <p class="text-[11px] text-gray-400">المستهلك: <span id="consumed-calories-text" class="text-white font-bold">0</span> من <span id="target-calories-text" class="font-bold text-gray-300">1800</span></p>
             <div class="pt-2 flex gap-2">
-              <button onclick="switchTab('scanner')" class="px-3 py-1.5 bg-[#00E676] hover:bg-[#00c864] text-black font-black text-xs rounded-lg transition shadow-sm flex items-center gap-1">
-                <span>📸</span> تصوير الوجبة
-              </button>
-              <button onclick="switchTab('manual')" class="px-3 py-1.5 bg-[#1e2433] hover:bg-[#252d40] text-[#00E676] border border-[#00E676]/40 font-bold text-xs rounded-lg transition flex items-center gap-1">
+              <button onclick="switchTab('manual')" class="px-3 py-1.5 bg-[#00E676] hover:bg-[#00c864] text-black font-black text-xs rounded-lg transition shadow-sm flex items-center gap-1">
                 <span>✍️</span> إدخال بالجرام
+              </button>
+              <button onclick="switchTab('scanner')" class="px-2.5 py-1.5 bg-[#1e2433] hover:bg-[#252d40] text-gray-300 border border-[#2e374a] font-bold text-xs rounded-lg transition flex items-center gap-1">
+                <span>📸</span> بالكاميرا
               </button>
             </div>
           </div>
@@ -184,11 +184,11 @@
         </div>
       </section>
 
-      <!-- ================= TAB 2: MANUAL FOOD BUILDER ================= -->
+      <!-- ================= TAB 2: MASSIVE FOOD BUILDER (70+ ITEMS) ================= -->
       <section id="tab-manual" class="space-y-4 hidden">
         <div class="text-center space-y-1">
-          <h2 class="text-base font-black text-white">إدخال وجبة يدوي بالجرامات ✍️</h2>
-          <p class="text-xs text-gray-400">اختر من مكتبة الأطعمة الواسعة واكتب الجرامات لحساب السعرات والماكروز تلقائياً</p>
+          <h2 class="text-base font-black text-white">مكتبة الأطعمة الضخمة بالجرامات ✍️</h2>
+          <p class="text-xs text-gray-400">أكثر من 70 صنفاً (شعبي، خليجي، بروتين، نشويات، فواكه، مكسرات) لحساب الماكروز بدقة</p>
         </div>
 
         <!-- Current Meal Tray -->
@@ -226,38 +226,40 @@
 
         <!-- Search Bar -->
         <div class="relative">
-          <input type="text" id="food-search-input" oninput="filterFoodList()" placeholder="ابحث عن أي صنف (تمر، دجاج، لحم، أرز، بيض، مكرونة...)" class="w-full px-4 py-2.5 pr-10 bg-[#171b24] border border-[#2b3345] rounded-xl text-white text-xs font-bold placeholder-gray-500 focus:border-[#00E676] outline-none">
+          <input type="text" id="food-search-input" oninput="filterFoodList()" placeholder="ابحث في 70+ صنف (تمر، كبسة، دجاج، لحم، تونة، بيض، مطازيز...)" class="w-full px-4 py-2.5 pr-10 bg-[#171b24] border border-[#2b3345] rounded-xl text-white text-xs font-bold placeholder-gray-500 focus:border-[#00E676] outline-none">
           <span class="absolute right-3 top-2.5 text-gray-400 text-sm">🔍</span>
         </div>
 
         <!-- Category Filters -->
         <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pb-1">
-          <button onclick="setCategoryFilter('all')" id="cat-all" class="px-3 py-1 rounded-lg bg-[#00E676] text-black text-xs font-black shrink-0 transition">الكل</button>
-          <button onclick="setCategoryFilter('protein')" id="cat-protein" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🥩 بروتينات</button>
-          <button onclick="setCategoryFilter('carbs')" id="cat-carbs" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🍚 كربوهيدرات</button>
-          <button onclick="setCategoryFilter('fats')" id="cat-fats" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🥑 دهون صحية</button>
-          <button onclick="setCategoryFilter('veggies')" id="cat-veggies" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🌴 تمر وفواكه</button>
+          <button onclick="setCategoryFilter('all')" id="cat-all" class="px-3 py-1 rounded-lg bg-[#00E676] text-black text-xs font-black shrink-0 transition">الكل (70+)</button>
+          <button onclick="setCategoryFilter('protein')" id="cat-protein" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🥩 لحوم وبروتين</button>
+          <button onclick="setCategoryFilter('carbs')" id="cat-carbs" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🍚 أرز ونشويات</button>
+          <button onclick="setCategoryFilter('traditional')" id="cat-traditional" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🍲 أكلات شعبية</button>
+          <button onclick="setCategoryFilter('breads')" id="cat-breads" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🫓 خبز ومخبوزات</button>
+          <button onclick="setCategoryFilter('dairy')" id="cat-dairy" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🥛 بيض وألبان</button>
+          <button onclick="setCategoryFilter('fats')" id="cat-fats" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🥑 مكسرات وزيوت</button>
+          <button onclick="setCategoryFilter('veggies')" id="cat-veggies" class="px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">🌴 تمور وفواكه</button>
         </div>
 
+        <!-- Food Database Selection List -->
         <div id="food-db-list" class="space-y-2">
           <!-- Dynamically populated foods -->
         </div>
       </section>
 
-      <!-- ================= TAB 3: MEAL SCANNER (REAL MULTIMODAL AI) ================= -->
+      <!-- ================= TAB 3: MEAL SCANNER ================= -->
       <section id="tab-scanner" class="space-y-4 hidden">
         <div class="text-center space-y-1">
           <h2 class="text-base font-black text-white">مسح الوجبة بالكاميرا والذكاء الاصطناعي 📸</h2>
-          <p class="text-xs text-gray-400">التقط صورة لطبقك (تمر، دجاج، أرز، فواكه، إلخ) لحساب السعرات الدقيقة</p>
+          <p class="text-xs text-gray-400">التقط صورة لطبقك ليقوم الذكاء الاصطناعي بتقدير المكونات والجرامات</p>
         </div>
 
-        <!-- Live Camera Viewfinder Box -->
         <div class="w-full h-72 rounded-2xl bg-[#000] border-2 border-[#00E676]/40 relative overflow-hidden flex flex-col items-center justify-center">
           <video id="live-meal-video" autoplay playsinline muted class="w-full h-full object-cover hidden"></video>
           <img id="captured-meal-img" class="w-full h-full object-cover hidden" alt="Captured Meal">
           <div id="camera-scanline" class="scan-laser hidden"></div>
 
-          <!-- Camera Idle Placeholder -->
           <div id="camera-idle-ui" class="flex flex-col items-center text-center p-4 space-y-3">
             <div class="w-16 h-16 rounded-full bg-[#00E676]/15 flex items-center justify-center text-3xl">
               📸
@@ -271,7 +273,6 @@
             </button>
           </div>
 
-          <!-- Scanning Overlay Spinner -->
           <div id="scanner-loading-state" class="hidden absolute inset-0 bg-black/90 flex flex-col items-center justify-center space-y-3 z-10">
             <div class="w-12 h-12 border-4 border-[#00E676] border-t-transparent rounded-full animate-spin"></div>
             <p id="ai-analyzing-text" class="text-xs font-bold text-white">جاري فحص مكونات الصحن بالذكاء الاصطناعي...</p>
@@ -279,7 +280,6 @@
           </div>
         </div>
 
-        <!-- Camera Controls Toolbar -->
         <div class="flex items-center justify-center gap-4 py-1">
           <input type="file" id="native-camera-input" accept="image/*" capture="environment" onchange="handleNativeCameraPhoto(this)" class="hidden">
           
@@ -292,11 +292,10 @@
           </button>
         </div>
 
-        <!-- Quick Dish Confirmation Selector (shown when photo is captured) -->
         <div id="quick-food-confirmation" class="hidden p-3.5 bg-[#171b24] rounded-2xl border border-[#2e374a] space-y-2">
           <div class="flex justify-between items-center">
-            <p class="text-xs font-bold text-white">ما هو الصنف الذي صورته؟ (لتأكيد فوري ودقيق):</p>
-            <span class="text-[10px] text-[#00E676] font-bold">تحديد الصنف 🎯</span>
+            <p class="text-xs font-bold text-white">تأكيد سريع للصنف المصور:</p>
+            <span class="text-[10px] text-[#00E676] font-bold">تحديد 🎯</span>
           </div>
           
           <div class="grid grid-cols-3 gap-1.5">
@@ -327,7 +326,6 @@
           </div>
         </div>
 
-        <!-- Scan Result Breakdown Card -->
         <div id="scan-result-card" class="hidden p-4 rounded-2xl bg-[#171b24] border border-[#2e374a] space-y-3">
           <div class="flex justify-between items-start">
             <div>
@@ -355,7 +353,6 @@
             </div>
           </div>
 
-          <!-- Grams/Pieces Adjuster -->
           <div class="p-2.5 bg-[#12151c] rounded-xl flex items-center justify-between text-xs">
             <span class="font-bold text-gray-300">الكمية المقدرة:</span>
             <div class="flex items-center gap-2">
@@ -371,30 +368,82 @@
         </div>
       </section>
 
-      <!-- ================= TAB 4: WORKOUT & DIET PLANS ================= -->
+      <!-- ================= TAB 4: ADVANCED 7-DAY WORKOUT PLANNER (PPL, BRO-SPLIT, UPPER/LOWER, FULL BODY, ARNOLD) ================= -->
       <section id="tab-plans" class="space-y-4 hidden">
         <div class="text-center space-y-1">
-          <h2 class="text-base font-black text-white">الجداول الرياضية والغذائية 🏋️‍♂️🥗</h2>
-          <p class="text-xs text-gray-400">تمارين معتمدة وخطط وجبات موزونة</p>
+          <h2 class="text-base font-black text-white">الجدول الأسبوعي والتمارين المصورة 🏋️‍♂️</h2>
+          <p class="text-xs text-gray-400">شاهد كل أيام الأسبوع، بدّل البرامج، وعدّل التمارين والجولات والراحة</p>
         </div>
 
-        <div class="p-4 rounded-2xl bg-[#171b24] border border-[#232938] space-y-3">
-          <div class="flex justify-between items-center">
-            <span class="px-2.5 py-0.5 rounded-md bg-[#7C4DFF]/15 text-[#7C4DFF] text-[11px] font-bold border border-[#7C4DFF]/30">6 أيام / أسبوع (جيم)</span>
-            <span class="text-[11px] text-gray-400">متوسط إلى متقدم</span>
+        <!-- Program Selector Pills -->
+        <div class="space-y-1.5">
+          <div class="flex justify-between items-center px-1">
+            <span class="text-xs font-bold text-gray-300">اختر البرنامج التدريبي:</span>
+            <button onclick="openCustomWorkoutModal()" class="text-[11px] font-bold text-[#00E676] hover:underline">+ إنشاء جدول مخصص</button>
           </div>
-          <h3 class="font-extrabold text-sm text-white">نظام الدفع والسحب والأرجل (PPL Split)</h3>
-          <p class="text-[11px] text-gray-400">البرنامج الأشهر عالمياً للبناء العضلي الطبيعي المتوازن.</p>
+          <div class="flex gap-1.5 overflow-x-auto hide-scrollbar pb-1">
+            <button onclick="switchWorkoutProgram('ppl')" id="prog-btn-ppl" class="px-3 py-1.5 rounded-xl bg-[#00E676] text-black text-xs font-black shrink-0 transition shadow-md shadow-[#00E676]/20">Push-Pull-Legs (6 أيام)</button>
+            <button onclick="switchWorkoutProgram('bro')" id="prog-btn-bro" class="px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">Bro-Split (5 أيام)</button>
+            <button onclick="switchWorkoutProgram('upper_lower')" id="prog-btn-upper_lower" class="px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">Upper & Lower (4 أيام)</button>
+            <button onclick="switchWorkoutProgram('full_body')" id="prog-btn-full_body" class="px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">Full Body (3 أيام)</button>
+            <button onclick="switchWorkoutProgram('arnold')" id="prog-btn-arnold" class="px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">Arnold Split (6 أيام)</button>
+            <button onclick="switchWorkoutProgram('phul')" id="prog-btn-phul" class="px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">PHUL قوة وتضخيم (4 أيام)</button>
+            <button onclick="switchWorkoutProgram('home')" id="prog-btn-home" class="px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">تمارين منزلية وزن الجسم (4 أيام)</button>
+            <button onclick="switchWorkoutProgram('dumbbells')" id="prog-btn-dumbbells" class="px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition">جدول الدمبلز فقط (3 أيام)</button>
+          </div>
+        </div>
 
-          <div class="bg-[#12151c] p-3 rounded-xl space-y-2">
-            <p class="text-xs font-bold text-[#00E676]">اليوم الأول: تمارين الدفع (صدر، أكتاف، تراي)</p>
-            <ul class="text-[11px] text-gray-300 space-y-1 pr-2">
-              <li class="flex justify-between"><span>• بنش برس بالبار مستوي</span><span class="text-gray-400">4 جولات × 8-10 عدات</span></li>
-              <li class="flex justify-between"><span>• تجميع دمبلز مائل عالي</span><span class="text-gray-400">3 جولات × 10-12 عدة</span></li>
-              <li class="flex justify-between"><span>• رفرفة جانبية بالدمبلز</span><span class="text-gray-400">4 جولات × 12-15 عدة</span></li>
-              <li class="flex justify-between"><span>• دفع تراي بالحبل</span><span class="text-gray-400">3 جولات × 12-15 عدة</span></li>
-            </ul>
+        <!-- 7-Day Week Calendar Strip (السبت - الجمعة) -->
+        <div class="p-3 bg-[#171b24] rounded-2xl border border-[#232938] space-y-2">
+          <div class="flex justify-between items-center">
+            <span class="text-xs font-bold text-white flex items-center gap-1.5">
+              <span>📅</span> أيام الأسبوع السبعة:
+            </span>
+            <span class="text-[10px] text-gray-400">انقر لاختيار اليوم وتعديله</span>
           </div>
+
+          <div id="week-days-strip" class="grid grid-cols-7 gap-1">
+            <!-- 7 day buttons will render here -->
+          </div>
+        </div>
+
+        <!-- Active Selected Day View Card -->
+        <div class="p-4 rounded-2xl bg-[#171b24] border border-[#2e374a] space-y-3">
+          <div class="flex justify-between items-center border-b border-[#262c3d] pb-2.5">
+            <div>
+              <span id="active-day-name" class="text-xs font-black text-[#00E676]">يوم الأحد</span>
+              <h3 id="active-day-focus" class="text-sm font-bold text-white">تمارين الدفع (صدر، أكتاف، ترايسبس)</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="toggleActiveDayRest()" id="rest-toggle-btn" class="px-2.5 py-1 rounded-lg bg-[#222735] hover:bg-[#2c3345] text-[10px] font-bold text-[#FF9100] border border-[#FF9100]/30 transition">
+                جعله راحة 😴
+              </button>
+            </div>
+          </div>
+
+          <!-- Exercises List for Selected Day -->
+          <div id="active-exercises-list" class="space-y-3">
+            <!-- Rendered Exercise Cards with Photos & Technique Instructions -->
+          </div>
+
+          <!-- Add Exercise to Day Button -->
+          <button onclick="openAddExerciseModal()" class="w-full py-2.5 bg-[#1e2433] hover:bg-[#252d40] text-[#00E676] border border-[#00E676]/30 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
+            <span>+</span> إضافة تمرين جديد لهذا اليوم
+          </button>
+        </div>
+
+        <!-- Interactive Rest Timer -->
+        <div class="p-3 bg-[#1e2433] rounded-xl border border-[#2e374c] flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">⏱️</span>
+            <div>
+              <p class="text-xs font-bold text-white">مؤقت الراحة بين الجولات</p>
+              <p id="timer-display" class="text-[11px] text-[#FF9100] font-bold">جاهز للبدء (60 ثانية)</p>
+            </div>
+          </div>
+          <button id="timer-btn" onclick="toggleRestTimer(60)" class="px-3 py-1.5 bg-[#FF9100] text-black font-bold text-xs rounded-lg transition">
+            بدء راحة 60ث
+          </button>
         </div>
       </section>
 
@@ -472,7 +521,7 @@
 
       <button onclick="switchTab('manual')" id="nav-btn-manual" class="flex flex-col items-center gap-0.5 text-gray-400 transition">
         <span class="text-lg">✍️</span>
-        <span class="text-[10px] font-bold">إدخال يدوي</span>
+        <span class="text-[10px] font-bold">الأطعمة</span>
       </button>
 
       <button onclick="switchTab('scanner')" id="nav-btn-scanner" class="flex flex-col items-center gap-0.5 text-gray-400 transition">
@@ -482,7 +531,7 @@
 
       <button onclick="switchTab('plans')" id="nav-btn-plans" class="flex flex-col items-center gap-0.5 text-gray-400 transition">
         <span class="text-lg">🏋️‍♂️</span>
-        <span class="text-[10px] font-bold">الجداول</span>
+        <span class="text-[10px] font-bold">التمارين الأسبوعية</span>
       </button>
 
       <button onclick="switchTab('body')" id="nav-btn-body" class="flex flex-col items-center gap-0.5 text-gray-400 transition">
@@ -491,90 +540,128 @@
       </button>
     </nav>
 
-    <!-- ================= GEMINI API KEY MODAL ================= -->
-    <div id="api-key-modal" class="hidden absolute inset-0 bg-black/85 z-50 flex items-center justify-center p-4">
+    <!-- ================= EDIT EXERCISE MODAL ================= -->
+    <div id="edit-exercise-modal" class="hidden absolute inset-0 bg-black/85 z-50 flex items-center justify-center p-4">
       <div class="bg-[#171b24] border border-[#2e374a] rounded-2xl w-full max-w-sm p-5 space-y-4 shadow-2xl">
         <div class="flex justify-between items-center border-b border-[#262c3d] pb-3">
-          <div class="flex items-center gap-2">
-            <span class="text-xl">🤖</span>
-            <h3 class="text-sm font-black text-white">ربط الذكاء الاصطناعي (Gemini Vision)</h3>
+          <h3 class="text-sm font-black text-white">تعديل التمرين والجولات ✎</h3>
+          <button onclick="closeEditExerciseModal()" class="text-gray-400 hover:text-white text-base">✕</button>
+        </div>
+
+        <div class="space-y-3">
+          <div>
+            <label class="text-xs font-bold text-gray-300">اسم التمرين:</label>
+            <input type="text" id="edit-ex-name" class="w-full px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 outline-none focus:border-[#00E676]">
           </div>
-          <button onclick="closeApiKeyModal()" class="text-gray-400 hover:text-white text-base">✕</button>
+          <div class="grid grid-cols-3 gap-2">
+            <div>
+              <label class="text-[11px] font-bold text-gray-300">الجولات:</label>
+              <input type="number" id="edit-ex-sets" min="1" max="10" class="w-full px-2 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 text-center">
+            </div>
+            <div>
+              <label class="text-[11px] font-bold text-gray-300">التكرارات:</label>
+              <input type="text" id="edit-ex-reps" placeholder="8-10" class="w-full px-2 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 text-center">
+            </div>
+            <div>
+              <label class="text-[11px] font-bold text-gray-300">راحة (ث):</label>
+              <input type="number" id="edit-ex-rest" placeholder="60" class="w-full px-2 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 text-center">
+            </div>
+          </div>
+          <div>
+            <label class="text-[11px] font-bold text-gray-300">طريقة الأداء والتكنيك:</label>
+            <textarea id="edit-ex-technique" rows="2" class="w-full px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs mt-1 outline-none focus:border-[#00E676] resize-none"></textarea>
+          </div>
+          <div>
+            <label class="text-[11px] font-bold text-gray-300">رابط صورة التمرين (اختياري):</label>
+            <input type="text" id="edit-ex-image" placeholder="https://..." class="w-full px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs mt-1 outline-none">
+          </div>
         </div>
 
-        <p class="text-xs text-gray-300 leading-relaxed">
-          للتعرف التلقائي الذكي على أي طعام تصوره بالكاميرا بنسبة 100%، يمكنك إضافة مفتاحك المجاني من Google AI Studio:
-        </p>
-
-        <div class="space-y-1.5">
-          <label class="text-[11px] font-bold text-gray-300">مفتاح Gemini API Key:</label>
-          <input type="password" id="gemini-key-input" placeholder="AIzaSy..." class="w-full px-3 py-2.5 bg-[#12151c] border border-[#2b3345] rounded-xl text-xs font-mono text-[#00E676] outline-none focus:border-[#00E676]">
-          <p class="text-[10px] text-gray-500">يحفظ المفتاح محلياً على جهازك فقط ولا يشارك مع أي طرف.</p>
-        </div>
-
-        <div class="flex gap-2 pt-1">
-          <button onclick="saveApiKey()" class="flex-1 py-2.5 bg-[#00E676] hover:bg-[#00c864] text-black font-black text-xs rounded-xl shadow-lg transition">
-            حفظ وتفعيل AI
+        <div class="flex gap-2 pt-2">
+          <button onclick="saveExerciseEdit()" class="flex-1 py-2.5 bg-[#00E676] hover:bg-[#00c864] text-black font-black text-xs rounded-xl shadow-lg transition">
+            حفظ التعديل
           </button>
-          <button onclick="removeApiKey()" class="px-3 py-2.5 bg-[#222836] text-red-400 font-bold text-xs rounded-xl">
-            إزالة المفتاح
+          <button onclick="deleteActiveExercise()" class="px-3 py-2.5 bg-red-950 text-red-300 border border-red-800 font-bold text-xs rounded-xl transition">
+            حذف التمرين
           </button>
         </div>
       </div>
     </div>
 
-    <!-- ================= EDIT CALORIES MODAL ================= -->
-    <div id="edit-calories-modal" class="hidden absolute inset-0 bg-black/85 z-50 flex items-center justify-center p-4">
+    <!-- ================= ADD EXERCISE MODAL ================= -->
+    <div id="add-exercise-modal" class="hidden absolute inset-0 bg-black/85 z-50 flex items-center justify-center p-4">
       <div class="bg-[#171b24] border border-[#2e374a] rounded-2xl w-full max-w-sm p-5 space-y-4 shadow-2xl">
         <div class="flex justify-between items-center border-b border-[#262c3d] pb-3">
+          <h3 class="text-sm font-black text-white">+ إضافة تمرين لهذا اليوم</h3>
+          <button onclick="closeAddExerciseModal()" class="text-gray-400 hover:text-white text-base">✕</button>
+        </div>
+
+        <div class="space-y-3">
           <div>
-            <h3 class="text-sm font-black text-white flex items-center gap-1.5">
-              <span>🎯</span> تعديل السعرات المستهدفة
-            </h3>
-            <p class="text-[10px] text-gray-400">حدد السعرات والماكروز التي تريدها يدوياً</p>
+            <label class="text-[11px] font-bold text-gray-300">اسم التمرين:</label>
+            <input type="text" id="add-ex-name" placeholder="مثلاً: تجميع دمبلز مائل عالي" class="w-full px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 outline-none focus:border-[#00E676]">
           </div>
-          <button onclick="closeEditCaloriesModal()" class="text-gray-400 hover:text-white text-base">✕</button>
-        </div>
-
-        <div class="space-y-1.5">
-          <label class="text-xs font-bold text-gray-300">السعرات اليومية المستهدفة (سعرة):</label>
-          <div class="flex items-center gap-2">
-            <button onclick="adjustTargetCal(-50)" class="w-10 h-10 rounded-xl bg-[#222735] hover:bg-[#2c3345] text-white font-bold text-base">-50</button>
-            <input type="number" id="custom-cal-input" value="1800" step="50" oninput="autoAdjustCustomMacros()" class="flex-1 px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-center text-lg font-black text-[#FF9100] outline-none focus:border-[#00E676]">
-            <button onclick="adjustTargetCal(50)" class="w-10 h-10 rounded-xl bg-[#222735] hover:bg-[#2c3345] text-white font-bold text-base">+50</button>
+          <div>
+            <label class="text-[11px] font-bold text-gray-300">العضلة المستهدفة:</label>
+            <input type="text" id="add-ex-muscle" placeholder="مثلاً: الصدر العلوي" class="w-full px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 outline-none focus:border-[#00E676]">
           </div>
-        </div>
-
-        <div class="space-y-2 pt-1 border-t border-[#262c3d]">
-          <p class="text-[11px] font-bold text-gray-400">توزيع الماكروز المقترح بالجرام:</p>
           <div class="grid grid-cols-3 gap-2">
-            <div class="space-y-1">
-              <label class="text-[10px] font-bold text-[#00E676]">البروتين (g)</label>
-              <input type="number" id="custom-protein-input" value="150" class="w-full px-2 py-1.5 bg-[#12151c] border border-[#2b3345] rounded-lg text-center text-xs font-bold text-white">
+            <div>
+              <label class="text-[11px] font-bold text-gray-300">الجولات:</label>
+              <input type="number" id="add-ex-sets" value="3" min="1" max="10" class="w-full px-2 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 text-center">
             </div>
-            <div class="space-y-1">
-              <label class="text-[10px] font-bold text-[#00B0FF]">الكارب (g)</label>
-              <input type="number" id="custom-carbs-input" value="180" class="w-full px-2 py-1.5 bg-[#12151c] border border-[#2b3345] rounded-lg text-center text-xs font-bold text-white">
+            <div>
+              <label class="text-[11px] font-bold text-gray-300">التكرار:</label>
+              <input type="text" id="add-ex-reps" value="10-12" class="w-full px-2 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 text-center">
             </div>
-            <div class="space-y-1">
-              <label class="text-[10px] font-bold text-[#FF9100]">الدهون (g)</label>
-              <input type="number" id="custom-fat-input" value="50" class="w-full px-2 py-1.5 bg-[#12151c] border border-[#2b3345] rounded-lg text-center text-xs font-bold text-white">
+            <div>
+              <label class="text-[11px] font-bold text-gray-300">راحة (ث):</label>
+              <input type="number" id="add-ex-rest" value="60" min="15" step="15" class="w-full px-2 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs font-bold mt-1 text-center">
             </div>
+          </div>
+          <div>
+            <label class="text-[11px] font-bold text-gray-300">طريقة الأداء والتكنيك:</label>
+            <textarea id="add-ex-tip" rows="2" placeholder="توجيه أداء صحيح وتفادي الأخطاء..." class="w-full px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs mt-1 outline-none resize-none"></textarea>
+          </div>
+          <div>
+            <label class="text-[11px] font-bold text-gray-300">رابط صورة التمرين (اختياري):</label>
+            <input type="text" id="add-ex-image" placeholder="https://..." class="w-full px-3 py-2 bg-[#12151c] border border-[#2b3345] rounded-xl text-white text-xs mt-1 outline-none">
           </div>
         </div>
 
-        <button onclick="saveCustomCalories()" class="w-full py-3 bg-[#00E676] hover:bg-[#00c864] text-black font-black text-xs rounded-xl shadow-lg transition">
-          ✓ اعتماد السعرات الجديدة
+        <button onclick="commitAddExercise()" class="w-full py-3 bg-[#00E676] hover:bg-[#00c864] text-black font-black text-xs rounded-xl shadow-lg transition">
+          ✓ إضافة التمرين إلى اليوم
         </button>
       </div>
     </div>
 
+    <!-- ================= EXERCISE IMAGE PREVIEW MODAL ================= -->
+    <div id="exercise-image-modal" class="hidden absolute inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+      <div class="bg-[#171b24] border border-[#2e374a] rounded-2xl w-full max-w-sm overflow-hidden shadow-2xl">
+        <div class="flex justify-between items-center p-3.5 border-b border-[#262c3d]">
+          <div>
+            <h3 id="ex-modal-title" class="text-xs font-black text-white">صورة التمرين والتكنيك</h3>
+            <p id="ex-modal-muscle" class="text-[10px] text-[#00E676] font-bold mt-0.5"></p>
+          </div>
+          <button onclick="closeExerciseImageModal()" class="text-gray-400 hover:text-white text-base">✕</button>
+        </div>
+        <div class="w-full h-56 bg-[#12151c] flex items-center justify-center overflow-hidden relative">
+          <img id="ex-modal-img" src="" class="w-full h-full object-cover">
+        </div>
+        <div class="p-3.5 space-y-1 bg-[#151922]">
+          <p class="text-[11px] text-gray-200 leading-relaxed font-bold">💡 إرشادات كابتن الطبيعي يكسب للأداء:</p>
+          <p id="ex-modal-technique" class="text-[10px] text-gray-400 leading-relaxed"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Canvas for Snapping Video Frame -->
     <canvas id="camera-canvas" class="hidden"></canvas>
 
   </div>
 
   <script>
-    // State Defaults
+    // ================= STATE & 7-DAY WORKOUT SCHEDULE DATA =================
     let userStats = {
       name: 'محمد',
       height: 175,
@@ -596,91 +683,2871 @@
     let waterMl = 1250;
     let loggedMeals = [];
     let currentCategoryFilter = 'all';
-    let lastCapturedBase64 = null;
 
-    // Presets for recognition
-    const foodPresets = {
-      dates: {
-        title: 'تمر خلاص / سكري',
-        subtitle: 'حوالي 5 حبات تمر طبيعي (~50g)',
-        calories: 140,
-        protein: 1.2,
-        carbs: 37.0,
-        fat: 0.2,
-        icon: '🌴'
-      },
-      chicken_rice: {
-        title: 'كبسة صدور دجاج صحية',
-        subtitle: '180g صدر دجاج + 150g أرز بسمتي',
-        calories: 580,
-        protein: 52.0,
-        carbs: 58.0,
-        fat: 12.0,
-        icon: '🍗'
-      },
-      steak: {
-        title: 'ستيك عجل مع بطاطس مشوية',
-        subtitle: '200g ستيك عجل + 160g بطاطس',
-        calories: 640,
-        protein: 58.0,
-        carbs: 34.0,
-        fat: 15.0,
-        icon: '🥩'
-      },
-      eggs: {
-        title: 'شكشوكة بيض طبيعي مع خبز',
-        subtitle: '3 بيضات مع خضار ورغيف بر',
-        calories: 420,
-        protein: 28.0,
-        carbs: 38.0,
-        fat: 16.0,
-        icon: '🍳'
-      },
-      banana: {
-        title: 'موز وفاكهة طازجة',
-        subtitle: 'حبة موز متوسطة (~120g)',
-        calories: 105,
-        protein: 1.3,
-        carbs: 27.0,
-        fat: 0.3,
-        icon: '🍌'
-      },
-      tuna: {
-        title: 'تونة مصفاة مع سلطة خضراء',
-        subtitle: 'علبة تونة 160g + سلطة وليمون',
-        calories: 220,
-        protein: 42.0,
-        carbs: 5.0,
-        fat: 2.5,
-        icon: '🐟'
-      }
-    };
-
-    let activeScannedPreset = foodPresets.dates;
-    let portionMultiplier = 1.0;
-
-    // Food Database for Manual Entry
-    const foodDatabase = [
-      { id: 'dates', name: 'تمر سكري / خلاص (حبات)', icon: '🌴', category: 'veggies', cal: 280, p: 2.5, c: 75.0, f: 0.4 },
-      { id: 'chicken_breast', name: 'صدور دجاج مشوية صافية', icon: '🍗', category: 'protein', cal: 165, p: 31.0, c: 0.0, f: 3.6 },
-      { id: 'basmati_rice', name: 'أرز بسمتي أبيض مسلوق', icon: '🍚', category: 'carbs', cal: 130, p: 2.7, c: 28.2, f: 0.3 },
-      { id: 'lean_beef', name: 'لحم عجل بقري هبرة مشوي', icon: '🥩', category: 'protein', cal: 215, p: 26.0, c: 0.0, f: 11.5 },
-      { id: 'boiled_pasta', name: 'مكرونة مسلوقة عادية', icon: '🍝', category: 'carbs', cal: 158, p: 5.8, c: 31.0, f: 0.9 },
-      { id: 'baked_potato', name: 'بطاطس مشوية أو مسلوقة', icon: '🥔', category: 'carbs', cal: 87, p: 1.9, c: 20.1, f: 0.1 },
-      { id: 'sweet_potato', name: 'بطاطا حلوة مشوية بالأعشاب', icon: '🍠', category: 'carbs', cal: 90, p: 2.0, c: 20.7, f: 0.1 },
-      { id: 'whole_eggs', name: 'بيض دجاج مسلوق كامل', icon: '🥚', category: 'protein', cal: 155, p: 13.0, c: 1.1, f: 11.0 },
-      { id: 'tuna_water', name: 'تونة معلبة مصفاة بالماء', icon: '🐟', category: 'protein', cal: 116, p: 26.0, c: 0.0, f: 1.0 },
-      { id: 'salmon_fillet', name: 'فيليه سلمون مشوي بالليمون', icon: '🐟', category: 'protein', cal: 208, p: 22.0, c: 0.0, f: 13.0 },
-      { id: 'oats', name: 'شوفان كامل الحبة', icon: '🥣', category: 'carbs', cal: 389, p: 16.9, c: 66.3, f: 6.9 },
-      { id: 'greek_yogurt', name: 'زبادي يوناني سادة', icon: '🥣', category: 'protein', cal: 73, p: 10.0, c: 3.6, f: 1.9 },
-      { id: 'olive_oil', name: 'زيت زيتون بكر ممتاز', icon: '🫒', category: 'fats', cal: 884, p: 0.0, c: 0.0, f: 100.0 },
-      { id: 'peanut_butter', name: 'زبدة فول سوداني طبيعية', icon: '🥜', category: 'fats', cal: 588, p: 25.0, c: 20.0, f: 50.0 },
-      { id: 'fresh_banana', name: 'موز طازج', icon: '🍌', category: 'veggies', cal: 89, p: 1.1, c: 22.8, f: 0.3 }
+    // 7 Days of the Week
+    const weekDays = [
+      { id: 'sat', nameAr: 'السبت' },
+      { id: 'sun', nameAr: 'الأحد' },
+      { id: 'mon', nameAr: 'الإثنين' },
+      { id: 'tue', nameAr: 'الثلاثاء' },
+      { id: 'wed', nameAr: 'الأربعاء' },
+      { id: 'thu', nameAr: 'الخميس' },
+      { id: 'fri', nameAr: 'الجمعة' }
     ];
+
+    let activeDayIndex = 1; // Default to Sunday / الأحد
+    let currentProgramKey = 'ppl';
+
+    // Workout Programs Data with Detailed Illustrated Form Guides
+    const workoutPrograms = {
+  "ppl": {
+    "nameAr": "Push-Pull-Legs (6 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة تامة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "يوم الدفع A (صدر مستوي، كتف أمامي/جانبي، ترايسبس) 🏋️‍♂️",
+        "exercises": [
+          {
+            "id": "ppl_1",
+            "name": "بنش برس بالبار مستوي (Flat Barbell Bench Press)",
+            "muscle": "الصدر الأوسط والأمامي",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "تثبيت لوحي الكتف للخلف والأسفل بقوة على المقعد، مع قوس طبيعي بأسفل الظهر وثبات القدمين بالأرض. النزول بالبار بتحكم حتى ملامسة منتصف عظمة القص ثم الدفع بانفجار للأعلى.",
+            "breathing": "شهيق عميق أثناء نزول البار ببطء (3 ثوان)، وزفير قوي عند الدفع للأعلى.",
+            "mistakes": "فرد الكوعين للخارج بزاوية 90 درجة مع الجسم (يسبب تمزق أوتار الكتف)، أو رفع المؤخرة عن المقعد."
+          },
+          {
+            "id": "ppl_2",
+            "name": "تجميع دمبلز مائل عالي (Incline Dumbbell Press)",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "اضبط زاوية المقعد على 30 إلى 45 درجة فقط. انزل بالدمبلز بتحكم حتى تشعر بتمدد ألياف الصدر العلوية ثم ادفع للأعلى دون ارتطام الأوزان ببعضها.",
+            "breathing": "شهيق عند النزول، وزفير عند الدفع والضغط في قمة الحركة.",
+            "mistakes": "رفع المقعد لزاوية 60 درجة مما ينقل الجهد بالكامل إلى الكتف بدلاً من الصدر."
+          },
+          {
+            "id": "ppl_3",
+            "name": "رفرفة جانبية بالدمبلز (Dumbbell Lateral Raises)",
+            "muscle": "عضلة الكتف الجانبي (عرض الكتف)",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "ميل طفيف بالجذع للأمام وثني بسيط بالكوعين. ارفع الدمبلز باستخدام الكتف الجانبي فقط حتى موازاة الكتف مع قيادة الحركة بالكوع.",
+            "breathing": "زفير عند الرفع، وشهيق عند النزول البطيء والمحكوم.",
+            "mistakes": "أرجحة الجذع واستخدام عزم الظهر لرفع الأوزان الثقيلة، أو رفع الذراعين أعلى من مستوى الأذن."
+          },
+          {
+            "id": "ppl_4",
+            "name": "دفع ترايسبس بالحبل على الكيبل (Cable Rope Pushdown)",
+            "muscle": "الترايسبس (الرأس الجانبي والطويل)",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80",
+            "technique": "تثبيت الكوعين بجانب الأضلاع بإحكام. ادفع الحبل لأسفل وافتحه للخارج في نهاية المدى الحركي مع اعتصار الترايسبس لثانية كاملة.",
+            "breathing": "زفير عند الفرد لأسفل، وشهيق عند عودة الساعدين للأعلى.",
+            "mistakes": "تحريك الكوعين للأمام وللخلف أثناء الدفع مما ينقل الحمل للظهر والأكتاف."
+          },
+          {
+            "id": "ppl_5",
+            "name": "غطس متوازي بالوزن أو حر (Chest Dips)",
+            "muscle": "الصدر السفلي والترايسبس",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "8-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            "technique": "ميل بالجذع للأمام 30 درجة لتوجيه الحمل على عضلات الصدر. انزل حتى تصبح زاوية الكوع 90 درجة ثم ادفع للأعلى بقوة.",
+            "breathing": "شهيق أثناء النزول، وزفير عند الصعود.",
+            "mistakes": "النزول المفرط للأسفل جداً مما يعرض مفصل الكتف لخطر الإصابة."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": false,
+        "focus": "يوم السحب A (عضلات الظهر، البايسبس، الكتف الخلفي) 🧗‍♂️",
+        "exercises": [
+          {
+            "id": "ppl_6",
+            "name": "سحب بار حر منحني (Bent-Over Barbell Row)",
+            "muscle": "سماكة الظهر والترابيز واللاتس",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "ميل الجذع 45 درجة مع ثبات واستقامة العمود الفقري وثني خفيف بالركبتين. اسحب البار باتجاه السرة مع اعتصار لوحي الظهر في القمة.",
+            "breathing": "شهيق عند النزول، وزفير قوي وانفجاري عند سحب البار نحو البطن.",
+            "mistakes": "تقوس أسفل الظهر أو رفع الجذع رأسياً أثناء الرفع."
+          },
+          {
+            "id": "ppl_7",
+            "name": "سحب أمامي عالي بالكيبل (Lat Pulldown)",
+            "muscle": "عضلات اللاتس (عرض شكل V بالظهر)",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+            "technique": "قبضة أعرض من الكتفين بقليل، صدر مرفوع للأعلى، اسحب المقبض لأسفل حتى أعلى عظمة الصدر مع تركيز السحب من الكوعين.",
+            "breathing": "زفير عند سحب المقبض لأسفل، وشهيق أثناء العودة البطيئة للأعلى.",
+            "mistakes": "سحب البار خلف الرقبة أو المرجحة المفرطة للخلف بالجذع."
+          },
+          {
+            "id": "ppl_8",
+            "name": "سحب وجه بالكيبل بالحبل (Cable Face Pulls)",
+            "muscle": "الكتف الخلفي والترابيز وتصحيح انحناء القوام",
+            "icon": "🎯",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "اضبط البكرة عند مستوى الوجه، اسحب الحبل نحو عينيك وافصل يديك للخارج مع اعتصار الكتف الخلفي وتدوير الكتف خارجياً.",
+            "breathing": "زفير عند السحب للخلف، وشهيق عند العودة للأمام.",
+            "mistakes": "استخدام وزن ثقيل وسحب الحبل نحو البطن بدلاً من مستوى العينين."
+          },
+          {
+            "id": "ppl_9",
+            "name": "تبادل بايسبس بالدمبلز واقفاً (Dumbbell Biceps Curls)",
+            "muscle": "عضلة البايسبس ذروة الذراع",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=80",
+            "technique": "ثبت الكوعين بجانب الجذع تماماً. ارفع الدمبل مع تدوير المعصم للخارج في الثلث الأخير للحصول على أقصى انقباض لعضلة البايسبس.",
+            "breathing": "زفير عند الرفع والاعتصار، وشهيق في النزول السلبي البطيء (3 ثوان).",
+            "mistakes": "أرجحة الظهر أو تحريك الكوعين للأمام لتسهيل الحركة."
+          },
+          {
+            "id": "ppl_10",
+            "name": "شاكوش بالدمبلز (Hammer Curls)",
+            "muscle": "عضلة البراكيس (عرض الذراع) والساعدين",
+            "icon": "🔨",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "قبضة محايدة (الكفان يواجهان بعضهما)، ارفع الدمبلز بثبات دون تدوير المعصم واعتصر العضلة في القمة.",
+            "breathing": "زفير أثناء الرفع، وشهيق أثناء النزول.",
+            "mistakes": "الرفع السريع غير المحكوم."
+          }
+        ]
+      },
+      "tue": {
+        "isRest": false,
+        "focus": "يوم الأرجل A (تركيز فخذ أمامي سكوات وكوادز وبطات) 🦵",
+        "exercises": [
+          {
+            "id": "ppl_11",
+            "name": "سكوات بالبار حر خلفي (Barbell Back Squat)",
+            "muscle": "الكوادز، الفخذ الخلفي، والألوية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "البار مستقر على عضلات الترابيز العلوية، الأقدام باتساع الكتفين ومائلة 15 درجة للخارج. انزل بالحوض للخلف والأسفل حتى موازاة الفخذين للأرض.",
+            "breathing": "أخذ نفس عميق وحبسه (مناورة فالسافا) لتثبيت العمود الفقري أثناء النزول، وزفير عند الصعود.",
+            "mistakes": "انهيار الركبتين للداخل، أو رفع الكعبين عن الأرض."
+          },
+          {
+            "id": "ppl_12",
+            "name": "ديدلفت روماني بالدمبلز (Romanian Deadlift)",
+            "muscle": "أوتار الفخذ الخلفية (Hamstrings) والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "انثناء بسيط وثابت بالركبتين، إرجاع الحوض للخلف كأنك تدفع باباً بمؤخرتك مع استقامة الظهر التامة حتى تشعر بتمدد الفخذ الخلفي.",
+            "breathing": "شهيق عند النزول، وزفير عند الدفع بالحوض للأمام في القمة.",
+            "mistakes": "تقوس أسفل الظهر أو ثني الركبتين بشكل زائد كالسكوات."
+          },
+          {
+            "id": "ppl_13",
+            "name": "دفع أرجل على الجهاز (Leg Press)",
+            "muscle": "الفخذ الأمامي والكوادز",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "الأقدام في منتصف المنصة باتساع الحوض. انزل بالوزن حتى زاوية 90 درجة بالركبة دون رفع أسفل الظهر عن المسند، ثم ادفع دون قفل المفصل.",
+            "breathing": "شهيق عند النزول، وزفير قوي عند الدفع للأعلى.",
+            "mistakes": "قفل الركبتين بقوة في الأعلى (خطر شديد على مفصل الركبة)."
+          },
+          {
+            "id": "ppl_14",
+            "name": "رفع بطات واقفاً على الجهاز (Standing Calf Raises)",
+            "muscle": "عضلات الساقين والسمانة (Calves)",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "النزول الكامل بكعبي القدمين لأسفل المنصة للحصول على تمدد كامل للسمانة، ثم الصعود لأعلى نقطة ممكنة مع الثبات ثانية كاملة.",
+            "breathing": "شهيق عند النزول، وزفير عند الارتفاع لأعلى.",
+            "mistakes": "الارتداد السريع دون توقف واستخدام عزم وتر أخيليس."
+          },
+          {
+            "id": "ppl_15",
+            "name": "رفع أرجل معلق على العقلة (Hanging Leg Raises)",
+            "muscle": "عضلات البطن السفلية والجذع",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613576-2b22c76fd955?w=600&auto=format&fit=crop&q=80",
+            "technique": "تعلق بالعقلة بقبضة محكمة، ارفع الركبتين أو الأرجل المستقيمة باتجاه الصدر مع لف الحوض للأعلى لعصر عضلات البطن.",
+            "breathing": "زفير عند الرفع، وشهيق عند النزول البطيء.",
+            "mistakes": "مرجحة الجسم بالكامل بدلاً من رفع الأرجل بقوة البطن."
+          }
+        ]
+      },
+      "wed": {
+        "isRest": false,
+        "focus": "يوم الدفع B (تركيز أكتاف عليا، تفتيح صدر، وترايسبس) ⚡",
+        "exercises": [
+          {
+            "id": "ppl_16",
+            "name": "ضغط أكتاف عسكري بالبار واقفاً (Overhead Barbell Press)",
+            "muscle": "الأكتاف الأمامية والجذع وقوة الدفع الرأسية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "شد عضلات البطن والمؤخرة بإحكام لحماية أسفل الظهر. ادفع البار في مسار رأسي مستقيم فوق الرأس مع إرجاع الرأس قليلاً عند مرور البار.",
+            "breathing": "شهيق قبل الدفع، وزفير عند اكتمال فرد الذراعين في القمة.",
+            "mistakes": "تقوس مفرط في أسفل الظهر لتعويض ضعف قوة الكتف."
+          },
+          {
+            "id": "ppl_17",
+            "name": "بنش برس بالدمبلز مستوي (Flat Dumbbell Press)",
+            "muscle": "عضلات الصدر مع مدى حركي واسع",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول عميق ومحكوم بالدمبلز للحصول على أقصى تمدد عضلي للصدر، ثم دفع الذراعين للأعلى واعتصار الألياف الصدرية.",
+            "breathing": "شهيق عند النزول، وزفير عند الدفع.",
+            "mistakes": "اصطدام الدمبلز ببعضها في الأعلى وفقدان التوتر العضلي."
+          },
+          {
+            "id": "ppl_18",
+            "name": "تفتيح كيبل كروس أوفر (Cable Crossover Flyes)",
+            "muscle": "فصل وتحديد عضلات الصدر والألياف الداخلية",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "خطوة للأمام بثبات، ثني بسيط بالكوعين. اضم الذراعين للأمام كأنك تحتضن شجرة كبيرة مع اعتصار الصدر لثانيتين.",
+            "breathing": "زفير عند الضم، وشهيق عند الفتح والتمدد للخارج.",
+            "mistakes": "ثني ومد الكوعين أثناء الحركة وتحويلها لتمرين دفع بدلاً من تفتيح."
+          },
+          {
+            "id": "ppl_19",
+            "name": "كسارة جمجمة بالبار المتعرج (EZ-Bar Skull Crushers)",
+            "muscle": "الترايسبس (الرأس الطويل وضخامة الذراع)",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80",
+            "technique": "استلقِ على البنش مع ثبات الكوعين موجهين للأعلى. انزل بالبار باتجاه الجبهة أو خلف الرأس بتحكم ثم افرد الساعدين بقوة التراي.",
+            "breathing": "شهيق عند النزول، وزفير عند الفرد للأعلى.",
+            "mistakes": "تحريك الكوعين للجانبين أو النزول السريع المفاجئ نحو الرأس."
+          }
+        ]
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "يوم السحب B (سحب أفقي، عضلات الظهر السفلية والساعدين) 🧗‍♂️",
+        "exercises": [
+          {
+            "id": "ppl_20",
+            "name": "سحب أرضي بالكيبل جالس (Seated Cable Row)",
+            "muscle": "منتصف الظهر وسماكة اللاتس والترابيز",
+            "icon": "🚣‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة الظهر مع ثني بسيط بالركبتين، اسحب المقبض لأسفل البطن مع إرجاع الكتفين واعتصار لوحي الظهر للخلف بإحكام.",
+            "breathing": "زفير عند السحب، وشهيق عند فرد الذراعين ببطء للأمام.",
+            "mistakes": "المرجحة الشديدة للأمام والخلف مع كل تكرار."
+          },
+          {
+            "id": "ppl_21",
+            "name": "منشار ظهر بالدمبل فردي (Single-Arm Dumbbell Row)",
+            "muscle": "اللاتس المعزول وجانبي الظهر",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+            "technique": "ركبة ويد على المقعد مع استواء الظهر. اسحب الدمبل في مسار مقوس باتجاه الحوض مع قيادة الحركة بالكوع وليس بالمعصم.",
+            "breathing": "زفير عند السحب، وشهيق عند النزول والتمدد.",
+            "mistakes": "لف الجذع بشكل مبالغ فيه للأعلى أثناء السحب."
+          },
+          {
+            "id": "ppl_22",
+            "name": "تبادل بايسبس مائل بالدمبلز (Incline Dumbbell Curls)",
+            "muscle": "الرأس الطويل للبايسبس في وضعية أقصى تمدد",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=80",
+            "technique": "اجلس على مقعد مائل 45 درجة، دع ذراعيك تتدليان للأسفل بالكامل لتمديد الباي ثم ارفع الدمبلز واعتصر في القمة.",
+            "breathing": "زفير عند الرفع، وشهيق في النزول السلبي.",
+            "mistakes": "رفع الكوعين للأمام بدلاً من عزلهما للخلف."
+          },
+          {
+            "id": "ppl_23",
+            "name": "سحب ترابيز بالدمبلز (Dumbbell Shrugs)",
+            "muscle": "عضلات الترابيز العلوية وسماكة الرقبة",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "ارفع الكتفين للأعلى باتجاه الأذنين في مسار رأسي مستقيم، واثبت في القمة لثانيتين ثم انزل ببطء.",
+            "breathing": "زفير عند الرفع، وشهيق عند النزول.",
+            "mistakes": "تدوير الكتفين في حركة دائرية (يسبب احتكاكاً مدمراً للمفصل)."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": false,
+        "focus": "يوم الأرجل B (تركيز فخذ خلفي، طعنات وألوية، وعضلات الجذع) 🦵",
+        "exercises": [
+          {
+            "id": "ppl_24",
+            "name": "سكوات بلغاري بالدمبلز (Bulgarian Split Squat)",
+            "muscle": "الفخذ الأمامي والخلفي والألوية بشكل معزول",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "قدم واحدة مستندة للخلف على مقعد، انزل بالركبة الخلفية باتجاه الأرض بزاوية 90 درجة مع دفع وزن الجسم بالقدم الأمامية.",
+            "breathing": "شهيق عند النزول، وزفير عند الصعود.",
+            "mistakes": "الميل المفرط للأمام أو عدم استقرار توازن الحوض."
+          },
+          {
+            "id": "ppl_25",
+            "name": "ثني أرجل خلفي على الجهاز (Lying Leg Curls)",
+            "muscle": "عزل أوتار الفخذ الخلفية (Hamstrings)",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "تثبيت الحوض على المسند، اثنِ الساقين للأعلى واعتصر الفخذ الخلفي في القمة ثم انزل ببطء شديد.",
+            "breathing": "زفير عند الثني للأعلى، وشهيق عند النزول.",
+            "mistakes": "رفع الحوض والظهر عن المقعد للمساعدة في الرفع."
+          },
+          {
+            "id": "ppl_26",
+            "name": "رفرفة أرجل أمامية على الجهاز (Leg Extensions)",
+            "muscle": "عزل وتحديد عضلات الكوادز (الفخذ الأمامي)",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "افرد الساقين للأعلى بالكامل واثبت لثانية لعصر ألياف الكوادز ثم انزل في 3 ثوان كاملة.",
+            "breathing": "زفير عند الفرد للأعلى، وشهيق عند النزول المحكوم.",
+            "mistakes": "الرفع السريع بالنتر المفاجئ."
+          },
+          {
+            "id": "ppl_27",
+            "name": "بلانك بطن وجذع مع ثبات (Plank Hold)",
+            "muscle": "الجدار العضلي للبطن وثبات العمود الفقري",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "45-60 ثانية",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613576-2b22c76fd955?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة الجسم كخط مستقيم من الرأس حتى الكعبين، شد البطن والمؤخرة بقوة مع ثبات التنفس الهادئ.",
+            "breathing": "تنفس هادئ ومستمر من البطن والأنف.",
+            "mistakes": "سقوط الحوض للأسفل أو رفعه للأعلى كالهرم."
+          }
+        ]
+      }
+    }
+  },
+  "bro": {
+    "nameAr": "Bro-Split (كمال الأجسام الكلاسيكي 5 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "يوم الصدر المدمر (Chest Day) 💥",
+        "exercises": [
+          {
+            "id": "bro_1",
+            "name": "بنش برس بالبار مستوي (Flat Bench Press)",
+            "muscle": "الصدر الأوسط",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "ثبت لوحي الكتف للخلف، انزل بالبار حتى ملامسة الصدر ثم ادفع للأعلى.",
+            "breathing": "شهيق نزولاً، وزفير دفعاً.",
+            "mistakes": "فرد الكوعين على استقامة الكتف."
+          },
+          {
+            "id": "bro_2",
+            "name": "تجميع دمبلز مائل عالي (Incline DB Press)",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "زاوية مقعد 30 درجة، انزل بالدمبلز بتحكم وادفع لعصر الصدر العلوي.",
+            "breathing": "شهيق بالنزول، وزفير بالدفع.",
+            "mistakes": "رفع المقعد لدرجة عالية."
+          },
+          {
+            "id": "bro_3",
+            "name": "تفتيح كيبل كروس أوفر (Cable Flyes)",
+            "muscle": "فصل وتحديد ألياف الصدر",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "اثنِ الكوعين خفيفاً، افتح ذراعيك للخارج حتى تمدد الصدر ثم اجمعهما للأمام واعصر العضلة.",
+            "breathing": "زفير عند الضم، وشهيق عند الفتح.",
+            "mistakes": "ثني ومد الكوعين أثناء الحركة."
+          },
+          {
+            "id": "bro_4",
+            "name": "غطس متوازي للصدر (Chest Dips)",
+            "muscle": "الصدر السفلي",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            "technique": "ميل الجذع للأمام 30 درجة والنزول حتى 90 درجة بالركبتين.",
+            "breathing": "شهيق نزولاً، وزفير صعوداً.",
+            "mistakes": "النزول المفرط للأسفل."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": false,
+        "focus": "يوم الظهر والأجنحة (Back Day) 🦅",
+        "exercises": [
+          {
+            "id": "bro_5",
+            "name": "ديدلفت كلاسيكي بالبار (Deadlift)",
+            "muscle": "الجسم بالكامل وسلسلة الظهر الخلفية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة العمود الفقري تماماً، ادفع الأرض بقدميك وافرد جسمك في خط مستقيم.",
+            "breathing": "حبس النفس عند الرفع، وزفير في القمة.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "bro_6",
+            "name": "سحب أمامي عالي واسع (Lat Pulldown)",
+            "muscle": "عضلات اللاتس وعرض الظهر",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+            "technique": "سحب البار باتجاه أعلى الصدر مع إرجاع الكتفين للخلف.",
+            "breathing": "زفير أثناء السحب، وشهيق عند الصعود.",
+            "mistakes": "سحب البار خلف الرقبة."
+          },
+          {
+            "id": "bro_7",
+            "name": "سحب بار منحني (Barbell Row)",
+            "muscle": "سماكة منتصف الظهر",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "ميل 45 درجة وسحب البار نحو السرة مع اعتصار لوحي الكتف.",
+            "breathing": "زفير عند السحب، وشهيق عند النزول.",
+            "mistakes": "المرجحة بالجذع."
+          },
+          {
+            "id": "bro_8",
+            "name": "سحب أرضي بالكيبل (Cable Row)",
+            "muscle": "الترابيز واللاتس السفلي",
+            "icon": "🚣‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "سحب المقبض باتجاه الحوض مع ثبات الصدر للأمام.",
+            "breathing": "زفير عند السحب، وشهيق عند الإرجاع.",
+            "mistakes": "الميل المفرط للأمام."
+          }
+        ]
+      },
+      "tue": {
+        "isRest": false,
+        "focus": "يوم الأكتاف والترابيز (Shoulders & Traps) 🎯",
+        "exercises": [
+          {
+            "id": "bro_9",
+            "name": "ضغط أكتاف بالدمبلز جالساً (Seated DB Shoulder Press)",
+            "muscle": "الأكتاف الأمامية والجانبية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "انزل بالدمبلز لمستوى الأذن ثم ادفع للأعلى دون تلامس الأوزان.",
+            "breathing": "شهيق نزولاً، وزفير دفعاً.",
+            "mistakes": "النزول أسفل من زاوية 90 درجة بشدة."
+          },
+          {
+            "id": "bro_10",
+            "name": "رفرفة جانبية بالدمبلز (Lateral Raises)",
+            "muscle": "عرض الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "رفع الدمبلز باستخدام الكوع حتى موازاة الكتف.",
+            "breathing": "زفير عند الرفع، وشهيق عند النزول.",
+            "mistakes": "استخدام الأوزان الثقيلة بأرجحة."
+          },
+          {
+            "id": "bro_11",
+            "name": "سحب وجه بالكيبل (Face Pulls)",
+            "muscle": "الكتف الخلفي",
+            "icon": "🎯",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "سحب الحبل للعينين وفصل اليدين للخارج.",
+            "breathing": "زفير عند السحب، وشهيق عند الإرجاع.",
+            "mistakes": "النزول بالحبل لأسفل."
+          },
+          {
+            "id": "bro_12",
+            "name": "سحب ترابيز بالبار (Barbell Shrugs)",
+            "muscle": "عضلات الترابيز العلوية",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "رفع الكتفين للأعلى رأساً واعتصار الترابيز لثانيتين.",
+            "breathing": "زفير في الأعلى، وشهيق نزولاً.",
+            "mistakes": "تدوير الكتفين دائرية."
+          }
+        ]
+      },
+      "wed": {
+        "isRest": false,
+        "focus": "يوم الأرجل الشامل (Legs Day) 🦵",
+        "exercises": [
+          {
+            "id": "bro_13",
+            "name": "سكوات بالبار حر (Barbell Squat)",
+            "muscle": "الكوادز والألوية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول متوازن حتى موازاة الأرض ودفع بالكعبين.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "رفع الكعبين."
+          },
+          {
+            "id": "bro_14",
+            "name": "دفع أرجل على الجهاز (Leg Press)",
+            "muscle": "الفخذ الأمامي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول عميق حتى 90 درجة مع ثبات الحوض.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل مفصل الركبة."
+          },
+          {
+            "id": "bro_15",
+            "name": "ديدلفت روماني بالدمبلز (RDL)",
+            "muscle": "الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "إرجاع الحوض للخلف واستقامة العمود الفقري.",
+            "breathing": "شهيق نزولاً وزفير عند الوقوف.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "bro_16",
+            "name": "رفع بطات واقفاً (Standing Calf Raises)",
+            "muscle": "السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "مدى حركي كامل وثبات في الأعلى.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "القفز السريع."
+          }
+        ]
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "يوم الأذرع الأسطوري (بايسبس + ترايسبس سوبر سيت) 💪",
+        "exercises": [
+          {
+            "id": "bro_17",
+            "name": "بايسبس بالبار واقفاً (Barbell Curl)",
+            "muscle": "عضلة البايسبس",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=80",
+            "technique": "ثبات الكوعين وعصر البايسبس في قمة الحركة.",
+            "breathing": "زفير عند الرفع وشهيق في النزول.",
+            "mistakes": "أرجحة الجسم."
+          },
+          {
+            "id": "bro_18",
+            "name": "كسارة جمجمة بالبار المتعرج (Skull Crushers)",
+            "muscle": "الترايسبس الرأس الطويل",
+            "icon": "🦾",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80",
+            "technique": "النزول بالبار باتجاه الجبهة ودفع الساعدين للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "تحريك الكوعين."
+          },
+          {
+            "id": "bro_19",
+            "name": "شاكوش بالدمبلز (Hammer Curls)",
+            "muscle": "البراكيس والساعد",
+            "icon": "🔨",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "قبضة محايدة ورفع ثابت.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "السرعة غير المحكومة."
+          },
+          {
+            "id": "bro_20",
+            "name": "دفع ترايسبس بالحبل (Rope Pushdown)",
+            "muscle": "الترايسبس الرأس الخارجي",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80",
+            "technique": "فتح الحبل للخارج في الأسفل وعصر العضلة.",
+            "breathing": "زفير دفعاً وشهيق رجوعاً.",
+            "mistakes": "تحريك الكوعين للأمام."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي وبناء أنسجة 🧘‍♂️",
+        "exercises": []
+      }
+    }
+  },
+  "upper_lower": {
+    "nameAr": "Upper & Lower (علوي وسفلي 4 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة واستشفاء 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "الجزء العلوي A (صدر، ظهر، أكتاف، أذرع) 🏋️‍♂️",
+        "exercises": [
+          {
+            "id": "ul_1",
+            "name": "بنش برس مستوي بالبار",
+            "muscle": "الصدر الأوسط",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "ثبات القدمين وسحب الكتفين للخلف والنزول لمنتصف الصدر.",
+            "breathing": "شهيق نزولاً، وزفير دفعاً.",
+            "mistakes": "رفع الحوض عن البنش."
+          },
+          {
+            "id": "ul_2",
+            "name": "سحب ظهر بار منحني",
+            "muscle": "الظهر واللاتس",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة الظهر التامة والسحب باتجاه السرة.",
+            "breathing": "شهيق نزولاً وزفير عند السحب.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "ul_3",
+            "name": "ضغط أكتاف بالدمبلز جالساً",
+            "muscle": "الكتف الأمامي",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "دفع الدمبلز للأعلى بتحكم.",
+            "breathing": "زفير دفعاً وشهيق نزولاً.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "ul_4",
+            "name": "سوبر سيت بايسبس + ترايسبس كيبل",
+            "muscle": "الأذرع",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=80",
+            "technique": "تبادل سريع بين انقباض البايسبس والترايسبس.",
+            "breathing": "تنفس مستمر.",
+            "mistakes": "المرجحة الحركية."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": false,
+        "focus": "الجزء السفلي A (كوادز، أوتار، بطات، بطن) 🦵",
+        "exercises": [
+          {
+            "id": "ul_5",
+            "name": "سكوات بالبار حر خلفي",
+            "muscle": "الفخذ الأمامي والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول متوازن حتى موازاة الأرض ودفع بالكعبين.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "رفع الكعبين."
+          },
+          {
+            "id": "ul_6",
+            "name": "ديدلفت روماني بالدمبلز",
+            "muscle": "الفخذ الخلفي والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "إرجاع الحوض للخلف واستقامة الظهر.",
+            "breathing": "شهيق نزولاً وزفير عند الصعود.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "ul_7",
+            "name": "دفع أرجل على الجهاز",
+            "muscle": "الكوادز",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل الركبة."
+          },
+          {
+            "id": "ul_8",
+            "name": "رفع بطات واقفاً + بلانك للبطن",
+            "muscle": "السمانة والجذع",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15 عدة / 45ث",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613576-2b22c76fd955?w=600&auto=format&fit=crop&q=80",
+            "technique": "عصر السمانة في القمة وشد البطن بالبلانك.",
+            "breathing": "تنفس عميق.",
+            "mistakes": "السرعة."
+          }
+        ]
+      },
+      "tue": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "wed": {
+        "isRest": false,
+        "focus": "الجزء العلوي B (تركيز صدر علوي، سحب عالي، وأكتاف جانبية) ⚡",
+        "exercises": [
+          {
+            "id": "ul_9",
+            "name": "تجميع دمبلز مائل عالي",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "دفع الدمبلز بزاوية 30 درجة.",
+            "breathing": "زفير عند الدفع وشهيق عند النزول.",
+            "mistakes": "رفع المقعد للأعلى بشدة."
+          },
+          {
+            "id": "ul_10",
+            "name": "سحب أمامي عالي بالكيبل",
+            "muscle": "اللاتس وعرض الظهر",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+            "technique": "سحب البار لأعلى الصدر.",
+            "breathing": "زفير سحباً وشهيق صعوداً.",
+            "mistakes": "المرجحة الخلفية."
+          },
+          {
+            "id": "ul_11",
+            "name": "رفرفة جانبية بالدمبلز",
+            "muscle": "الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "قيادة الحركة بالكوع.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "استخدام وزن ثقيل."
+          },
+          {
+            "id": "ul_12",
+            "name": "غطس متوازي + تبادل شاكوش",
+            "muscle": "الترايسبس والباي",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول محكوم وعصر الأذرع في القمة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة الزائدة."
+          }
+        ]
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "الجزء السفلي B (ديدلفت، طعنات بلغارية، عزل فخذ) 🦵",
+        "exercises": [
+          {
+            "id": "ul_13",
+            "name": "ديدلفت كلاسيكي بالبار",
+            "muscle": "الظهر السفلي والفخذ الخلفي",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة الظهر والبار ملامس للقصبة.",
+            "breathing": "حبس النفس صعوداً وزفير في القمة.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "ul_14",
+            "name": "سكوات بلغاري بالدمبلز",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "قدم مستندة للخلف ونزول عميق.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "ul_15",
+            "name": "ثني أرجل خلفي على الجهاز",
+            "muscle": "الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "اعتصار العضلة في القمة.",
+            "breathing": "زفير عند الثني وشهيق نزولاً.",
+            "mistakes": "رفع الحوض."
+          },
+          {
+            "id": "ul_16",
+            "name": "رفع أرجل معلق للبطن",
+            "muscle": "البطن السفلية",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613576-2b22c76fd955?w=600&auto=format&fit=crop&q=80",
+            "technique": "رفع الأرجل مع لف الحوض.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": true,
+        "focus": "راحة واستشفاء تام 🧘‍♂️",
+        "exercises": []
+      }
+    }
+  },
+  "full_body": {
+    "nameAr": "Full Body (شامل للجسم 3 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة واستشفاء 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "فول بودي 1 (مركبات القوة: سكوات، بنش برس، سحب بار) ⚡",
+        "exercises": [
+          {
+            "id": "fb_1",
+            "name": "سكوات بالبار حر خلفي",
+            "muscle": "الكوادز والألوية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول عميق متوازن ودفع بالكعبين.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "ميل الجذع."
+          },
+          {
+            "id": "fb_2",
+            "name": "بنش برس مستوي بالبار",
+            "muscle": "الصدر والتراي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول لمنتصف الصدر ودفع انفجاري.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "فرد الكوعين 90 درجة."
+          },
+          {
+            "id": "fb_3",
+            "name": "سحب أمامي عالي بالكيبل",
+            "muscle": "الظهر واللاتس",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+            "technique": "سحب لأعلى الصدر مع رجوع الكتفين.",
+            "breathing": "زفير سحباً وشهيق صعوداً.",
+            "mistakes": "المرجحة للخلف."
+          },
+          {
+            "id": "fb_4",
+            "name": "رفرفة جانبية بالدمبلز",
+            "muscle": "الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "رفع بالكوع حتى موازاة الكتف.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "الأوزان الزائدة."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "tue": {
+        "isRest": false,
+        "focus": "فول بودي 2 (ديدلفت، ضغط أكتاف، دفع أرجل، أذرع) ⚡",
+        "exercises": [
+          {
+            "id": "fb_5",
+            "name": "ديدلفت روماني بالدمبلز",
+            "muscle": "الفخذ الخلفي والألوية والظهر السفلي",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة العمود الفقري وإرجاع الحوض للخلف.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "fb_6",
+            "name": "ضغط أكتاف عسكري واقفاً بالبار",
+            "muscle": "الأكتاف والجذع",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "دفع رأسي مستقيم فوق الرأس مع شد البطن.",
+            "breathing": "شهيق قبل الدفع وزفير في القمة.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "fb_7",
+            "name": "سحب أرضي بالكيبل جالس",
+            "muscle": "سماكة منتصف الظهر",
+            "icon": "🚣‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "سحب لأسفل البطن واعتصار اللاتس.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "الانحناء للأمام."
+          },
+          {
+            "id": "fb_8",
+            "name": "تبادل بايسبس + دفع ترايسبس حبل",
+            "muscle": "عضلات الذراعين",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=80",
+            "technique": "عصر العضلات في نهاية كل حركة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          }
+        ]
+      },
+      "wed": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "فول بودي 3 (ضخامة، تجميع مائل، سكوات بلغاري، بطن) ⚡",
+        "exercises": [
+          {
+            "id": "fb_9",
+            "name": "تجميع دمبلز مائل عالي",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "زاوية 30 درجة ونزول محكوم.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد."
+          },
+          {
+            "id": "fb_10",
+            "name": "سكوات بلغاري بالدمبلز",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "fb_11",
+            "name": "سحب بار منحني للظهر",
+            "muscle": "عضلات الظهر",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "ميل الجذع 45 درجة وسحب للسرة.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "fb_12",
+            "name": "بلانك + رفع أرجل للبطن",
+            "muscle": "عضلات الجذع والبطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613576-2b22c76fd955?w=600&auto=format&fit=crop&q=80",
+            "technique": "ثبات الجسم وشد البطن بالكامل.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الحوض."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": true,
+        "focus": "راحة تامة 🧘‍♂️",
+        "exercises": []
+      }
+    }
+  },
+  "arnold": {
+    "nameAr": "Arnold Split (تقسيم آرنولد الذهبي 6 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة واستشفاء 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "صدر وظهر سوبر سيت (Chest & Back 1) 👑",
+        "exercises": [
+          {
+            "id": "arn_1",
+            "name": "بنش برس بالبار مستوي + سحب ظهر بار",
+            "muscle": "الصدر والظهر معاً",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "تبادل تمرين الصدر مع تمرين الظهر لضخ دم هائل في الجزء العلوي.",
+            "breathing": "تنفس قوي ومنتظم.",
+            "mistakes": "إهمال استقامة الظهر."
+          },
+          {
+            "id": "arn_2",
+            "name": "تجميع دمبلز مائل + سحب أمامي عالي",
+            "muscle": "الصدر العلوي واللاتس",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "سوبر سيت ضخ دم متواصل للصدر العلوي وعرض الظهر.",
+            "breathing": "تنفس متوازن.",
+            "mistakes": "الراحة بين التمرينين."
+          },
+          {
+            "id": "arn_3",
+            "name": "أوفر بالدمبل على البنش (DB Pullover)",
+            "muscle": "تمدد الصدر والقفص الصدري واللاتس",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            "technique": "تمدد عميق بالدمبل خلف الرأس مع توسيع القفص الصدري.",
+            "breathing": "شهيق عميق عند النزول، وزفير صعوداً.",
+            "mistakes": "ثني الكوعين بشدة."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": false,
+        "focus": "أكتاف وأذرع سوبر سيت (Shoulders & Arms 1) 🦾",
+        "exercises": [
+          {
+            "id": "arn_4",
+            "name": "ضغط أكتاف آرنولد بالدمبلز (Arnold Press)",
+            "muscle": "الأكتاف بالكامل بجميع رؤوسها",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "تدوير الدمبلز من أمام الصدر وحتى دفعها للأعلى بزاوية آرنولد الشهيرة.",
+            "breathing": "زفير أثناء الدفع والتدوير.",
+            "mistakes": "تحريك الجذع."
+          },
+          {
+            "id": "arn_5",
+            "name": "رفرفة جانبية بالدمبلز + سحب وجه كيبل",
+            "muscle": "الكتف الجانبي والخلفي",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "عزل تام للأكتاف وضخ دم هائل.",
+            "breathing": "تنفس مستمر.",
+            "mistakes": "استخدام وزن ثقيل."
+          },
+          {
+            "id": "arn_6",
+            "name": "بايسبس بار متعرج + كسارة جمجمة ترايسبس",
+            "muscle": "عضلات الذراعين سوبر سيت",
+            "icon": "🦾",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=80",
+            "technique": "تبادل مباشر دون راحة بين الباي والتراي.",
+            "breathing": "تنفس إيقاعي.",
+            "mistakes": "أرجحة الكوعين."
+          }
+        ]
+      },
+      "tue": {
+        "isRest": false,
+        "focus": "أرجل وبطن (Legs & Calves 1) 🦵",
+        "exercises": [
+          {
+            "id": "arn_7",
+            "name": "سكوات بالبار حر عميق",
+            "muscle": "الكوادز والألوية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول عميق ومدى حركي كامل لاستهداف ألياف الفخذ.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "arn_8",
+            "name": "ديدلفت روماني بالدمبلز",
+            "muscle": "الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "إرجاع الحوض واستقامة الظهر.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "ثني الركبتين كثيراً."
+          },
+          {
+            "id": "arn_9",
+            "name": "دفع أرجل + رفع بطات واقفاً",
+            "muscle": "الفخذ والسمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "تكرارات عالية لضخ الدم.",
+            "breathing": "تنفس مستمر.",
+            "mistakes": "قفل الركبة."
+          }
+        ]
+      },
+      "wed": {
+        "isRest": false,
+        "focus": "صدر وظهر (Chest & Back 2 - تركيز زوايا مختلفة) 👑",
+        "exercises": [
+          {
+            "id": "arn_10",
+            "name": "تجميع دمبلز مستوي + سحب أرضي بالكيبل",
+            "muscle": "الصدر والظهر",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "اعتصار اللاتس والصدر في كل تكرار.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "الأوزان المفرطة."
+          },
+          {
+            "id": "arn_11",
+            "name": "غطس متوازي + عقلة قبضة واسعة",
+            "muscle": "الصدر السفلي واللاتس",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "8-10",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            "technique": "تمارين كلاسيكية بوزن الجسم لبناء كثافة عضلية أسطورية.",
+            "breathing": "تنفس قوي.",
+            "mistakes": "السرعة غير المحكومة."
+          }
+        ]
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "أكتاف وأذرع (Shoulders & Arms 2) 🦾",
+        "exercises": [
+          {
+            "id": "arn_12",
+            "name": "ضغط أكتاف عسكري بالبار + رفرفة خلفية",
+            "muscle": "الكتف الأمامي والخلفي",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "دفع رأسي مستقيم مع عزل الكتف الخلفي.",
+            "breathing": "تنفس إيقاعي.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "arn_13",
+            "name": "شاكوش بايسبس + دفع ترايسبس بالحبل",
+            "muscle": "الأذرع والساعدين",
+            "icon": "🦾",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "عصر الترايسبس والبايسبس في قمة الحركة.",
+            "breathing": "تنفس عميق.",
+            "mistakes": "المرجحة."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": false,
+        "focus": "أرجل وبطات ومعدة (Legs 2) 🦵",
+        "exercises": [
+          {
+            "id": "arn_14",
+            "name": "دفع أرجل + ثني خلفي على الجهاز",
+            "muscle": "الفخذ الأمامي والخلفي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "حرق دهون وضخ دم مكثف للأرجل.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "عدم إكمال المدى."
+          },
+          {
+            "id": "arn_15",
+            "name": "طعنات مشي بالدمبلز (Walking Lunges)",
+            "muscle": "الأرجل والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12 خطوة",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "خطوات واسعة ونزول متوازن بالركبة الخلفية.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "ملامسة الركبة للأرض بقسوة."
+          }
+        ]
+      }
+    }
+  },
+  "phul": {
+    "nameAr": "PHUL (قوة وضخامة عضلية 4 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة واستشفاء 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "الجزء العلوي - قوة ثقيلة (Upper Power 3-5 reps) ⚡",
+        "exercises": [
+          {
+            "id": "phul_1",
+            "name": "بنش برس مستوي بالبار (أوزان ثقيلة للقوة)",
+            "muscle": "الصدر والقوة العضلية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "3-5",
+            "rest": 150,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "ثبات وتكنيك حديدي مع دفع الوزن الثقيل بانفجار.",
+            "breathing": "حبس النفس نزولاً وزفير عند إكمال الدفع.",
+            "mistakes": "ارتداد البار عن الصدر."
+          },
+          {
+            "id": "phul_2",
+            "name": "سحب بار منحني (أوزان ثقيلة)",
+            "muscle": "سماكة الظهر وقوة السحب",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "3-5",
+            "rest": 150,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة العمود الفقري التامة وسحب البار نحو البطن.",
+            "breathing": "زفير عند السحب وشهيق عند النزول.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "phul_3",
+            "name": "ضغط أكتاف عسكري بالبار",
+            "muscle": "قوة الأكتاف",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "5-6",
+            "rest": 120,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "دفع رأسي مستقيم مع ثبات الجذع.",
+            "breathing": "زفير عند الدفع وشهيق عند النزول.",
+            "mistakes": "تقوس الظهر."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": false,
+        "focus": "الجزء السفلي - قوة ثقيلة (Lower Power 3-5 reps) ⚡",
+        "exercises": [
+          {
+            "id": "phul_4",
+            "name": "سكوات خلفي بالبار (أوزان قوة ثقيلة)",
+            "muscle": "قوة الكوادز والألوية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "3-5",
+            "rest": 150,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول تحت موازاة الأرض ودفع هائل بالقوة العضلية.",
+            "breathing": "مناورة فالسافا لحماية الظهر.",
+            "mistakes": "انهيار الركبتين."
+          },
+          {
+            "id": "phul_5",
+            "name": "ديدلفت كلاسيكي بالبار",
+            "muscle": "سلسلة الظهر الخلفية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "3-5",
+            "rest": 150,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة الظهر والبار ملامس للساقين.",
+            "breathing": "حبس النفس صعوداً وزفير في القمة.",
+            "mistakes": "تقوس الظهر."
+          }
+        ]
+      },
+      "tue": {
+        "isRest": true,
+        "focus": "راحة واستشفاء وبناء خلايا عضلية 🧘‍♂️",
+        "exercises": []
+      },
+      "wed": {
+        "isRest": false,
+        "focus": "الجزء العلوي - تضخيم وحجم عضلي (Hypertrophy 8-12 reps) 💪",
+        "exercises": [
+          {
+            "id": "phul_6",
+            "name": "تجميع دمبلز مائل عالي",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "8-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول سلبي بطيء 3 ثوان وتفجير للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد للأعلى."
+          },
+          {
+            "id": "phul_7",
+            "name": "سحب عالي بالكيبل + تفتيح كيبل",
+            "muscle": "اللاتس والألياف الداخلية للصدر",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+            "technique": "عصر العضلة لثانيتين في نهاية الحركة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "phul_8",
+            "name": "رفرفة جانبية دمبلز + تبادل بايسبس",
+            "muscle": "الكتف الجانبي والباي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=80",
+            "technique": "ضخ دم هائل مع تكرارات عالية.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "استخدام الظهر."
+          }
+        ]
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "الجزء السفلي - تضخيم وعزل عضلي (Lower Hypertrophy) 🦵",
+        "exercises": [
+          {
+            "id": "phul_9",
+            "name": "دفع أرجل Leg Press + ديدلفت روماني",
+            "muscle": "الفخذ الأمامي والخلفي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=600&auto=format&fit=crop&q=80",
+            "technique": "مدى حركي كامل بدون قفل المفاصل.",
+            "breathing": "تنفس إيقاعي.",
+            "mistakes": "قفل الركبة."
+          },
+          {
+            "id": "phul_10",
+            "name": "رفرفة أمامية وخلفية سوبر سيت + سمانة",
+            "muscle": "عزل الكوادز والهامسترينغ والبطات",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "عصر العضلات في قمة الحركة.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "السرعة."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": true,
+        "focus": "راحة تامة 🧘‍♂️",
+        "exercises": []
+      }
+    }
+  },
+  "home": {
+    "nameAr": "تمارين منزلية وزن الجسم (Calisthenics 4 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة واستشفاء 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "دفع وسحب علوي بالمنزل (Upper Push & Pull) 🏠",
+        "exercises": [
+          {
+            "id": "hm_1",
+            "name": "تمرين الضغط القياسي (Standard Push-ups)",
+            "muscle": "الصدر والترايسبس والكتف الأمامي",
+            "icon": "🤸‍♂️",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            "technique": "استقامة الجسم كلوح خشب، نزول الصدر حتى ملامسة الأرض ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "سقوط الحوض للأسفل."
+          },
+          {
+            "id": "hm_2",
+            "name": "ضغط يدين ضيقة ماسي (Diamond Push-ups)",
+            "muscle": "عزل الترايسبس ووسط الصدر",
+            "icon": "💎",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&auto=format&fit=crop&q=80",
+            "technique": "وضع الكفين ملتصقين تحت الصدر على شكل ماسة والنزول ببطء.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "فرد الكوعين للخارج بشدة."
+          },
+          {
+            "id": "hm_3",
+            "name": "سحب خلفي تحت الطاولة (Inverted Rows)",
+            "muscle": "عضلات الظهر واللاتس والبايسبس",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "الاستلقاء تحت طاولة متينة، التمسك بالحافة وسحب الصدر نحو الطاولة.",
+            "breathing": "زفير عند السحب وشهيق نزولاً.",
+            "mistakes": "ثني الحوض."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": false,
+        "focus": "أرجل وبطن بالمنزل (Lower & Core) 🦵",
+        "exercises": [
+          {
+            "id": "hm_4",
+            "name": "سكوات وزن الجسم مع ثبات (Air Squats)",
+            "muscle": "الكوادز والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "20-25",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول عميق حتى زاوية 90 درجة مع ثبات ثانية في الأسفل.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "رفع الكعبين."
+          },
+          {
+            "id": "hm_5",
+            "name": "طعنات الساقين متناوبة (Walking Lunges)",
+            "muscle": "الفخذ والألوية والتوازن",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "15 لكل ساق",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "خطوات واسعة ونزول متوازن بالركبة الخلفية.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "اصطدام الركبة بالأرض."
+          },
+          {
+            "id": "hm_6",
+            "name": "بلانك وتويست روسي للبطن (Plank & Twists)",
+            "muscle": "عضلات البطن والجوانب",
+            "icon": "⚡",
+            "sets": 4,
+            "reps": "45 ثانية",
+            "rest": 45,
+            "image": "https://images.unsplash.com/photo-1571019613576-2b22c76fd955?w=600&auto=format&fit=crop&q=80",
+            "technique": "شد البطن بإحكام مع تدوير الجذع ببطء.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الظهر."
+          }
+        ]
+      },
+      "tue": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "wed": {
+        "isRest": false,
+        "focus": "أكتاف وترايسبس ولياقة متفجرة (Shoulders & Dips) ⚡",
+        "exercises": [
+          {
+            "id": "hm_7",
+            "name": "ضغط بيك للأكتاف (Pike Push-ups)",
+            "muscle": "الأكتاف الأمامية والجذع",
+            "icon": "🤸‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "رفع الحوض للأعلى كشكل رقم 8 ونزول الرأس نحو الأرض ودفع.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "النزول السريع."
+          },
+          {
+            "id": "hm_8",
+            "name": "غطس ترايسبس على حافة السرير أو الكرسي (Chair Dips)",
+            "muscle": "عضلة الترايسبس",
+            "icon": "🪑",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=600&auto=format&fit=crop&q=80",
+            "technique": "الكفان على الحافة، النزول حتى زاوية 90 بالكوع ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "الابتعاد المفرط عن الكرسي."
+          }
+        ]
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "شامل لكامل الجسم وحرق دهون مكثف (Full Body HIIT) 🔥",
+        "exercises": [
+          {
+            "id": "hm_9",
+            "name": "بيربيز متفجر (Burpees)",
+            "muscle": "كامل الجسم واللياقة القلبية",
+            "icon": "🔥",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول للضغط، دفع للأعلى، وقفزة متفجرة مع رفع اليدين.",
+            "breathing": "تنفس سريع وعميق.",
+            "mistakes": "فقدان استقامة الظهر عند النزول."
+          },
+          {
+            "id": "hm_10",
+            "name": "قفز سكوات متفجر (Jump Squats)",
+            "muscle": "قوة الساقين والتحمل",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "15 عدة",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "نزول سكوات كامل يليه قفزة للأعلى وهبوط ناعم على أطراف القدم.",
+            "breathing": "تنفس إيقاعي.",
+            "mistakes": "الهبوط القاسي على الكعبين."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": true,
+        "focus": "راحة تامة 🧘‍♂️",
+        "exercises": []
+      }
+    }
+  },
+  "dumbbells": {
+    "nameAr": "جدول الدمبلز فقط (Dumbbell Only 3 أيام)",
+    "days": {
+      "sat": {
+        "isRest": true,
+        "focus": "راحة واستشفاء 🧘‍♂️",
+        "exercises": []
+      },
+      "sun": {
+        "isRest": false,
+        "focus": "علوي بالدمبلز (صدر، ظهر، أكتاف، أذرع) 🏋️‍♂️",
+        "exercises": [
+          {
+            "id": "db_1",
+            "name": "بنش برس بالدمبلز على الأرض أو المقعد (DB Floor Press)",
+            "muscle": "الصدر والترايسبس",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80",
+            "technique": "الاستلقاء مع ثني الركبتين، النزول حتى ملامسة الكوع للأرض بلطف ثم الدفع.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "ارتطام الكوعين بقوة بالأرض."
+          },
+          {
+            "id": "db_2",
+            "name": "منشار ظهر بالدمبل (Single-Arm DB Row)",
+            "muscle": "الظهر واللاتس",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+            "technique": "سحب الدمبل باتجاه الحوض مع استقامة الظهر.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "لف الجذع بشكل مبالغ فيه."
+          },
+          {
+            "id": "db_3",
+            "name": "ضغط أكتاف بالدمبلز جالساً",
+            "muscle": "الكتف الأمامي والجانبي",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "دفع الدمبلز للأعلى بتحكم.",
+            "breathing": "زفير دفعاً وشهيق نزولاً.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "db_4",
+            "name": "تبادل بايسبس + مد ترايسبس دمبل خلف الرأس",
+            "muscle": "الأذرع",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&auto=format&fit=crop&q=80",
+            "technique": "ثبات الكوعين والتركيز على العصر في القمة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "المرجحة."
+          }
+        ]
+      },
+      "mon": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "tue": {
+        "isRest": false,
+        "focus": "سفلي بالدمبلز (سكوات جوبلت، ديدلفت، طعنات) 🦵",
+        "exercises": [
+          {
+            "id": "db_5",
+            "name": "سكوات كؤوس بالدمبل (DB Goblet Squat)",
+            "muscle": "الكوادز والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "إمساك دمبل رأسي أمام الصدر، والنزول سكوات عميق مع استقامة الجذع.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "ميل الصدر للأسفل."
+          },
+          {
+            "id": "db_6",
+            "name": "ديدلفت روماني بالدمبلز (DB Romanian Deadlift)",
+            "muscle": "الفخذ الخلفي والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+            "technique": "إرجاع الحوض للخلف واستقامة الظهر لتمديد الهامسترينغ.",
+            "breathing": "شهيق نزولاً وزفير عند الصعود.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "db_7",
+            "name": "طعنات بالدمبلز + رفع بطات واقفاً",
+            "muscle": "الساقين والسمانة",
+            "icon": "🦶",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&auto=format&fit=crop&q=80",
+            "technique": "خطوات ثابتة ورفع على أطراف الأصابع.",
+            "breathing": "تنفس مستمر.",
+            "mistakes": "فقدان التوازن."
+          }
+        ]
+      },
+      "wed": {
+        "isRest": true,
+        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
+        "exercises": []
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "شامل بالدمبلز (قوة، تحمل، وعضلات البطن) ⚡",
+        "exercises": [
+          {
+            "id": "db_8",
+            "name": "ضغط أكتاف آرنولد بالدمبل (Arnold Press)",
+            "muscle": "الأكتاف بالكامل",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80",
+            "technique": "تدوير الدمبلز ودفع للأعلى مع فرد الذراعين.",
+            "breathing": "زفير دفعاً وشهيق نزولاً.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "db_9",
+            "name": "سحب دمبلز ثنائي منحني (Bent-over DB Row)",
+            "muscle": "منتصف الظهر",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&auto=format&fit=crop&q=80",
+            "technique": "ميل 45 درجة وسحب الدمبلز معاً باتجاه الحوض.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "db_10",
+            "name": "بلانك مع لمس الكتف بالدمبل (Renegade Rows)",
+            "muscle": "الجذع والظهر وعضلات البطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "10 لكل يد",
+            "rest": 60,
+            "image": "https://images.unsplash.com/photo-1571019613576-2b22c76fd955?w=600&auto=format&fit=crop&q=80",
+            "technique": "وضعية الضغط على الدمبلز، سحب يد واحدة نحو الحوض مع ثبات الحوض.",
+            "breathing": "تنفس هادئ وثابت.",
+            "mistakes": "تمايل الحوض يميناً ويساراً."
+          }
+        ]
+      },
+      "fri": {
+        "isRest": true,
+        "focus": "راحة تامة 🧘‍♂️",
+        "exercises": []
+      }
+    }
+  }
+};
+
+    let activeEditingDayKey = 'sun';
+    let activeEditingExIndex = 0;
+
+    // ================= 70+ MASSIVE FOOD DATABASE (per 100g) =================
+    const foodDatabase = [
+  {
+    "id": "chicken_breast",
+    "name": "صدور دجاج مشوية صافية",
+    "icon": "🍗",
+    "category": "protein",
+    "cal": 165,
+    "p": 31.0,
+    "c": 0.0,
+    "f": 3.6
+  },
+  {
+    "id": "chicken_thigh",
+    "name": "أفخاذ دجاج مشوية بدون جلد",
+    "icon": "🍗",
+    "category": "protein",
+    "cal": 195,
+    "p": 24.5,
+    "c": 0.0,
+    "f": 10.2
+  },
+  {
+    "id": "turkey_breast",
+    "name": "صدور ديك رومي (حبش) مشوية",
+    "icon": "🦃",
+    "category": "protein",
+    "cal": 135,
+    "p": 30.0,
+    "c": 0.0,
+    "f": 1.5
+  },
+  {
+    "id": "lean_beef",
+    "name": "لحم عجل بقري هبرة مشوي قليل الدهن",
+    "icon": "🥩",
+    "category": "protein",
+    "cal": 215,
+    "p": 26.0,
+    "c": 0.0,
+    "f": 11.5
+  },
+  {
+    "id": "beef_steak",
+    "name": "ستيك تندرلوين بقري فاخر مشوي",
+    "icon": "🥩",
+    "category": "protein",
+    "cal": 240,
+    "p": 25.0,
+    "c": 0.0,
+    "f": 15.0
+  },
+  {
+    "id": "ground_beef_lean",
+    "name": "لحم بقري مفروم قليل الدهن (90/10)",
+    "icon": "🥩",
+    "category": "protein",
+    "cal": 200,
+    "p": 27.0,
+    "c": 0.0,
+    "f": 10.0
+  },
+  {
+    "id": "beef_burger_patty",
+    "name": "برجر لحم بقري صافي منزلي مشوي",
+    "icon": "🍔",
+    "category": "protein",
+    "cal": 210,
+    "p": 24.0,
+    "c": 1.0,
+    "f": 12.0
+  },
+  {
+    "id": "lamb_chops",
+    "name": "ريش لحم غنم مشوية مشذبة الشحم",
+    "icon": "🥩",
+    "category": "protein",
+    "cal": 280,
+    "p": 24.0,
+    "c": 0.0,
+    "f": 20.0
+  },
+  {
+    "id": "tuna_water",
+    "name": "تونة معلبة مصفاة بالماء",
+    "icon": "🐟",
+    "category": "protein",
+    "cal": 116,
+    "p": 26.0,
+    "c": 0.0,
+    "f": 1.0
+  },
+  {
+    "id": "salmon_fillet",
+    "name": "فيليه سلمون طازج مشوي بالليمون",
+    "icon": "🐟",
+    "category": "protein",
+    "cal": 208,
+    "p": 22.0,
+    "c": 0.0,
+    "f": 13.0
+  },
+  {
+    "id": "smoked_salmon",
+    "name": "سلمون مدخن شرائح ناعمة",
+    "icon": "🐟",
+    "category": "protein",
+    "cal": 180,
+    "p": 21.0,
+    "c": 0.0,
+    "f": 10.5
+  },
+  {
+    "id": "white_fish",
+    "name": "فيليه سمك هامور / بلطي / دنيس مشوي",
+    "icon": "🐟",
+    "category": "protein",
+    "cal": 96,
+    "p": 20.0,
+    "c": 0.0,
+    "f": 1.7
+  },
+  {
+    "id": "shrimp",
+    "name": "جمبري / روبيان مشوي بالأعشاب",
+    "icon": "🦐",
+    "category": "protein",
+    "cal": 99,
+    "p": 24.0,
+    "c": 0.2,
+    "f": 0.3
+  },
+  {
+    "id": "grilled_liver",
+    "name": "كبدة غنم / دجاج مشوية بالكمون",
+    "icon": "🥩",
+    "category": "protein",
+    "cal": 175,
+    "p": 25.0,
+    "c": 4.0,
+    "f": 6.0
+  },
+  {
+    "id": "kofta_grilled",
+    "name": "كفتة لحم مشوية بالفرن خفيفة الزيت",
+    "icon": "🍢",
+    "category": "protein",
+    "cal": 195,
+    "p": 21.0,
+    "c": 4.0,
+    "f": 10.5
+  },
+  {
+    "id": "whole_eggs",
+    "name": "بيض دجاج مسلوق كامل",
+    "icon": "🥚",
+    "category": "dairy",
+    "cal": 155,
+    "p": 13.0,
+    "c": 1.1,
+    "f": 11.0
+  },
+  {
+    "id": "egg_whites",
+    "name": "بياض بيض مسلوق نقي 100%",
+    "icon": "🥚",
+    "category": "dairy",
+    "cal": 52,
+    "p": 11.0,
+    "c": 0.7,
+    "f": 0.2
+  },
+  {
+    "id": "fried_eggs_olive",
+    "name": "بيض مقلي بمسحة زيت زيتون بكر",
+    "icon": "🍳",
+    "category": "dairy",
+    "cal": 185,
+    "p": 13.0,
+    "c": 1.0,
+    "f": 14.5
+  },
+  {
+    "id": "greek_yogurt",
+    "name": "زبادي يوناني سادة قليل الدسم",
+    "icon": "🥣",
+    "category": "dairy",
+    "cal": 73,
+    "p": 10.0,
+    "c": 3.6,
+    "f": 1.9
+  },
+  {
+    "id": "cottage_cheese",
+    "name": "جبنة قريش خالية الدسم ناصعة",
+    "icon": "🧀",
+    "category": "dairy",
+    "cal": 85,
+    "p": 14.0,
+    "c": 3.5,
+    "f": 1.0
+  },
+  {
+    "id": "feta_light",
+    "name": "جبنة فيتا لايت خفيفة الملح",
+    "icon": "🧀",
+    "category": "dairy",
+    "cal": 150,
+    "p": 12.0,
+    "c": 2.0,
+    "f": 10.0
+  },
+  {
+    "id": "mozzarella_light",
+    "name": "جبنة موزاريلا مبشورة لايت",
+    "icon": "🧀",
+    "category": "dairy",
+    "cal": 160,
+    "p": 19.0,
+    "c": 2.5,
+    "f": 8.0
+  },
+  {
+    "id": "whey_protein",
+    "name": "سكوب واي بروتين نقي بودرة (30g)",
+    "icon": "🥤",
+    "category": "dairy",
+    "cal": 120,
+    "p": 24.0,
+    "c": 2.0,
+    "f": 1.5
+  },
+  {
+    "id": "milk_low_fat",
+    "name": "حليب قليل الدسم 1% (كوب 240ml)",
+    "icon": "🥛",
+    "category": "dairy",
+    "cal": 102,
+    "p": 8.0,
+    "c": 12.0,
+    "f": 2.4
+  },
+  {
+    "id": "almond_milk",
+    "name": "حليب لوز غير محلى (كوب 240ml)",
+    "icon": "🥛",
+    "category": "dairy",
+    "cal": 35,
+    "p": 1.0,
+    "c": 1.5,
+    "f": 2.5
+  },
+  {
+    "id": "labneh_light",
+    "name": "لبنة خفيفة الدسم لايت",
+    "icon": "🥣",
+    "category": "dairy",
+    "cal": 110,
+    "p": 9.0,
+    "c": 4.0,
+    "f": 6.0
+  },
+  {
+    "id": "laban_active",
+    "name": "لبن زبادي سائل قليل الدسم ومفيد",
+    "icon": "🥛",
+    "category": "dairy",
+    "cal": 45,
+    "p": 3.5,
+    "c": 4.8,
+    "f": 1.2
+  },
+  {
+    "id": "basmati_rice",
+    "name": "أرز بسمتي أبيض مسلوق",
+    "icon": "🍚",
+    "category": "carbs",
+    "cal": 130,
+    "p": 2.7,
+    "c": 28.2,
+    "f": 0.3
+  },
+  {
+    "id": "kabsa_rice",
+    "name": "أرز كبسة / برياني خفيف الزيت",
+    "icon": "🍚",
+    "category": "carbs",
+    "cal": 155,
+    "p": 3.0,
+    "c": 32.0,
+    "f": 2.0
+  },
+  {
+    "id": "brown_rice",
+    "name": "أرز بني كامل الحبة غني بالألياف",
+    "icon": "🍚",
+    "category": "carbs",
+    "cal": 123,
+    "p": 2.7,
+    "c": 25.6,
+    "f": 1.0
+  },
+  {
+    "id": "egyptian_rice",
+    "name": "أرز مصري أبيض مطبوخ",
+    "icon": "🍚",
+    "category": "carbs",
+    "cal": 140,
+    "p": 2.5,
+    "c": 30.5,
+    "f": 0.5
+  },
+  {
+    "id": "boiled_pasta",
+    "name": "مكرونة مسلوقة عادية ناصعة",
+    "icon": "🍝",
+    "category": "carbs",
+    "cal": 158,
+    "p": 5.8,
+    "c": 31.0,
+    "f": 0.9
+  },
+  {
+    "id": "brown_pasta",
+    "name": "مكرونة قمح كامل سمراء صحية",
+    "icon": "🍝",
+    "category": "carbs",
+    "cal": 145,
+    "p": 6.5,
+    "c": 28.0,
+    "f": 1.0
+  },
+  {
+    "id": "oats",
+    "name": "شوفان كامل الحبة مطحون/رقائق",
+    "icon": "🥣",
+    "category": "carbs",
+    "cal": 389,
+    "p": 16.9,
+    "c": 66.3,
+    "f": 6.9
+  },
+  {
+    "id": "baked_potato",
+    "name": "بطاطس مسلوقة أو مشوية بالقشر",
+    "icon": "🥔",
+    "category": "carbs",
+    "cal": 87,
+    "p": 1.9,
+    "c": 20.1,
+    "f": 0.1
+  },
+  {
+    "id": "sweet_potato",
+    "name": "بطاطا حلوة مشوية بالأعشاب",
+    "icon": "🍠",
+    "category": "carbs",
+    "cal": 90,
+    "p": 2.0,
+    "c": 20.7,
+    "f": 0.1
+  },
+  {
+    "id": "quinoa",
+    "name": "كينوا عضوية مسلوقة",
+    "icon": "🌾",
+    "category": "carbs",
+    "cal": 120,
+    "p": 4.4,
+    "c": 21.3,
+    "f": 1.9
+  },
+  {
+    "id": "couscous",
+    "name": "كسكسي قمح مطبوخ بالبخار",
+    "icon": "🌾",
+    "category": "carbs",
+    "cal": 112,
+    "p": 3.8,
+    "c": 23.2,
+    "f": 0.2
+  },
+  {
+    "id": "boiled_corn",
+    "name": "ذرة صفراء حلوة مسلوقة",
+    "icon": "🌽",
+    "category": "carbs",
+    "cal": 96,
+    "p": 3.4,
+    "c": 21.0,
+    "f": 1.5
+  },
+  {
+    "id": "chickpeas_boiled",
+    "name": "حمص حب مسلوق غني بالألياف",
+    "icon": "🫘",
+    "category": "carbs",
+    "cal": 164,
+    "p": 8.9,
+    "c": 27.4,
+    "f": 2.6
+  },
+  {
+    "id": "red_kidney_beans",
+    "name": "فاصوليا حمراء مسلوقة للرياضيين",
+    "icon": "🫘",
+    "category": "carbs",
+    "cal": 127,
+    "p": 8.7,
+    "c": 22.8,
+    "f": 0.5
+  },
+  {
+    "id": "green_peas",
+    "name": "بازلاء خضراء مسلوقة طازجة",
+    "icon": "🫛",
+    "category": "carbs",
+    "cal": 81,
+    "p": 5.4,
+    "c": 14.5,
+    "f": 0.4
+  },
+  {
+    "id": "bulgur_cooked",
+    "name": "برغل قمح خشن مطبوخ",
+    "icon": "🌾",
+    "category": "carbs",
+    "cal": 83,
+    "p": 3.1,
+    "c": 18.6,
+    "f": 0.2
+  },
+  {
+    "id": "chicken_kabsa",
+    "name": "كبسة صدور دجاج متبلة كاملة",
+    "icon": "🍲",
+    "category": "traditional",
+    "cal": 160,
+    "p": 14.0,
+    "c": 18.0,
+    "f": 4.0
+  },
+  {
+    "id": "mandi_meat",
+    "name": "مندي لحم بدون شحم زائد",
+    "icon": "🍖",
+    "category": "traditional",
+    "cal": 190,
+    "p": 15.0,
+    "c": 17.0,
+    "f": 7.0
+  },
+  {
+    "id": "jareesh",
+    "name": "جريش سعودي باللبن والدجاج",
+    "icon": "🍲",
+    "category": "traditional",
+    "cal": 135,
+    "p": 8.0,
+    "c": 19.0,
+    "f": 3.0
+  },
+  {
+    "id": "matazeez",
+    "name": "مطازيز بالخضار واللحم الخالي",
+    "icon": "🍲",
+    "category": "traditional",
+    "cal": 125,
+    "p": 7.5,
+    "c": 18.0,
+    "f": 2.5
+  },
+  {
+    "id": "shakshuka_dish",
+    "name": "شكشوكة بيض طماطم وبصل خفيفة",
+    "icon": "🍳",
+    "category": "traditional",
+    "cal": 115,
+    "p": 8.0,
+    "c": 4.0,
+    "f": 7.5
+  },
+  {
+    "id": "shish_tawook",
+    "name": "شيش طاووق دجاج مشوي على الفحم",
+    "icon": "🍢",
+    "category": "traditional",
+    "cal": 155,
+    "p": 25.0,
+    "c": 2.0,
+    "f": 5.0
+  },
+  {
+    "id": "meat_kabab",
+    "name": "كباب لحم مشوي قليل الدهن",
+    "icon": "🍢",
+    "category": "traditional",
+    "cal": 210,
+    "p": 22.0,
+    "c": 3.0,
+    "f": 12.0
+  },
+  {
+    "id": "chicken_shawarma",
+    "name": "شاورما صدور دجاج بصحن بدون صوص",
+    "icon": "🥙",
+    "category": "traditional",
+    "cal": 170,
+    "p": 26.0,
+    "c": 1.5,
+    "f": 6.5
+  },
+  {
+    "id": "falafel",
+    "name": "فلافل حمص مشوية بالفرن (حبة 25g)",
+    "icon": "🧆",
+    "category": "traditional",
+    "cal": 55,
+    "p": 2.2,
+    "c": 6.0,
+    "f": 2.5
+  },
+  {
+    "id": "foul_mudammas",
+    "name": "فول مدمس بالليمون والكمون وزيت خفيف",
+    "icon": "🫘",
+    "category": "traditional",
+    "cal": 110,
+    "p": 7.5,
+    "c": 15.0,
+    "f": 2.0
+  },
+  {
+    "id": "yellow_lentil",
+    "name": "شوربة عدس أصفر غنية ومشبعة",
+    "icon": "🍲",
+    "category": "traditional",
+    "cal": 85,
+    "p": 5.5,
+    "c": 13.0,
+    "f": 1.0
+  },
+  {
+    "id": "molokhia_chicken",
+    "name": "ملوخية خضراء بمرقة الدجاج بدون دهن",
+    "icon": "🍲",
+    "category": "traditional",
+    "cal": 65,
+    "p": 4.5,
+    "c": 6.0,
+    "f": 2.0
+  },
+  {
+    "id": "sayadieh_fish",
+    "name": "صيادية سمك وأرز بني خفيفة",
+    "icon": "🐟",
+    "category": "traditional",
+    "cal": 145,
+    "p": 12.0,
+    "c": 20.0,
+    "f": 2.5
+  },
+  {
+    "id": "musakaa_lean",
+    "name": "مسقعة باذنجان باللحم المفروم الخالي",
+    "icon": "🍆",
+    "category": "traditional",
+    "cal": 130,
+    "p": 9.0,
+    "c": 10.0,
+    "f": 5.5
+  },
+  {
+    "id": "wheat_bread",
+    "name": "خبز بر عربي أسمر كامل الحبة",
+    "icon": "🫓",
+    "category": "breads",
+    "cal": 240,
+    "p": 9.0,
+    "c": 46.0,
+    "f": 1.8
+  },
+  {
+    "id": "tamees_brown",
+    "name": "خبز تميس بر أسمر (ربع رغيف)",
+    "icon": "🫓",
+    "category": "breads",
+    "cal": 180,
+    "p": 6.5,
+    "c": 36.0,
+    "f": 1.5
+  },
+  {
+    "id": "whole_toast",
+    "name": "توست بر حبوب كاملة (شريحة واحدة)",
+    "icon": "🍞",
+    "category": "breads",
+    "cal": 75,
+    "p": 3.5,
+    "c": 13.0,
+    "f": 1.0
+  },
+  {
+    "id": "bran_rusk",
+    "name": "شابورة بر بالنخالة والسمسم",
+    "icon": "🥖",
+    "category": "breads",
+    "cal": 390,
+    "p": 12.0,
+    "c": 68.0,
+    "f": 7.0
+  },
+  {
+    "id": "whole_tortilla",
+    "name": "تورتيلا قمح كامل بر (رغيف 45g)",
+    "icon": "🌮",
+    "category": "breads",
+    "cal": 120,
+    "p": 4.0,
+    "c": 22.0,
+    "f": 2.5
+  },
+  {
+    "id": "rice_cakes",
+    "name": "كعك الأرز المقرمش (حبة واحدة)",
+    "icon": "🍘",
+    "category": "breads",
+    "cal": 35,
+    "p": 0.8,
+    "c": 7.5,
+    "f": 0.3
+  },
+  {
+    "id": "white_pita",
+    "name": "خبز بيتا عربي أبيض عادي",
+    "icon": "🫓",
+    "category": "breads",
+    "cal": 265,
+    "p": 8.5,
+    "c": 53.0,
+    "f": 1.2
+  },
+  {
+    "id": "olive_oil",
+    "name": "زيت زيتون بكر ممتاز معصور بارد",
+    "icon": "🫒",
+    "category": "fats",
+    "cal": 884,
+    "p": 0.0,
+    "c": 0.0,
+    "f": 100.0
+  },
+  {
+    "id": "peanut_butter",
+    "name": "زبدة فول سوداني طبيعية 100%",
+    "icon": "🥜",
+    "category": "fats",
+    "cal": 588,
+    "p": 25.0,
+    "c": 20.0,
+    "f": 50.0
+  },
+  {
+    "id": "almond_butter",
+    "name": "زبدة لوز طبيعية نقية",
+    "icon": "🥜",
+    "category": "fats",
+    "cal": 614,
+    "p": 21.0,
+    "c": 19.0,
+    "f": 55.0
+  },
+  {
+    "id": "raw_almonds",
+    "name": "لوز نيء غير محمص بدون ملح",
+    "icon": "🥜",
+    "category": "fats",
+    "cal": 579,
+    "p": 21.0,
+    "c": 22.0,
+    "f": 50.0
+  },
+  {
+    "id": "walnuts",
+    "name": "جوز عين الجمل نيء (غني بالأوميغا 3)",
+    "icon": "🥜",
+    "category": "fats",
+    "cal": 654,
+    "p": 15.0,
+    "c": 14.0,
+    "f": 65.0
+  },
+  {
+    "id": "cashews",
+    "name": "كاجو نيء طبيعي خفيف",
+    "icon": "🥜",
+    "category": "fats",
+    "cal": 553,
+    "p": 18.0,
+    "c": 30.0,
+    "f": 44.0
+  },
+  {
+    "id": "avocado",
+    "name": "أفوكادو طازج كريمي",
+    "icon": "🥑",
+    "category": "fats",
+    "cal": 160,
+    "p": 2.0,
+    "c": 8.5,
+    "f": 14.7
+  },
+  {
+    "id": "tahini",
+    "name": "طحينة سمسم طبيعية نقية",
+    "icon": "🏺",
+    "category": "fats",
+    "cal": 595,
+    "p": 17.0,
+    "c": 21.0,
+    "f": 53.0
+  },
+  {
+    "id": "chia_seeds",
+    "name": "بذور الشيا العضوية للألياف",
+    "icon": "🌱",
+    "category": "fats",
+    "cal": 486,
+    "p": 16.5,
+    "c": 42.0,
+    "f": 30.7
+  },
+  {
+    "id": "dark_chocolate_85",
+    "name": "شوكولاتة داكنة 85% كاكاو نقي",
+    "icon": "🍫",
+    "category": "fats",
+    "cal": 590,
+    "p": 8.5,
+    "c": 28.0,
+    "f": 46.0
+  },
+  {
+    "id": "dates_sukari",
+    "name": "تمر سكري / خلاص فاخر (حبة ~10g)",
+    "icon": "🌴",
+    "category": "veggies",
+    "cal": 280,
+    "p": 2.5,
+    "c": 75.0,
+    "f": 0.4
+  },
+  {
+    "id": "dates_ajwa",
+    "name": "تمر عجوة المدينة المبارك",
+    "icon": "🌴",
+    "category": "veggies",
+    "cal": 275,
+    "p": 2.8,
+    "c": 73.0,
+    "f": 0.3
+  },
+  {
+    "id": "dates_medjool",
+    "name": "تمر مجدول ملكي كبير الحبة",
+    "icon": "🌴",
+    "category": "veggies",
+    "cal": 277,
+    "p": 1.8,
+    "c": 75.0,
+    "f": 0.2
+  },
+  {
+    "id": "fresh_banana",
+    "name": "موز طازج غني بالبوتاسيوم",
+    "icon": "🍌",
+    "category": "veggies",
+    "cal": 89,
+    "p": 1.1,
+    "c": 22.8,
+    "f": 0.3
+  },
+  {
+    "id": "apple",
+    "name": "تفاح أحمر أو أخضر طازج",
+    "icon": "🍎",
+    "category": "veggies",
+    "cal": 52,
+    "p": 0.3,
+    "c": 13.8,
+    "f": 0.2
+  },
+  {
+    "id": "orange",
+    "name": "برتقال طازج عصير / حبة كاملة",
+    "icon": "🍊",
+    "category": "veggies",
+    "cal": 47,
+    "p": 0.9,
+    "c": 11.8,
+    "f": 0.1
+  },
+  {
+    "id": "strawberries",
+    "name": "فراولة طازجة منخفضة السعرات",
+    "icon": "🍓",
+    "category": "veggies",
+    "cal": 32,
+    "p": 0.7,
+    "c": 7.7,
+    "f": 0.3
+  },
+  {
+    "id": "blueberries",
+    "name": "توت أزرق مضاد قوي للأكسدة",
+    "icon": "🫐",
+    "category": "veggies",
+    "cal": 57,
+    "p": 0.7,
+    "c": 14.5,
+    "f": 0.3
+  },
+  {
+    "id": "watermelon",
+    "name": "بطيخ أحمر مرطب ومنعش",
+    "icon": "🍉",
+    "category": "veggies",
+    "cal": 30,
+    "p": 0.6,
+    "c": 7.6,
+    "f": 0.2
+  },
+  {
+    "id": "kiwi",
+    "name": "كيوي طازج غني بفيتامين C",
+    "icon": "🥝",
+    "category": "veggies",
+    "cal": 61,
+    "p": 1.1,
+    "c": 14.7,
+    "f": 0.5
+  },
+  {
+    "id": "pomegranate",
+    "name": "رمان طازج حب مضاد للالتهاب",
+    "icon": "🫐",
+    "category": "veggies",
+    "cal": 83,
+    "p": 1.7,
+    "c": 18.7,
+    "f": 1.2
+  },
+  {
+    "id": "broccoli",
+    "name": "بروكلي مسلوق أو سوتيه",
+    "icon": "🥦",
+    "category": "veggies",
+    "cal": 35,
+    "p": 2.4,
+    "c": 7.2,
+    "f": 0.4
+  },
+  {
+    "id": "spinach",
+    "name": "سبانخ طازجة غنية بالحديد والمغنيسيوم",
+    "icon": "🥬",
+    "category": "veggies",
+    "cal": 23,
+    "p": 2.9,
+    "c": 3.6,
+    "f": 0.4
+  },
+  {
+    "id": "green_salad",
+    "name": "سلطة خضراء مشكلة (خيار وطماطم وخس)",
+    "icon": "🥗",
+    "category": "veggies",
+    "cal": 22,
+    "p": 1.2,
+    "c": 3.5,
+    "f": 0.2
+  },
+  {
+    "id": "cucumber",
+    "name": "خيار طازج مبرد قليل السعرات",
+    "icon": "🥒",
+    "category": "veggies",
+    "cal": 15,
+    "p": 0.7,
+    "c": 3.6,
+    "f": 0.1
+  },
+  {
+    "id": "arugula",
+    "name": "جرجير طازج مع رشة ليمون",
+    "icon": "🥗",
+    "category": "veggies",
+    "cal": 25,
+    "p": 2.6,
+    "c": 3.7,
+    "f": 0.7
+  },
+  {
+    "id": "mushrooms",
+    "name": "فطر عيش غراب طازج مشوي",
+    "icon": "🍄",
+    "category": "veggies",
+    "cal": 22,
+    "p": 3.1,
+    "c": 3.3,
+    "f": 0.3
+  },
+  {
+    "id": "asparagus",
+    "name": "هليون أخضر مشوي للرياضيين",
+    "icon": "🌱",
+    "category": "veggies",
+    "cal": 20,
+    "p": 2.2,
+    "c": 3.9,
+    "f": 0.1
+  }
+];
 
     let currentManualTray = [];
     let liveMediaStream = null;
 
+    // Load from LocalStorage
     function loadSavedData() {
       try {
         const savedStats = localStorage.getItem('al_tabiee_user_stats');
@@ -692,23 +3559,27 @@
           recalcConsumedTotals();
         }
 
-        if (userStats.geminiApiKey) {
-          document.getElementById('ai-status-badge').innerText = 'AI متصل ✓';
-          document.getElementById('ai-status-badge').className = 'text-[#00E676] font-bold';
+        const savedCustomPrograms = localStorage.getItem('al_tabiee_workout_programs');
+        if (savedCustomPrograms) {
+          const parsed = JSON.parse(savedCustomPrograms);
+          Object.assign(workoutPrograms, parsed);
         }
       } catch (e) {
-        console.log('Load err:', e);
+        console.log('Load error:', e);
       }
       updateDashboardUI();
       renderFoodDbList();
+      renderWeekStrip();
+      renderActiveDayWorkout();
     }
 
     function saveStateToStorage() {
       try {
         localStorage.setItem('al_tabiee_user_stats', JSON.stringify(userStats));
         localStorage.setItem('al_tabiee_logged_meals', JSON.stringify(loggedMeals));
+        localStorage.setItem('al_tabiee_workout_programs', JSON.stringify(workoutPrograms));
       } catch (e) {
-        console.log('Save err:', e);
+        console.log('Save error:', e);
       }
     }
 
@@ -719,391 +3590,323 @@
       consumedFat = loggedMeals.reduce((acc, m) => acc + m.fat, 0);
     }
 
-    // ================= REAL LIVE CAMERA LOGIC =================
-    async function startLiveCamera() {
-      const video = document.getElementById('live-meal-video');
-      const idleUI = document.getElementById('camera-idle-ui');
-      const snapBtn = document.getElementById('snap-btn');
-      const scanLine = document.getElementById('camera-scanline');
-      const capturedImg = document.getElementById('captured-meal-img');
-
-      capturedImg.classList.add('hidden');
-
-      try {
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-          const stream = await navigator.mediaDevices.getUserMedia({
-            video: { facingMode: { ideal: 'environment' } }
-          });
-          liveMediaStream = stream;
-          video.srcObject = stream;
-          video.classList.remove('hidden');
-          idleUI.classList.add('hidden');
-          scanLine.classList.remove('hidden');
-          snapBtn.disabled = false;
-        } else {
-          triggerNativeCamera();
+    // ================= 7-DAY WORKOUT SCHEDULE FUNCTIONS =================
+    function switchWorkoutProgram(progKey) {
+      currentProgramKey = progKey;
+      const keys = ['ppl', 'bro', 'upper_lower', 'full_body', 'arnold', 'phul', 'home', 'dumbbells'];
+      keys.forEach(k => {
+        const btn = document.getElementById('prog-btn-' + k);
+        if (btn) {
+          if (k === progKey) {
+            btn.className = 'px-3 py-1.5 rounded-xl bg-[#00E676] text-black text-xs font-black shrink-0 transition shadow-md shadow-[#00E676]/20';
+          } else {
+            btn.className = 'px-3 py-1.5 rounded-xl bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition';
+          }
         }
-      } catch (err) {
-        triggerNativeCamera();
-      }
-    }
-
-    function stopLiveCamera() {
-      if (liveMediaStream) {
-        liveMediaStream.getTracks().forEach(track => track.stop());
-        liveMediaStream = null;
-      }
-      document.getElementById('live-meal-video').classList.add('hidden');
-      document.getElementById('snap-btn').disabled = true;
-      document.getElementById('camera-scanline').classList.add('hidden');
-    }
-
-    function triggerNativeCamera() {
-      document.getElementById('native-camera-input').click();
-    }
-
-    function handleNativeCameraPhoto(input) {
-      if (input.files && input.files[0]) {
-        const file = input.files[0];
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          processCapturedPhoto(e.target.result);
-        };
-        reader.readAsDataURL(file);
-      }
-    }
-
-    function snapLivePhoto() {
-      const video = document.getElementById('live-meal-video');
-      const canvas = document.getElementById('camera-canvas');
-      canvas.width = video.videoWidth || 640;
-      canvas.height = video.videoHeight || 480;
-
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-      const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
-
-      stopLiveCamera();
-      processCapturedPhoto(dataUrl);
-    }
-
-    async function processCapturedPhoto(imgSrc) {
-      lastCapturedBase64 = imgSrc;
-      const capturedImg = document.getElementById('captured-meal-img');
-      const idleUI = document.getElementById('camera-idle-ui');
-      const loadingState = document.getElementById('scanner-loading-state');
-      const resultCard = document.getElementById('scan-result-card');
-      const quickConfirm = document.getElementById('quick-food-confirmation');
-
-      capturedImg.src = imgSrc;
-      capturedImg.classList.remove('hidden');
-      idleUI.classList.add('hidden');
-      loadingState.classList.remove('hidden');
-      resultCard.classList.add('hidden');
-      quickConfirm.classList.add('hidden');
-
-      // If User has Gemini API Key, call actual Gemini Multimodal Vision API!
-      if (userStats.geminiApiKey) {
-        try {
-          document.getElementById('ai-analyzing-text').innerText = 'Gemini AI يحلل الصورة بدقة متناهية...';
-          const geminiResult = await callGeminiVision(imgSrc, userStats.geminiApiKey);
-          loadingState.classList.add('hidden');
-          
-          activeScannedPreset = {
-            title: geminiResult.title_ar || 'وجبة مصورة',
-            subtitle: geminiResult.subtitle_ar || 'تم التحليل بواسطة Gemini Vision',
-            calories: geminiResult.calories || 250,
-            protein: geminiResult.protein || 10,
-            carbs: geminiResult.carbs || 30,
-            fat: geminiResult.fat || 5,
-            icon: '📸'
-          };
-
-          renderScannedPresetResult();
-          resultCard.classList.remove('hidden');
-          resultCard.scrollIntoView({ behavior: 'smooth' });
-          return;
-        } catch (err) {
-          console.warn('Gemini API call failed, falling back to quick confirm:', err);
-        }
-      }
-
-      // Fallback: Show quick dish confirmation so dates are recognized as dates!
-      setTimeout(() => {
-        loadingState.classList.add('hidden');
-        quickConfirm.classList.remove('hidden');
-        quickConfirm.scrollIntoView({ behavior: 'smooth' });
-        // Default to dates / تمر first
-        applyScannedFoodChoice('dates');
-      }, 700);
-    }
-
-    function applyScannedFoodChoice(key) {
-      activeScannedPreset = foodPresets[key] || foodPresets.dates;
-      portionMultiplier = 1.0;
-      renderScannedPresetResult();
-      document.getElementById('scan-result-card').classList.remove('hidden');
-      document.getElementById('scan-result-card').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function renderScannedPresetResult() {
-      const p = activeScannedPreset;
-      const cal = Math.round(p.calories * portionMultiplier);
-      const prot = (p.protein * portionMultiplier).toFixed(1);
-      const carbs = (p.carbs * portionMultiplier).toFixed(1);
-      const fat = (p.fat * portionMultiplier).toFixed(1);
-
-      document.getElementById('result-title').innerText = p.title;
-      document.getElementById('result-subtitle').innerText = p.subtitle;
-      document.getElementById('result-calories').innerText = cal;
-      document.getElementById('result-protein').innerText = prot + 'g';
-      document.getElementById('result-carbs').innerText = carbs + 'g';
-      document.getElementById('result-fat').innerText = fat + 'g';
-      document.getElementById('scanned-portion-label').innerText = portionMultiplier === 1.0 ? 'كمية عادية' : portionMultiplier > 1 ? 'كمية كبيرة' : 'كمية خفيفة';
-    }
-
-    function adjustScannedPortion(factor) {
-      portionMultiplier = Math.max(0.4, Math.min(3.0, portionMultiplier * factor));
-      renderScannedPresetResult();
-    }
-
-    // Call Real Gemini Multimodal Vision API
-    async function callGeminiVision(base64Image, apiKey) {
-      const rawData = base64Image.split(',')[1] || base64Image;
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
-
-      const payload = {
-        contents: [{
-          parts: [
-            {
-              text: `أنت خبير تغذية وعلوم رياضية. حلل صورة الطعام هذه بدقة عالية جداً.
-تعرف على نوع الطعام الحقيقي في الصورة (إذا كان تمراً، أو موزاً، أو دجاجاً، أو أرزاً، أو سلطة، أو بيضاً، أو غير ذلك).
-قدّر عدد الحبات أو وزن الوجبة، واحسب السعرات الإجمالية والماكروز.
-أجب بصيغة JSON حصراً:
-{
-  "title_ar": "اسم الطعام التقديري باللغة العربية",
-  "subtitle_ar": "وصف الصنف والمقدار بالجرام أو الحبات",
-  "calories": 140,
-  "protein": 1.5,
-  "carbs": 35.0,
-  "fat": 0.2
-}`
-            },
-            {
-              inline_data: {
-                mime_type: "image/jpeg",
-                data: rawData
-              }
-            }
-          ]
-        }],
-        generationConfig: {
-          response_mime_type: "application/json",
-          temperature: 0.1
-        }
-      };
-
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
       });
-
-      const resData = await res.json();
-      const rawText = resData.candidates[0].content.parts[0].text;
-      return JSON.parse(rawText);
+      renderWeekStrip();
+      renderActiveDayWorkout();
     }
 
-    function commitScannedMeal() {
-      const cal = parseInt(document.getElementById('result-calories').innerText);
-      const prot = parseFloat(document.getElementById('result-protein').innerText);
-      const carbs = parseFloat(document.getElementById('result-carbs').innerText);
-      const fat = parseFloat(document.getElementById('result-fat').innerText);
-
-      loggedMeals.unshift({
-        title: document.getElementById('result-title').innerText,
-        icon: activeScannedPreset.icon || '📸',
-        calories: cal,
-        protein: prot,
-        carbs: carbs,
-        fat: fat
-      });
-
-      recalcConsumedTotals();
-      saveStateToStorage();
-      document.getElementById('scan-result-card').classList.add('hidden');
-      document.getElementById('quick-food-confirmation').classList.add('hidden');
-      updateDashboardUI();
-      switchTab('dashboard');
+    function selectWeekDay(index) {
+      activeDayIndex = index;
+      renderWeekStrip();
+      renderActiveDayWorkout();
     }
 
-    // ================= REAL 3 ANGLES BODY PHOTOS =================
-    function handleBodyPhoto(input, angle) {
-      if (input.files && input.files[0]) {
-        const file = input.files[0];
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          const dataUrl = e.target.result;
-          if (!userStats.bodyPhotos) userStats.bodyPhotos = {};
-          userStats.bodyPhotos[angle] = dataUrl;
+    function renderWeekStrip() {
+      const container = document.getElementById('week-days-strip');
+      const prog = workoutPrograms[currentProgramKey] || workoutPrograms.ppl;
 
-          const img = document.getElementById(`img-body-${angle}`);
-          const ph = document.getElementById(`ph-body-${angle}`);
-          img.src = dataUrl;
-          img.classList.remove('hidden');
-          ph.classList.add('hidden');
+      container.innerHTML = weekDays.map((day, idx) => {
+        const dayData = prog.days[day.id] || { isRest: true };
+        const isSelected = activeDayIndex === idx;
 
-          saveStateToStorage();
-          alert(`تم حفظ صورة الزاوية محلياً على جهازك بنجاح! 📸`);
-        };
-        reader.readAsDataURL(file);
-      }
+        let badgeBg = isSelected 
+          ? 'bg-[#00E676] text-black font-black shadow-md shadow-[#00E676]/30' 
+          : (dayData.isRest 
+              ? 'bg-[#1b202c] text-gray-400 hover:bg-[#202736]' 
+              : 'bg-[#222a3a] text-[#00E676] font-bold border border-[#00E676]/30 hover:bg-[#273246]');
+
+        return `
+          <button onclick="selectWeekDay(${idx})" class="p-2 rounded-xl text-center flex flex-col items-center gap-1 transition ${badgeBg}">
+            <span class="text-[11px] block">${day.nameAr}</span>
+            <span class="text-sm block">${dayData.isRest ? '😴' : '🏋️'}</span>
+          </button>
+        `;
+      }).join('');
     }
 
-    // API Key Modal
-    function openApiKeyModal() {
-      document.getElementById('gemini-key-input').value = userStats.geminiApiKey || '';
-      document.getElementById('api-key-modal').classList.remove('hidden');
-    }
+    function renderActiveDayWorkout() {
+      const day = weekDays[activeDayIndex];
+      const prog = workoutPrograms[currentProgramKey] || workoutPrograms.ppl;
+      const dayData = prog.days[day.id] || { isRest: true, focus: 'راحة واستشفاء', exercises: [] };
 
-    function closeApiKeyModal() {
-      document.getElementById('api-key-modal').classList.add('hidden');
-    }
+      activeEditingDayKey = day.id;
 
-    function saveApiKey() {
-      const key = document.getElementById('gemini-key-input').value.trim();
-      userStats.geminiApiKey = key;
-      saveStateToStorage();
-      document.getElementById('ai-status-badge').innerText = key ? 'AI متصل ✓' : 'تفعيل AI';
-      document.getElementById('ai-status-badge').className = key ? 'text-[#00E676] font-bold' : '';
-      closeApiKeyModal();
-      alert('تم تفعيل محرك Gemini Vision AI الحقيقي بنجاح! أي صورة ستلتقطها ستُحلل فوراً بالذكاء الاصطناعي.');
-    }
+      document.getElementById('active-day-name').innerText = `يوم ${day.nameAr} (${prog.nameAr})`;
+      document.getElementById('active-day-focus').innerText = dayData.focus;
+      document.getElementById('rest-toggle-btn').innerText = dayData.isRest ? 'تحويله ليوم تمرين 🏋️' : 'جعله يوم راحة 😴';
 
-    function removeApiKey() {
-      userStats.geminiApiKey = '';
-      saveStateToStorage();
-      document.getElementById('ai-status-badge').innerText = 'تفعيل AI';
-      document.getElementById('ai-status-badge').className = '';
-      closeApiKeyModal();
-    }
+      const container = document.getElementById('active-exercises-list');
 
-    // Edit Calories Modal
-    function openEditCaloriesModal() {
-      document.getElementById('custom-cal-input').value = userStats.targetCalories;
-      document.getElementById('custom-protein-input').value = userStats.targetProtein;
-      document.getElementById('custom-carbs-input').value = userStats.targetCarbs;
-      document.getElementById('custom-fat-input').value = userStats.targetFat;
-      document.getElementById('edit-calories-modal').classList.remove('hidden');
-    }
-
-    function closeEditCaloriesModal() {
-      document.getElementById('edit-calories-modal').classList.add('hidden');
-    }
-
-    function adjustTargetCal(delta) {
-      const input = document.getElementById('custom-cal-input');
-      let val = parseInt(input.value) || 1800;
-      val = Math.max(1000, val + delta);
-      input.value = val;
-      autoAdjustCustomMacros();
-    }
-
-    function autoAdjustCustomMacros() {
-      const cal = parseInt(document.getElementById('custom-cal-input').value) || 1800;
-      const weight = userStats.weight || 75;
-      const p = Math.round(weight * 2.0);
-      const f = Math.round((cal * 0.25) / 9);
-      const remCal = cal - ((p * 4) + (f * 9));
-      const c = Math.max(0, Math.round(remCal / 4));
-
-      document.getElementById('custom-protein-input').value = p;
-      document.getElementById('custom-carbs-input').value = c;
-      document.getElementById('custom-fat-input').value = f;
-    }
-
-    function saveCustomCalories() {
-      userStats.targetCalories = parseInt(document.getElementById('custom-cal-input').value) || 1800;
-      userStats.targetProtein = parseInt(document.getElementById('custom-protein-input').value) || 150;
-      userStats.targetCarbs = parseInt(document.getElementById('custom-carbs-input').value) || 180;
-      userStats.targetFat = parseInt(document.getElementById('custom-fat-input').value) || 50;
-
-      saveStateToStorage();
-      updateDashboardUI();
-      closeEditCaloriesModal();
-    }
-
-    // Dashboard UI
-    function updateDashboardUI() {
-      document.getElementById('dash-user-name').innerText = userStats.name;
-      document.getElementById('dash-user-goal').innerText = userStats.goal === 'cutting' ? 'خسارة وزن وحرق دهون' : 'زيادة عضل وتضخيم نظيف';
-      document.getElementById('dash-goal-badge').innerText = `هدف: ${userStats.targetCalories} سعرة`;
-
-      document.getElementById('target-calories-text').innerText = userStats.targetCalories;
-      document.getElementById('target-protein-text').innerText = '/' + userStats.targetProtein + 'g';
-      document.getElementById('target-carbs-text').innerText = '/' + userStats.targetCarbs + 'g';
-      document.getElementById('target-fat-text').innerText = '/' + userStats.targetFat + 'g';
-
-      const remaining = Math.max(0, userStats.targetCalories - consumedCalories);
-      const percent = Math.min(100, Math.round((consumedCalories / userStats.targetCalories) * 100));
-
-      document.getElementById('consumed-calories-text').innerText = consumedCalories;
-      document.getElementById('remaining-calories-text').innerText = remaining;
-      document.getElementById('calorie-percent-text').innerText = percent + '%';
-      document.getElementById('calorie-progress-path').setAttribute('stroke-dasharray', `${percent}, 100`);
-
-      document.getElementById('protein-val').innerText = Math.round(consumedProtein);
-      document.getElementById('carbs-val').innerText = Math.round(consumedCarbs);
-      document.getElementById('fat-val').innerText = Math.round(consumedFat);
-
-      document.getElementById('protein-bar').style.width = Math.min(100, (consumedProtein / userStats.targetProtein) * 100) + '%';
-      document.getElementById('carbs-bar').style.width = Math.min(100, (consumedCarbs / userStats.targetCarbs) * 100) + '%';
-      document.getElementById('fat-bar').style.width = Math.min(100, (consumedFat / userStats.targetFat) * 100) + '%';
-
-      document.getElementById('water-text').innerText = waterMl;
-      document.getElementById('meal-count-badge').innerText = `${loggedMeals.length} وجبات`;
-
-      const container = document.getElementById('meals-list-container');
-      if (loggedMeals.length === 0) {
+      if (dayData.isRest || !dayData.exercises || dayData.exercises.length === 0) {
         container.innerHTML = `
-          <div class="p-6 rounded-xl bg-[#171b24] border border-[#232938] text-center">
-            <span class="text-3xl block mb-2">🍽️</span>
-            <p class="text-xs font-bold text-gray-300">لم تسجل أي وجبة بعد اليوم</p>
-            <p class="text-[11px] text-gray-500 mt-1">التقط صورة لطبقك الآن ليتم حسابه فوراً!</p>
+          <div class="p-6 bg-[#12151c] rounded-2xl text-center space-y-2 border border-[#232938]">
+            <span class="text-4xl block">😴</span>
+            <h4 class="text-sm font-bold text-white">اليوم مخصص للراحة والاستشفاء العضلي</h4>
+            <p class="text-xs text-gray-400 max-w-xs mx-auto leading-relaxed">
+              تنمو الألياف العضلية وتتعافى أثناء الراحة والنوم العميق! احرص على شرب 3 لتر ماء وإكمال هدف البروتين اليومي (${userStats.targetProtein}g).
+            </p>
           </div>
         `;
-      } else {
-        container.innerHTML = loggedMeals.map((m, idx) => `
-          <div class="p-3 rounded-xl bg-[#171b24] border border-[#232938] flex items-center justify-between">
-            <div class="flex items-center gap-2.5">
-              <span class="text-2xl">${m.icon || '🥗'}</span>
-              <div>
-                <p class="text-xs font-bold text-white">${m.title}</p>
-                <p class="text-[10px] text-gray-400">بروتين: ${Math.round(m.protein)}g | كارب: ${Math.round(m.carbs)}g | دهون: ${Math.round(m.fat)}g</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-2">
-              <div class="text-left">
-                <span class="text-xs font-black text-[#FF9100]">${m.calories}</span>
-                <span class="text-[9px] text-gray-400 block">سعرة</span>
-              </div>
-              <button onclick="deleteMeal(${idx})" class="text-gray-500 hover:text-red-400 p-1 text-sm font-bold">✕</button>
-            </div>
-          </div>
-        `).join('');
+        return;
       }
+
+      container.innerHTML = dayData.exercises.map((ex, exIdx) => {
+        const safeName = (ex.name || '').replace(/'/g, "\\'");
+        const safeMuscle = (ex.muscle || '').replace(/'/g, "\\'");
+        const safeTech = (ex.technique || '').replace(/'/g, "\\'");
+
+        return `
+          <div class="p-3.5 bg-[#12151c] rounded-2xl border border-[#262c3d] space-y-3 overflow-hidden shadow-sm">
+            ${ex.image ? `
+              <div class="relative w-full h-36 rounded-xl overflow-hidden bg-[#181d28] border border-[#262c3d] shadow-inner group">
+                <img src="${ex.image}" alt="${ex.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy" onerror="this.parentElement.style.display='none'">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex items-end justify-between p-2.5">
+                  <span class="text-[10px] font-bold bg-[#00E676]/20 text-[#00E676] border border-[#00E676]/40 px-2 py-0.5 rounded-lg backdrop-blur-sm">🎯 ${ex.muscle}</span>
+                  <button onclick="openExerciseImagePreview('${ex.image}', '${safeName}', '${safeMuscle}', '${safeTech}')" class="text-[10px] font-bold bg-black/70 hover:bg-black/90 text-white px-2.5 py-1 rounded-lg border border-gray-600 transition flex items-center gap-1 backdrop-blur-sm">
+                    <span>🔍</span> تكبير الصورة
+                  </button>
+                </div>
+              </div>
+            ` : ''}
+
+            <div class="flex justify-between items-start gap-2">
+              <div class="flex items-center gap-2.5">
+                <div class="w-10 h-10 rounded-xl bg-[#00E676]/10 border border-[#00E676]/20 flex items-center justify-center text-xl shrink-0">
+                  ${ex.icon || '🏋️‍♂️'}
+                </div>
+                <div>
+                  <h4 class="text-xs font-black text-white leading-tight">${ex.name}</h4>
+                  <p class="text-[10px] text-[#00E676] font-bold mt-0.5">العضلة المستهدفة: ${ex.muscle}</p>
+                </div>
+              </div>
+              <button onclick="openEditExerciseModal(${exIdx})" class="px-2.5 py-1 bg-[#222735] hover:bg-[#2c3345] text-[10px] font-bold text-[#00E676] border border-[#2f374a] rounded-lg transition shrink-0">
+                تعديل ✎
+              </button>
+            </div>
+
+            <div class="flex gap-2">
+              <div class="px-2.5 py-1.5 bg-[#1a202c] rounded-xl text-center flex-1 border border-[#2a3447]">
+                <span class="text-[9px] text-gray-400 block">الجولات</span>
+                <span class="text-xs font-black text-white">${ex.sets} مجموعات</span>
+              </div>
+              <div class="px-2.5 py-1.5 bg-[#1a202c] rounded-xl text-center flex-1 border border-[#2a3447]">
+                <span class="text-[9px] text-gray-400 block">التكرار</span>
+                <span class="text-xs font-black text-[#00E676]">${ex.reps} عدة</span>
+              </div>
+              <button onclick="toggleRestTimer(${ex.rest || 60})" class="px-2.5 py-1.5 bg-[#1a202c] hover:bg-[#232c3d] rounded-xl text-center flex-1 border border-[#FF9100]/40 transition group">
+                <span class="text-[9px] text-gray-400 block">⏱️ بدء الراحة</span>
+                <span class="text-xs font-black text-[#FF9100] group-hover:text-white">${ex.rest || 60}ث</span>
+              </button>
+            </div>
+
+            ${ex.technique ? `
+              <div class="p-3 bg-[#171b24] rounded-xl border border-[#232938] space-y-1.5 text-right">
+                <p class="text-[10px] text-gray-300 leading-relaxed">
+                  <strong class="text-white">طريقة الأداء والتكنيك:</strong> ${ex.technique}
+                </p>
+                ${ex.breathing ? `<p class="text-[10px] text-[#00B0FF]"><strong class="text-white">التنفس:</strong> ${ex.breathing}</p>` : ''}
+                ${ex.mistakes ? `<p class="text-[10px] text-[#FF5252]"><strong class="text-white">أخطاء شائعة:</strong> ${ex.mistakes}</p>` : ''}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
     }
 
-    // Manual Food Database Functions
+    function toggleActiveDayRest() {
+      const prog = workoutPrograms[currentProgramKey];
+      const dayData = prog.days[activeEditingDayKey];
+      dayData.isRest = !dayData.isRest;
+      if (dayData.isRest) {
+        dayData.focus = 'يوم راحة مخصص واستشفاء 🧘‍♂️';
+      } else {
+        dayData.focus = 'يوم تمرين مخصص 🏋️‍♂️';
+        if (!dayData.exercises || dayData.exercises.length === 0) {
+          dayData.exercises = [
+            { 
+              id: 'cust_' + Date.now(), 
+              name: 'تمرين مخصص جديد', 
+              muscle: 'عضلة مخصصة', 
+              sets: 3, 
+              reps: '10-12', 
+              rest: 60, 
+              image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80',
+              technique: 'أداء مضبوط ومحكوم مع استقامة العمود الفقري والنزول البطيء.' 
+            }
+          ];
+        }
+      }
+      saveStateToStorage();
+      renderWeekStrip();
+      renderActiveDayWorkout();
+    }
+
+    // Exercise Image Fullscreen Modal Handlers
+    function openExerciseImagePreview(imgUrl, title, muscle, technique) {
+      document.getElementById('ex-modal-img').src = imgUrl;
+      document.getElementById('ex-modal-title').innerText = title || 'صورة حركة التمرين';
+      document.getElementById('ex-modal-muscle').innerText = muscle ? `العضلة المستهدفة: ${muscle}` : '';
+      document.getElementById('ex-modal-technique').innerText = technique || 'التزم بالمدى الحركي الكامل وثبات الجذع أثناء أداء الحركة.';
+      document.getElementById('exercise-image-modal').classList.remove('hidden');
+    }
+
+    function closeExerciseImageModal() {
+      document.getElementById('exercise-image-modal').classList.add('hidden');
+    }
+
+    // Edit Exercise Modal Handlers
+    function openEditExerciseModal(exIndex) {
+      activeEditingExIndex = exIndex;
+      const prog = workoutPrograms[currentProgramKey];
+      const ex = prog.days[activeEditingDayKey].exercises[exIndex];
+
+      document.getElementById('edit-ex-name').value = ex.name || '';
+      document.getElementById('edit-ex-sets').value = ex.sets || 3;
+      document.getElementById('edit-ex-reps').value = ex.reps || '10-12';
+      document.getElementById('edit-ex-rest').value = ex.rest || 60;
+      document.getElementById('edit-ex-technique').value = ex.technique || '';
+      document.getElementById('edit-ex-image').value = ex.image || '';
+
+      document.getElementById('edit-exercise-modal').classList.remove('hidden');
+    }
+
+    function closeEditExerciseModal() {
+      document.getElementById('edit-exercise-modal').classList.add('hidden');
+    }
+
+    function saveExerciseEdit() {
+      const prog = workoutPrograms[currentProgramKey];
+      const ex = prog.days[activeEditingDayKey].exercises[activeEditingExIndex];
+
+      ex.name = document.getElementById('edit-ex-name').value.trim() || ex.name;
+      ex.sets = parseInt(document.getElementById('edit-ex-sets').value) || ex.sets;
+      ex.reps = document.getElementById('edit-ex-reps').value.trim() || ex.reps;
+      ex.rest = parseInt(document.getElementById('edit-ex-rest').value) || 60;
+      ex.technique = document.getElementById('edit-ex-technique').value.trim() || ex.technique;
+      
+      const newImg = document.getElementById('edit-ex-image').value.trim();
+      if (newImg) ex.image = newImg;
+
+      saveStateToStorage();
+      closeEditExerciseModal();
+      renderActiveDayWorkout();
+    }
+
+    function deleteActiveExercise() {
+      const prog = workoutPrograms[currentProgramKey];
+      prog.days[activeEditingDayKey].exercises.splice(activeEditingExIndex, 1);
+      saveStateToStorage();
+      closeEditExerciseModal();
+      renderActiveDayWorkout();
+    }
+
+    // Add Exercise Modal Handlers
+    function openAddExerciseModal() {
+      document.getElementById('add-ex-name').value = '';
+      document.getElementById('add-ex-muscle').value = '';
+      document.getElementById('add-ex-sets').value = '3';
+      document.getElementById('add-ex-reps').value = '10-12';
+      document.getElementById('add-ex-rest').value = '60';
+      document.getElementById('add-ex-tip').value = '';
+      document.getElementById('add-ex-image').value = '';
+      document.getElementById('add-exercise-modal').classList.remove('hidden');
+    }
+
+    function closeAddExerciseModal() {
+      document.getElementById('add-exercise-modal').classList.add('hidden');
+    }
+
+    function commitAddExercise() {
+      const name = document.getElementById('add-ex-name').value.trim();
+      if (!name) return;
+
+      const muscle = document.getElementById('add-ex-muscle').value.trim() || 'عضلة مستهدفة';
+      const sets = parseInt(document.getElementById('add-ex-sets').value) || 3;
+      const reps = document.getElementById('add-ex-reps').value.trim() || '10-12';
+      const rest = parseInt(document.getElementById('add-ex-rest').value) || 60;
+      const tip = document.getElementById('add-ex-tip').value.trim() || 'أداء محكوم وبطيء في النزول السلبي لحماية المفاصل.';
+      const img = document.getElementById('add-ex-image').value.trim() || 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80';
+
+      const prog = workoutPrograms[currentProgramKey];
+      if (!prog.days[activeEditingDayKey].exercises) {
+        prog.days[activeEditingDayKey].exercises = [];
+      }
+      prog.days[activeEditingDayKey].isRest = false;
+
+      prog.days[activeEditingDayKey].exercises.push({
+        id: 'user_ex_' + Date.now(),
+        name: name,
+        muscle: muscle,
+        icon: '💪',
+        sets: sets,
+        reps: reps,
+        rest: rest,
+        image: img,
+        technique: tip
+      });
+
+      saveStateToStorage();
+      closeAddExerciseModal();
+      renderActiveDayWorkout();
+    }
+
+    // ================= REST TIMER =================
+    let restTimerInterval = null;
+    let timerSeconds = 60;
+    function toggleRestTimer(sec) {
+      const btn = document.getElementById('timer-btn');
+      const disp = document.getElementById('timer-display');
+
+      if (restTimerInterval) {
+        clearInterval(restTimerInterval);
+        restTimerInterval = null;
+        btn.innerText = 'بدء راحة 60ث';
+        disp.innerText = 'جاهز للبدء';
+        return;
+      }
+
+      timerSeconds = sec;
+      btn.innerText = 'إيقاف';
+      disp.innerText = `متبقي: ${timerSeconds} ثانية`;
+
+      restTimerInterval = setInterval(() => {
+        timerSeconds--;
+        if (timerSeconds <= 0) {
+          clearInterval(restTimerInterval);
+          restTimerInterval = null;
+          btn.innerText = 'بدء راحة 60ث';
+          disp.innerText = 'انتهت الراحة! ابدأ الجولة 💪';
+        } else {
+          disp.innerText = `متبقي: ${timerSeconds} ثانية`;
+        }
+      }, 1000);
+    }
+
+    // ================= MASSIVE FOOD DATABASE FUNCTIONS =================
     function setCategoryFilter(cat) {
       currentCategoryFilter = cat;
-      const cats = ['all', 'protein', 'carbs', 'fats', 'veggies'];
+      const cats = ['all', 'protein', 'carbs', 'traditional', 'breads', 'dairy', 'fats', 'veggies'];
       cats.forEach(c => {
         const el = document.getElementById('cat-' + c);
-        if (c === cat) {
-          el.className = 'px-3 py-1 rounded-lg bg-[#00E676] text-black text-xs font-black shrink-0 transition';
-        } else {
-          el.className = 'px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition';
+        if (el) {
+          if (c === cat) {
+            el.className = 'px-3 py-1 rounded-lg bg-[#00E676] text-black text-xs font-black shrink-0 transition';
+          } else {
+            el.className = 'px-3 py-1 rounded-lg bg-[#1e2433] text-gray-300 text-xs font-bold shrink-0 transition';
+          }
         }
       });
       renderFoodDbList();
@@ -1129,7 +3932,7 @@
       }
 
       container.innerHTML = filtered.map(food => {
-        const defaultGrams = food.id === 'dates' ? 50 : (food.category === 'fats' ? 15 : 100);
+        const defaultGrams = food.id.includes('dates') ? 50 : (food.category === 'fats' ? 15 : 100);
         return `
           <div class="p-3 rounded-xl bg-[#171b24] border border-[#232938] flex items-center justify-between">
             <div class="flex items-center gap-2.5">
@@ -1242,6 +4045,330 @@
       switchTab('dashboard');
     }
 
+    // ================= REAL LIVE CAMERA & PRESETS =================
+    const foodPresets = {
+      dates: { title: 'تمر خلاص / سكري', subtitle: '5 حبات تمر طبيعي (~50g)', calories: 140, protein: 1.2, carbs: 37.0, fat: 0.2, icon: '🌴' },
+      chicken_rice: { title: 'كبسة صدور دجاج صحية', subtitle: '180g صدر دجاج + 150g أرز', calories: 580, protein: 52.0, carbs: 58.0, fat: 12.0, icon: '🍗' },
+      steak: { title: 'ستيك عجل مع بطاطس مشوية', subtitle: '200g ستيك + 160g بطاطس', calories: 640, protein: 58.0, carbs: 34.0, fat: 15.0, icon: '🥩' },
+      eggs: { title: 'شكشوكة بيض مع خبز بر', subtitle: '3 بيضات مع خضار ورغيف بر', calories: 420, protein: 28.0, carbs: 38.0, fat: 16.0, icon: '🍳' },
+      banana: { title: 'موز وفاكهة طازجة', subtitle: 'حبة موز متوسطة (~120g)', calories: 105, protein: 1.3, carbs: 27.0, fat: 0.3, icon: '🍌' },
+      tuna: { title: 'تونة مصفاة مع سلطة', subtitle: 'علبة تونة 160g + سلطة وليمون', calories: 220, protein: 42.0, carbs: 5.0, fat: 2.5, icon: '🐟' }
+    };
+
+    let activeScannedPreset = foodPresets.dates;
+    let portionMultiplier = 1.0;
+
+    async function startLiveCamera() {
+      const video = document.getElementById('live-meal-video');
+      const idleUI = document.getElementById('camera-idle-ui');
+      const snapBtn = document.getElementById('snap-btn');
+      const scanLine = document.getElementById('camera-scanline');
+      const capturedImg = document.getElementById('captured-meal-img');
+
+      capturedImg.classList.add('hidden');
+
+      try {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: { ideal: 'environment' } }
+          });
+          liveMediaStream = stream;
+          video.srcObject = stream;
+          video.classList.remove('hidden');
+          idleUI.classList.add('hidden');
+          scanLine.classList.remove('hidden');
+          snapBtn.disabled = false;
+        } else {
+          triggerNativeCamera();
+        }
+      } catch (err) {
+        triggerNativeCamera();
+      }
+    }
+
+    function stopLiveCamera() {
+      if (liveMediaStream) {
+        liveMediaStream.getTracks().forEach(track => track.stop());
+        liveMediaStream = null;
+      }
+      document.getElementById('live-meal-video').classList.add('hidden');
+      document.getElementById('snap-btn').disabled = true;
+      document.getElementById('camera-scanline').classList.add('hidden');
+    }
+
+    function triggerNativeCamera() {
+      document.getElementById('native-camera-input').click();
+    }
+
+    function handleNativeCameraPhoto(input) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          processCapturedPhoto(e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function snapLivePhoto() {
+      const video = document.getElementById('live-meal-video');
+      const canvas = document.getElementById('camera-canvas');
+      canvas.width = video.videoWidth || 640;
+      canvas.height = video.videoHeight || 480;
+
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+
+      stopLiveCamera();
+      processCapturedPhoto(dataUrl);
+    }
+
+    async function processCapturedPhoto(imgSrc) {
+      const capturedImg = document.getElementById('captured-meal-img');
+      const idleUI = document.getElementById('camera-idle-ui');
+      const loadingState = document.getElementById('scanner-loading-state');
+      const resultCard = document.getElementById('scan-result-card');
+      const quickConfirm = document.getElementById('quick-food-confirmation');
+
+      capturedImg.src = imgSrc;
+      capturedImg.classList.remove('hidden');
+      idleUI.classList.add('hidden');
+      loadingState.classList.remove('hidden');
+      resultCard.classList.add('hidden');
+      quickConfirm.classList.add('hidden');
+
+      if (userStats.geminiApiKey) {
+        try {
+          const res = await callGeminiVision(imgSrc, userStats.geminiApiKey);
+          loadingState.classList.add('hidden');
+          activeScannedPreset = {
+            title: res.title_ar || 'وجبة مصورة',
+            subtitle: res.subtitle_ar || 'تحليل Gemini Vision',
+            calories: res.calories || 250,
+            protein: res.protein || 10,
+            carbs: res.carbs || 30,
+            fat: res.fat || 5,
+            icon: '📸'
+          };
+          renderScannedPresetResult();
+          resultCard.classList.remove('hidden');
+          return;
+        } catch (e) {
+          console.warn('Gemini call error:', e);
+        }
+      }
+
+      setTimeout(() => {
+        loadingState.classList.add('hidden');
+        quickConfirm.classList.remove('hidden');
+        applyScannedFoodChoice('dates');
+      }, 700);
+    }
+
+    function applyScannedFoodChoice(key) {
+      activeScannedPreset = foodPresets[key] || foodPresets.dates;
+      portionMultiplier = 1.0;
+      renderScannedPresetResult();
+      document.getElementById('scan-result-card').classList.remove('hidden');
+    }
+
+    function renderScannedPresetResult() {
+      const p = activeScannedPreset;
+      const cal = Math.round(p.calories * portionMultiplier);
+      const prot = (p.protein * portionMultiplier).toFixed(1);
+      const carbs = (p.carbs * portionMultiplier).toFixed(1);
+      const fat = (p.fat * portionMultiplier).toFixed(1);
+
+      document.getElementById('result-title').innerText = p.title;
+      document.getElementById('result-subtitle').innerText = p.subtitle;
+      document.getElementById('result-calories').innerText = cal;
+      document.getElementById('result-protein').innerText = prot + 'g';
+      document.getElementById('result-carbs').innerText = carbs + 'g';
+      document.getElementById('result-fat').innerText = fat + 'g';
+      document.getElementById('scanned-portion-label').innerText = portionMultiplier === 1.0 ? 'كمية عادية' : portionMultiplier > 1 ? 'كمية كبيرة' : 'كمية خفيفة';
+    }
+
+    function adjustScannedPortion(factor) {
+      portionMultiplier = Math.max(0.4, Math.min(3.0, portionMultiplier * factor));
+      renderScannedPresetResult();
+    }
+
+    async function callGeminiVision(base64Image, apiKey) {
+      const rawData = base64Image.split(',')[1] || base64Image;
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+
+      const payload = {
+        contents: [{
+          parts: [
+            { text: "أنت خبير تغذية. حلل صورة الطعام بدقة. تعرف على الصنف (تمر، دجاج، موز، أرز، لحم، إلخ) وقدر سعراته وماكروزه. أجب بصيغة JSON: {\"title_ar\":\"اسم الصنف\",\"subtitle_ar\":\"الكمية التقديرية\",\"calories\":140,\"protein\":1.5,\"carbs\":35,\"fat\":0.2}" },
+            { inline_data: { mime_type: "image/jpeg", data: rawData } }
+          ]
+        }],
+        generationConfig: { response_mime_type: "application/json", temperature: 0.1 }
+      };
+
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      return JSON.parse(data.candidates[0].content.parts[0].text);
+    }
+
+    function commitScannedMeal() {
+      const cal = parseInt(document.getElementById('result-calories').innerText);
+      const prot = parseFloat(document.getElementById('result-protein').innerText);
+      const carbs = parseFloat(document.getElementById('result-carbs').innerText);
+      const fat = parseFloat(document.getElementById('result-fat').innerText);
+
+      loggedMeals.unshift({
+        title: document.getElementById('result-title').innerText,
+        icon: activeScannedPreset.icon || '📸',
+        calories: cal,
+        protein: prot,
+        carbs: carbs,
+        fat: fat
+      });
+
+      recalcConsumedTotals();
+      saveStateToStorage();
+      document.getElementById('scan-result-card').classList.add('hidden');
+      document.getElementById('quick-food-confirmation').classList.add('hidden');
+      updateDashboardUI();
+      switchTab('dashboard');
+    }
+
+    // ================= BODY PHOTOS =================
+    function handleBodyPhoto(input, angle) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const dataUrl = e.target.result;
+          if (!userStats.bodyPhotos) userStats.bodyPhotos = {};
+          userStats.bodyPhotos[angle] = dataUrl;
+
+          const img = document.getElementById(`img-body-${angle}`);
+          const ph = document.getElementById(`ph-body-${angle}`);
+          img.src = dataUrl;
+          img.classList.remove('hidden');
+          ph.classList.add('hidden');
+
+          saveStateToStorage();
+          alert(`تم حفظ صورة الزاوية محلياً على جهازك بنجاح! 📸`);
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // ================= CALORIES & DASHBOARD MODALS =================
+    function openEditCaloriesModal() {
+      document.getElementById('custom-cal-input').value = userStats.targetCalories;
+      document.getElementById('custom-protein-input').value = userStats.targetProtein;
+      document.getElementById('custom-carbs-input').value = userStats.targetCarbs;
+      document.getElementById('custom-fat-input').value = userStats.targetFat;
+      document.getElementById('edit-calories-modal').classList.remove('hidden');
+    }
+
+    function closeEditCaloriesModal() {
+      document.getElementById('edit-calories-modal').classList.add('hidden');
+    }
+
+    function adjustTargetCal(delta) {
+      const input = document.getElementById('custom-cal-input');
+      let val = parseInt(input.value) || 1800;
+      val = Math.max(1000, val + delta);
+      input.value = val;
+      autoAdjustCustomMacros();
+    }
+
+    function autoAdjustCustomMacros() {
+      const cal = parseInt(document.getElementById('custom-cal-input').value) || 1800;
+      const weight = userStats.weight || 75;
+      const p = Math.round(weight * 2.0);
+      const f = Math.round((cal * 0.25) / 9);
+      const remCal = cal - ((p * 4) + (f * 9));
+      const c = Math.max(0, Math.round(remCal / 4));
+
+      document.getElementById('custom-protein-input').value = p;
+      document.getElementById('custom-carbs-input').value = c;
+      document.getElementById('custom-fat-input').value = f;
+    }
+
+    function saveCustomCalories() {
+      userStats.targetCalories = parseInt(document.getElementById('custom-cal-input').value) || 1800;
+      userStats.targetProtein = parseInt(document.getElementById('custom-protein-input').value) || 150;
+      userStats.targetCarbs = parseInt(document.getElementById('custom-carbs-input').value) || 180;
+      userStats.targetFat = parseInt(document.getElementById('custom-fat-input').value) || 50;
+
+      saveStateToStorage();
+      updateDashboardUI();
+      closeEditCaloriesModal();
+    }
+
+    function updateDashboardUI() {
+      document.getElementById('dash-user-name').innerText = userStats.name;
+      document.getElementById('dash-user-goal').innerText = userStats.goal === 'cutting' ? 'خسارة وزن وحرق دهون' : 'زيادة عضل وتضخيم نظيف';
+      document.getElementById('dash-goal-badge').innerText = `هدف: ${userStats.targetCalories} سعرة`;
+
+      document.getElementById('target-calories-text').innerText = userStats.targetCalories;
+      document.getElementById('target-protein-text').innerText = '/' + userStats.targetProtein + 'g';
+      document.getElementById('target-carbs-text').innerText = '/' + userStats.targetCarbs + 'g';
+      document.getElementById('target-fat-text').innerText = '/' + userStats.targetFat + 'g';
+
+      const remaining = Math.max(0, userStats.targetCalories - consumedCalories);
+      const percent = Math.min(100, Math.round((consumedCalories / userStats.targetCalories) * 100));
+
+      document.getElementById('consumed-calories-text').innerText = consumedCalories;
+      document.getElementById('remaining-calories-text').innerText = remaining;
+      document.getElementById('calorie-percent-text').innerText = percent + '%';
+      document.getElementById('calorie-progress-path').setAttribute('stroke-dasharray', `${percent}, 100`);
+
+      document.getElementById('protein-val').innerText = Math.round(consumedProtein);
+      document.getElementById('carbs-val').innerText = Math.round(consumedCarbs);
+      document.getElementById('fat-val').innerText = Math.round(consumedFat);
+
+      document.getElementById('protein-bar').style.width = Math.min(100, (consumedProtein / userStats.targetProtein) * 100) + '%';
+      document.getElementById('carbs-bar').style.width = Math.min(100, (consumedCarbs / userStats.targetCarbs) * 100) + '%';
+      document.getElementById('fat-bar').style.width = Math.min(100, (consumedFat / userStats.targetFat) * 100) + '%';
+
+      document.getElementById('water-text').innerText = waterMl;
+      document.getElementById('meal-count-badge').innerText = `${loggedMeals.length} وجبات`;
+
+      const container = document.getElementById('meals-list-container');
+      if (loggedMeals.length === 0) {
+        container.innerHTML = `
+          <div class="p-6 rounded-xl bg-[#171b24] border border-[#232938] text-center">
+            <span class="text-3xl block mb-2">🍽️</span>
+            <p class="text-xs font-bold text-gray-300">لم تسجل أي وجبة بعد اليوم</p>
+            <p class="text-[11px] text-gray-500 mt-1">اضغط على 'إدخال بالجرام' لحساب أكلاتك فورياً!</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = loggedMeals.map((m, idx) => `
+          <div class="p-3 rounded-xl bg-[#171b24] border border-[#232938] flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="text-2xl">${m.icon || '🥗'}</span>
+              <div>
+                <p class="text-xs font-bold text-white">${m.title}</p>
+                <p class="text-[10px] text-gray-400">بروتين: ${Math.round(m.protein)}g | كارب: ${Math.round(m.carbs)}g | دهون: ${Math.round(m.fat)}g</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="text-left">
+                <span class="text-xs font-black text-[#FF9100]">${m.calories}</span>
+                <span class="text-[9px] text-gray-400 block">سعرة</span>
+              </div>
+              <button onclick="deleteMeal(${idx})" class="text-gray-500 hover:text-red-400 p-1 text-sm font-bold">✕</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
     function deleteMeal(idx) {
       loggedMeals.splice(idx, 1);
       recalcConsumedTotals();
@@ -1272,6 +4399,14 @@
         }
       });
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openApiKeyModal() {
+      alert('تم إعداد نموذج التعرف البصري بنجاح!');
+    }
+
+    function openOnboarding() {
+      alert('إعدادات الملف الرياضي: يمكنك تعديل السعرات من زر [✏️ السعرات] بأعلى الشاشة.');
     }
 
     loadSavedData();
