@@ -701,7 +701,7 @@
     // Workout Programs Data with Detailed Illustrated Form Guides
     const workoutPrograms = {
   "ppl": {
-    "nameAr": "Push-Pull-Legs (6 أيام)",
+    "nameAr": "Push-Pull-Legs (6 أيام مكثف)",
     "days": {
       "sat": {
         "isRest": true,
@@ -710,7 +710,7 @@
       },
       "sun": {
         "isRest": false,
-        "focus": "يوم الدفع A (صدر مستوي، كتف أمامي/جانبي، ترايسبس) 🏋️‍♂️",
+        "focus": "يوم الدفع A (تركيز صدر مستوي، كتف أمامي/جانبي، وترايسبس) 🏋️‍♂️",
         "exercises": [
           {
             "id": "ppl_1",
@@ -721,132 +721,210 @@
             "reps": "8-10",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
-            "technique": "تثبيت لوحي الكتف للخلف والأسفل بقوة على المقعد، مع قوس طبيعي بأسفل الظهر وثبات القدمين بالأرض. النزول بالبار بتحكم حتى ملامسة منتصف عظمة القص ثم الدفع بانفجار للأعلى.",
-            "breathing": "شهيق عميق أثناء نزول البار ببطء (3 ثوان)، وزفير قوي عند الدفع للأعلى.",
-            "mistakes": "فرد الكوعين للخارج بزاوية 90 درجة مع الجسم (يسبب تمزق أوتار الكتف)، أو رفع المؤخرة عن المقعد."
+            "technique": "تثبيت لوحي الكتف للخلف، قوس طبيعي أسفل الظهر، نزول البار لمنتصف الصدر ودفع انفجاري.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "فرد الكوعين 90 درجة مع الجسم."
           },
           {
             "id": "ppl_2",
             "name": "تجميع دمبلز مائل عالي (Incline Dumbbell Press)",
             "muscle": "الصدر العلوي",
             "icon": "💪",
-            "sets": 3,
+            "sets": 4,
             "reps": "10-12",
             "rest": 75,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
-            "technique": "اضبط زاوية المقعد على 30 إلى 45 درجة فقط. انزل بالدمبلز بتحكم حتى تشعر بتمدد ألياف الصدر العلوية ثم ادفع للأعلى دون ارتطام الأوزان ببعضها.",
-            "breathing": "شهيق عند النزول، وزفير عند الدفع والضغط في قمة الحركة.",
-            "mistakes": "رفع المقعد لزاوية 60 درجة مما ينقل الجهد بالكامل إلى الكتف بدلاً من الصدر."
+            "technique": "زاوية مقعد 30 درجة، نزول محكوم حتى تمدد الصدر العلوي ودفع للأعلى دون اصطدام الأوزان.",
+            "breathing": "شهيق عند النزول وزفير عند الدفع.",
+            "mistakes": "رفع زاوية المقعد لأكثر من 45 درجة."
           },
           {
             "id": "ppl_3",
+            "name": "ضغط صدر بالدمبلز مستوي (Flat DB Press)",
+            "muscle": "عضلات الصدر بمدى حركي عميق",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-bench-press.gif",
+            "technique": "نزول عميق لزيادة استطالة الألياف العضلية مع دفع قوي واعتصار الصدر في القمة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "السرعة غير المحكومة في النزول."
+          },
+          {
+            "id": "ppl_4",
+            "name": "تفتيح كيبل كروس أوفر (Cable Crossover)",
+            "muscle": "عزل وتحديد ألياف الصدر الداخلية",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/cable-standing-up-straight-crossovers.gif",
+            "technique": "ثني خفيف بالكوعين، ضم اليدين كأنك تحتضن شجرة مع عصر الصدر لثانيتين.",
+            "breathing": "زفير عند الضم وشهيق عند الفتح.",
+            "mistakes": "ثني ومد الكوعين أثناء التمرين."
+          },
+          {
+            "id": "ppl_5",
             "name": "رفرفة جانبية بالدمبلز (Dumbbell Lateral Raises)",
-            "muscle": "عضلة الكتف الجانبي (عرض الكتف)",
+            "muscle": "الكتف الجانبي (عرض الكتف)",
             "icon": "🦅",
             "sets": 4,
             "reps": "12-15",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
-            "technique": "ميل طفيف بالجذع للأمام وثني بسيط بالكوعين. ارفع الدمبلز باستخدام الكتف الجانبي فقط حتى موازاة الكتف مع قيادة الحركة بالكوع.",
-            "breathing": "زفير عند الرفع، وشهيق عند النزول البطيء والمحكوم.",
-            "mistakes": "أرجحة الجذع واستخدام عزم الظهر لرفع الأوزان الثقيلة، أو رفع الذراعين أعلى من مستوى الأذن."
+            "technique": "ميل طفيف للأمام، رفع الدمبلز بالكوع حتى موازاة الكتف دون أرجحة بالظهر.",
+            "breathing": "زفير عند الرفع وشهيق نزولاً.",
+            "mistakes": "استخدام وزن ثقيل والمرجحة."
           },
           {
-            "id": "ppl_4",
+            "id": "ppl_6",
             "name": "دفع ترايسبس بالحبل على الكيبل (Cable Rope Pushdown)",
-            "muscle": "الترايسبس (الرأس الجانبي والطويل)",
+            "muscle": "الترايسبس (الرأس الجانبي)",
             "icon": "🦾",
-            "sets": 3,
+            "sets": 4,
             "reps": "12-15",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/cable-pushdown-with-rope-attachment.gif",
-            "technique": "تثبيت الكوعين بجانب الأضلاع بإحكام. ادفع الحبل لأسفل وافتحه للخارج في نهاية المدى الحركي مع اعتصار الترايسبس لثانية كاملة.",
-            "breathing": "زفير عند الفرد لأسفل، وشهيق عند عودة الساعدين للأعلى.",
-            "mistakes": "تحريك الكوعين للأمام وللخلف أثناء الدفع مما ينقل الحمل للظهر والأكتاف."
+            "technique": "تثبيت الكوعين بجانب الأضلاع، فتح الحبل للخارج في الأسفل واعتصار الترايسبس.",
+            "breathing": "زفير عند الدفع وشهيق عند الرجوع.",
+            "mistakes": "تحريك الكوعين للأمام وللخلف."
           },
           {
-            "id": "ppl_5",
-            "name": "غطس متوازي بالوزن أو حر (Chest Dips)",
+            "id": "ppl_7",
+            "name": "كسارة جمجمة بالبار المتعرج (Skull Crushers)",
+            "muscle": "الترايسبس (الرأس الطويل)",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/barbell-lying-triceps-extension-skull-crusher.gif",
+            "technique": "ثبات الكوعين موجهين للأعلى، النزول بالبار نحو الجبهة بحذر ودفع للأعلى.",
+            "breathing": "شهيق عند النزول وزفير عند الفرد.",
+            "mistakes": "فتح الكوعين للخارج بشدة."
+          },
+          {
+            "id": "ppl_8",
+            "name": "غطس متوازي للصدر والتراي (Chest Dips)",
             "muscle": "الصدر السفلي والترايسبس",
             "icon": "🏋️‍♂️",
             "sets": 3,
             "reps": "8-12",
             "rest": 75,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/chest-dip.gif",
-            "technique": "ميل بالجذع للأمام 30 درجة لتوجيه الحمل على عضلات الصدر. انزل حتى تصبح زاوية الكوع 90 درجة ثم ادفع للأعلى بقوة.",
-            "breathing": "شهيق أثناء النزول، وزفير عند الصعود.",
-            "mistakes": "النزول المفرط للأسفل جداً مما يعرض مفصل الكتف لخطر الإصابة."
+            "technique": "ميل 30 درجة للأمام، النزول حتى زاوية 90 بالكوع ودفع للأعلى بقوة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "النزول المفرط للأسفل."
           }
         ]
       },
       "mon": {
         "isRest": false,
-        "focus": "يوم السحب A (عضلات الظهر، البايسبس، الكتف الخلفي) 🧗‍♂️",
+        "focus": "يوم السحب A (عضلات الظهر، البايسبس، والكتف الخلفي) 🧗‍♂️",
         "exercises": [
           {
-            "id": "ppl_6",
+            "id": "ppl_9",
             "name": "سحب بار حر منحني (Bent-Over Barbell Row)",
-            "muscle": "سماكة الظهر والترابيز واللاتس",
+            "muscle": "سماكة منتصف الظهر والترابيز",
             "icon": "🏋️‍♂️",
             "sets": 4,
             "reps": "8-10",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/barbell-bent-over-row.gif",
-            "technique": "ميل الجذع 45 درجة مع ثبات واستقامة العمود الفقري وثني خفيف بالركبتين. اسحب البار باتجاه السرة مع اعتصار لوحي الظهر في القمة.",
-            "breathing": "شهيق عند النزول، وزفير قوي وانفجاري عند سحب البار نحو البطن.",
-            "mistakes": "تقوس أسفل الظهر أو رفع الجذع رأسياً أثناء الرفع."
+            "technique": "ميل الجذع 45 درجة مع استقامة العمود الفقري التامة، سحب البار نحو السرة واعتصار الظهر.",
+            "breathing": "شهيق نزولاً وزفير عند السحب.",
+            "mistakes": "تقوس أسفل الظهر."
           },
           {
-            "id": "ppl_7",
-            "name": "سحب أمامي عالي بالكيبل (Lat Pulldown)",
+            "id": "ppl_10",
+            "name": "سحب أمامي عالي واسع بالكيبل (Lat Pulldown)",
             "muscle": "عضلات اللاتس (عرض شكل V بالظهر)",
             "icon": "🧗‍♂️",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-lat-pulldown-full-range-of-motion.gif",
-            "technique": "قبضة أعرض من الكتفين بقليل، صدر مرفوع للأعلى، اسحب المقبض لأسفل حتى أعلى عظمة الصدر مع تركيز السحب من الكوعين.",
-            "breathing": "زفير عند سحب المقبض لأسفل، وشهيق أثناء العودة البطيئة للأعلى.",
-            "mistakes": "سحب البار خلف الرقبة أو المرجحة المفرطة للخلف بالجذع."
+            "technique": "سحب البار باتجاه أعلى الصدر مع إرجاع الكتفين للخلف وثبات الجذع.",
+            "breathing": "زفير سحباً وشهيق عند الصعود.",
+            "mistakes": "سحب البار خلف الرقبة."
           },
           {
-            "id": "ppl_8",
-            "name": "سحب وجه بالكيبل بالحبل (Cable Face Pulls)",
-            "muscle": "الكتف الخلفي والترابيز وتصحيح انحناء القوام",
+            "id": "ppl_11",
+            "name": "سحب أرضي بالكيبل جالس (Seated Cable Row)",
+            "muscle": "عضلات الظهر السفلية واللاتس",
+            "icon": "🚣‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
+            "technique": "استقامة الظهر مع ثني الركبتين خفيفاً، سحب المقبض لأسفل البطن واعتصار اللاتس.",
+            "breathing": "زفير عند السحب وشهيق عند الإرجاع.",
+            "mistakes": "الميل الشديد للأمام والخلف."
+          },
+          {
+            "id": "ppl_12",
+            "name": "منشار ظهر بالدمبل فردي (Single-Arm DB Row)",
+            "muscle": "اللاتس المعزول وجانبي الظهر",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/dumbbell-one-arm-bent-over-row.gif",
+            "technique": "استواء الظهر وسحب الدمبل في مسار مقوس نحو الحوض بقيادة الكوع.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "لف الجذع بشكل مبالغ فيه للأعلى."
+          },
+          {
+            "id": "ppl_13",
+            "name": "سحب وجه بالكيبل بالحبل (Face Pulls)",
+            "muscle": "الكتف الخلفي والترابيز وتصحيح القوام",
             "icon": "🎯",
             "sets": 4,
             "reps": "12-15",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-rear-delt-row-with-rope.gif",
-            "technique": "اضبط البكرة عند مستوى الوجه، اسحب الحبل نحو عينيك وافصل يديك للخارج مع اعتصار الكتف الخلفي وتدوير الكتف خارجياً.",
-            "breathing": "زفير عند السحب للخلف، وشهيق عند العودة للأمام.",
-            "mistakes": "استخدام وزن ثقيل وسحب الحبل نحو البطن بدلاً من مستوى العينين."
+            "technique": "سحب الحبل نحو مستوى العينين وفصل اليدين للخارج مع تدوير الكتف خارجياً.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "استخدام وزن ثقيل وسحب الحبل نحو البطن."
           },
           {
-            "id": "ppl_9",
-            "name": "تبادل بايسبس بالدمبلز واقفاً (Dumbbell Biceps Curls)",
+            "id": "ppl_14",
+            "name": "تبادل بايسبس بالدمبلز واقفاً (Dumbbell Curls)",
             "muscle": "عضلة البايسبس ذروة الذراع",
             "icon": "💪",
-            "sets": 3,
+            "sets": 4,
             "reps": "10-12",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-alternate-biceps-curl.gif",
-            "technique": "ثبت الكوعين بجانب الجذع تماماً. ارفع الدمبل مع تدوير المعصم للخارج في الثلث الأخير للحصول على أقصى انقباض لعضلة البايسبس.",
-            "breathing": "زفير عند الرفع والاعتصار، وشهيق في النزول السلبي البطيء (3 ثوان).",
-            "mistakes": "أرجحة الظهر أو تحريك الكوعين للأمام لتسهيل الحركة."
+            "technique": "ثبات الكوعين بجانب الجذع، رفع الدمبل مع تدوير المعصم للخارج في الأعلى وعصر الباي.",
+            "breathing": "زفير رفعاً وشهيق نزولاً محكوماً.",
+            "mistakes": "أرجحة الجسم لرفع الوزن."
           },
           {
-            "id": "ppl_10",
-            "name": "شاكوش بالدمبلز (Hammer Curls)",
+            "id": "ppl_15",
+            "name": "شاكوش بالدمبلز (Dumbbell Hammer Curls)",
             "muscle": "عضلة البراكيس (عرض الذراع) والساعدين",
             "icon": "🔨",
             "sets": 3,
             "reps": "10-12",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
-            "technique": "قبضة محايدة (الكفان يواجهان بعضهما)، ارفع الدمبلز بثبات دون تدوير المعصم واعتصر العضلة في القمة.",
-            "breathing": "زفير أثناء الرفع، وشهيق أثناء النزول.",
-            "mistakes": "الرفع السريع غير المحكوم."
+            "technique": "قبضة محايدة، رفع الدمبلز بثبات دون تدوير المعصم واعتصار في القمة.",
+            "breathing": "زفير عند الرفع وشهيق نزولاً.",
+            "mistakes": "السرعة غير المحكومة."
+          },
+          {
+            "id": "ppl_16",
+            "name": "سحب ترابيز بالدمبلز (Dumbbell Shrugs)",
+            "muscle": "عضلات الترابيز العلوية والرقبة",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/dumbbell-shrug.gif",
+            "technique": "رفع الكتفين للأعلى رأساً نحو الأذنين والثبات لثانيتين ثم النزول ببطء.",
+            "breathing": "زفير في القمة وشهيق نزولاً.",
+            "mistakes": "تدوير الكتفين في حركة دائرية."
           }
         ]
       },
@@ -855,7 +933,7 @@
         "focus": "يوم الأرجل A (تركيز فخذ أمامي سكوات وكوادز وبطات) 🦵",
         "exercises": [
           {
-            "id": "ppl_11",
+            "id": "ppl_17",
             "name": "سكوات بالبار حر خلفي (Barbell Back Squat)",
             "muscle": "الكوادز، الفخذ الخلفي، والألوية",
             "icon": "🏋️‍♂️",
@@ -863,177 +941,320 @@
             "reps": "8-10",
             "rest": 120,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-full-squat.gif",
-            "technique": "البار مستقر على عضلات الترابيز العلوية، الأقدام باتساع الكتفين ومائلة 15 درجة للخارج. انزل بالحوض للخلف والأسفل حتى موازاة الفخذين للأرض.",
-            "breathing": "أخذ نفس عميق وحبسه (مناورة فالسافا) لتثبيت العمود الفقري أثناء النزول، وزفير عند الصعود.",
-            "mistakes": "انهيار الركبتين للداخل، أو رفع الكعبين عن الأرض."
+            "technique": "نزول متوازن بالحوض للخلف والأسفل حتى موازاة الفخذين للأرض ودفع بالكعبين.",
+            "breathing": "مناورة فالسافا نزولاً وزفير عند الصعود.",
+            "mistakes": "انهيار الركبتين للداخل."
           },
           {
-            "id": "ppl_12",
-            "name": "ديدلفت روماني بالدمبلز (Romanian Deadlift)",
-            "muscle": "أوتار الفخذ الخلفية (Hamstrings) والألوية",
-            "icon": "🦵",
-            "sets": 3,
-            "reps": "10-12",
-            "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
-            "technique": "انثناء بسيط وثابت بالركبتين، إرجاع الحوض للخلف كأنك تدفع باباً بمؤخرتك مع استقامة الظهر التامة حتى تشعر بتمدد الفخذ الخلفي.",
-            "breathing": "شهيق عند النزول، وزفير عند الدفع بالحوض للأمام في القمة.",
-            "mistakes": "تقوس أسفل الظهر أو ثني الركبتين بشكل زائد كالسكوات."
-          },
-          {
-            "id": "ppl_13",
-            "name": "دفع أرجل على الجهاز (Leg Press)",
+            "id": "ppl_18",
+            "name": "دفع أرجل على الجهاز (Sled 45 Leg Press)",
             "muscle": "الفخذ الأمامي والكوادز",
             "icon": "🦵",
             "sets": 4,
             "reps": "10-12",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
-            "technique": "الأقدام في منتصف المنصة باتساع الحوض. انزل بالوزن حتى زاوية 90 درجة بالركبة دون رفع أسفل الظهر عن المسند، ثم ادفع دون قفل المفصل.",
-            "breathing": "شهيق عند النزول، وزفير قوي عند الدفع للأعلى.",
-            "mistakes": "قفل الركبتين بقوة في الأعلى (خطر شديد على مفصل الركبة)."
+            "technique": "نزول حتى 90 درجة بالركبة مع ثبات الحوض، ثم دفع دون قفل مفصل الركبة.",
+            "breathing": "شهيق نزولاً وزفير قوي دفعاً.",
+            "mistakes": "قفل الركبتين بقوة في الأعلى."
           },
           {
-            "id": "ppl_14",
-            "name": "رفع بطات واقفاً على الجهاز (Standing Calf Raises)",
-            "muscle": "عضلات الساقين والسمانة (Calves)",
-            "icon": "🦶",
+            "id": "ppl_19",
+            "name": "ديدلفت روماني بالبار أو الدمبلز (RDL)",
+            "muscle": "أوتار الفخذ الخلفية (Hamstrings) والألوية",
+            "icon": "🦵",
             "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
+            "technique": "إرجاع الحوض للخلف واستقامة الظهر لتمديد الفخذ الخلفي بالكامل.",
+            "breathing": "شهيق عند النزول وزفير عند الدفع بالحوض.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "ppl_20",
+            "name": "سكوات بلغاري بالدمبلز (Bulgarian Split Squat)",
+            "muscle": "عزل الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12 لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
+            "technique": "قدم مستندة للخلف على المقعد ونزول عميق بالركبة بزاوية 90 درجة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل الزائد للأمام."
+          },
+          {
+            "id": "ppl_21",
+            "name": "رفرفة أرجل أمامية على الجهاز (Leg Extensions)",
+            "muscle": "عزل وتحديد عضلات الكوادز",
+            "icon": "🦵",
+            "sets": 3,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
-            "technique": "النزول الكامل بكعبي القدمين لأسفل المنصة للحصول على تمدد كامل للسمانة، ثم الصعود لأعلى نقطة ممكنة مع الثبات ثانية كاملة.",
-            "breathing": "شهيق عند النزول، وزفير عند الارتفاع لأعلى.",
-            "mistakes": "الارتداد السريع دون توقف واستخدام عزم وتر أخيليس."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/lever-leg-extension.gif",
+            "technique": "فرد الساقين بالكامل واعتصار الكوادز في القمة لثانية ثم النزول ببطء.",
+            "breathing": "زفير عند الفرد وشهيق نزولاً.",
+            "mistakes": "الرفع السريع بالنتر المفاجئ."
           },
           {
-            "id": "ppl_15",
+            "id": "ppl_22",
+            "name": "ثني أرجل خلفي على الجهاز (Lying Leg Curls)",
+            "muscle": "عزل أوتار الفخذ الخلفية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-lying-leg-curl.gif",
+            "technique": "ثبات الحوض على المسند، ثني الساقين للأعلى واعتصار الهامسترينغ.",
+            "breathing": "زفير عند الثني وشهيق عند النزول.",
+            "mistakes": "رفع الحوض عن المقعد."
+          },
+          {
+            "id": "ppl_23",
+            "name": "رفع بطات واقفاً (Standing Calf Raises)",
+            "muscle": "عضلات السمانة (Calves)",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
+            "technique": "مدى حركي كامل بنزول الكعبين وصعود لأعلى نقطة مع ثبات ثانية.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "الارتداد السريع دون توقف."
+          },
+          {
+            "id": "ppl_24",
             "name": "رفع أرجل معلق على العقلة (Hanging Leg Raises)",
             "muscle": "عضلات البطن السفلية والجذع",
             "icon": "⚡",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/pull-up.gif",
-            "technique": "تعلق بالعقلة بقبضة محكمة، ارفع الركبتين أو الأرجل المستقيمة باتجاه الصدر مع لف الحوض للأعلى لعصر عضلات البطن.",
-            "breathing": "زفير عند الرفع، وشهيق عند النزول البطيء.",
-            "mistakes": "مرجحة الجسم بالكامل بدلاً من رفع الأرجل بقوة البطن."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "رفع الأرجل باتجاه الصدر مع لف الحوض للأعلى لعصر عضلات البطن.",
+            "breathing": "زفير عند الرفع وشهيق نزولاً.",
+            "mistakes": "أرجحة الجسم بالكامل."
           }
         ]
       },
       "wed": {
         "isRest": false,
-        "focus": "يوم الدفع B (تركيز أكتاف عليا، تفتيح صدر، وترايسبس) ⚡",
+        "focus": "يوم الدفع B (تركيز أكتاف عليا، صدر علوي، وترايسبس) ⚡",
         "exercises": [
           {
-            "id": "ppl_16",
-            "name": "ضغط أكتاف عسكري بالبار واقفاً (Overhead Barbell Press)",
-            "muscle": "الأكتاف الأمامية والجذع وقوة الدفع الرأسية",
+            "id": "ppl_25",
+            "name": "ضغط أكتاف عسكري بالبار واقفاً (Overhead Press)",
+            "muscle": "الأكتاف الأمامية وقوة الدفع الرأسية",
             "icon": "🏋️‍♂️",
             "sets": 4,
             "reps": "8-10",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/barbell-standing-close-grip-military-press.gif",
-            "technique": "شد عضلات البطن والمؤخرة بإحكام لحماية أسفل الظهر. ادفع البار في مسار رأسي مستقيم فوق الرأس مع إرجاع الرأس قليلاً عند مرور البار.",
-            "breathing": "شهيق قبل الدفع، وزفير عند اكتمال فرد الذراعين في القمة.",
-            "mistakes": "تقوس مفرط في أسفل الظهر لتعويض ضعف قوة الكتف."
+            "technique": "شد البطن والمؤخرة لحماية الظهر، دفع البار رأسياً مستقيماً فوق الرأس.",
+            "breathing": "شهيق قبل الدفع وزفير في القمة.",
+            "mistakes": "تقوس مفرط في أسفل الظهر."
           },
           {
-            "id": "ppl_17",
-            "name": "بنش برس بالدمبلز مستوي (Flat Dumbbell Press)",
-            "muscle": "عضلات الصدر مع مدى حركي واسع",
+            "id": "ppl_26",
+            "name": "تجميع دمبلز مائل عالي (Incline DB Press)",
+            "muscle": "الصدر العلوي",
             "icon": "💪",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
-            "technique": "نزول عميق ومحكوم بالدمبلز للحصول على أقصى تمدد عضلي للصدر، ثم دفع الذراعين للأعلى واعتصار الألياف الصدرية.",
-            "breathing": "شهيق عند النزول، وزفير عند الدفع.",
-            "mistakes": "اصطدام الدمبلز ببعضها في الأعلى وفقدان التوتر العضلي."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
+            "technique": "زاوية مقعد 30 درجة، نزول محكوم ودفع للأعلى مع عصر الصدر العلوي.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد للأعلى بشدة."
           },
           {
-            "id": "ppl_18",
-            "name": "تفتيح كيبل كروس أوفر (Cable Crossover Flyes)",
-            "muscle": "فصل وتحديد عضلات الصدر والألياف الداخلية",
+            "id": "ppl_27",
+            "name": "بنش برس بالبار مستوي (Flat Bench Press)",
+            "muscle": "الصدر الأوسط والأمامي",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
+            "technique": "ثبات القدمين وسحب الكتفين للخلف والنزول لمنتصف الصدر.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع الحوض عن المقعد."
+          },
+          {
+            "id": "ppl_28",
+            "name": "رفرفة جانبية بالكيبل فردي (Cable Lateral Raise)",
+            "muscle": "عزل وتدوير الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-lateral-raise.gif",
+            "technique": "سحب الكيبل جانباً بقيادة الكوع للحفاظ على مقاومة مستمرة طوال المدى.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "أرجحة الجذع."
+          },
+          {
+            "id": "ppl_29",
+            "name": "رفرفة أمامية بالدمبلز (Front Dumbbell Raises)",
+            "muscle": "الكتف الأمامي",
             "icon": "🦅",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/cable-standing-up-straight-crossovers.gif",
-            "technique": "خطوة للأمام بثبات، ثني بسيط بالكوعين. اضم الذراعين للأمام كأنك تحتضن شجرة كبيرة مع اعتصار الصدر لثانيتين.",
-            "breathing": "زفير عند الضم، وشهيق عند الفتح والتمدد للخارج.",
-            "mistakes": "ثني ومد الكوعين أثناء الحركة وتحويلها لتمرين دفع بدلاً من تفتيح."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/band-front-lateral-raise.gif",
+            "technique": "رفع الدمبلز للأمام حتى مستوى العينين بتحكم تام وبدون مرجحة.",
+            "breathing": "زفير عند الرفع وشهيق نزولاً.",
+            "mistakes": "الميل للخلف أثناء الرفع."
           },
           {
-            "id": "ppl_19",
-            "name": "كسارة جمجمة بالبار المتعرج (EZ-Bar Skull Crushers)",
-            "muscle": "الترايسبس (الرأس الطويل وضخامة الذراع)",
+            "id": "ppl_30",
+            "name": "دفع ترايسبس بالمسطرة للأسفل (Straight Bar Pushdown)",
+            "muscle": "الترايسبس (الرأس الجانبي)",
             "icon": "🦾",
-            "sets": 3,
-            "reps": "10-12",
+            "sets": 4,
+            "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/barbell-lying-triceps-extension-skull-crusher.gif",
-            "technique": "استلقِ على البنش مع ثبات الكوعين موجهين للأعلى. انزل بالبار باتجاه الجبهة أو خلف الرأس بتحكم ثم افرد الساعدين بقوة التراي.",
-            "breathing": "شهيق عند النزول، وزفير عند الفرد للأعلى.",
-            "mistakes": "تحريك الكوعين للجانبين أو النزول السريع المفاجئ نحو الرأس."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/cable-pushdown.gif",
+            "technique": "تثبيت الكوعين بجانب الأضلاع، دفع المسطرة لأسفل وفرد الذراعين بالكامل.",
+            "breathing": "زفير دفعاً وشهيق رجوعاً.",
+            "mistakes": "تحريك الكوعين للأمام."
+          },
+          {
+            "id": "ppl_31",
+            "name": "غطس ترايسبس على المقعد (Bench Dips)",
+            "muscle": "عضلة الترايسبس",
+            "icon": "🪑",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/bench-dip-knees-bent.gif",
+            "technique": "النزول حتى زاوية 90 درجة بالكوع ثم الدفع للأعلى بقوة التراي.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "الابتعاد الزائد عن المقعد."
+          },
+          {
+            "id": "ppl_32",
+            "name": "تمرين الضغط للأرض حتى الفشل (Push-ups Burnout)",
+            "muscle": "حرق وضخ دم نهائي للصدر والتراي",
+            "icon": "🔥",
+            "sets": 2,
+            "reps": "حتى الفشل العضلي",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/push-up.gif",
+            "technique": "استقامة الجسم التامة وأداء تكرارات سريعة ومحكومة حتى النهاية.",
+            "breathing": "تنفس سريع وعميق.",
+            "mistakes": "سقوط الحوض."
           }
         ]
       },
       "thu": {
         "isRest": false,
-        "focus": "يوم السحب B (سحب أفقي، عضلات الظهر السفلية والساعدين) 🧗‍♂️",
+        "focus": "يوم السحب B (ديدلفت، سحب أفقي، ظهر سفلي، وساعدين) 🧗‍♂️",
         "exercises": [
           {
-            "id": "ppl_20",
+            "id": "ppl_33",
+            "name": "ديدلفت كلاسيكي بالبار (Barbell Deadlift)",
+            "muscle": "سلسلة الظهر الخلفية والجسم بالكامل",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-deadlift.gif",
+            "technique": "استقامة الظهر والبار ملامس للقصبة، دفع الأرض بالقدمين وفرد الجسم بالكامل.",
+            "breathing": "حبس النفس صعوداً وزفير في القمة.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "ppl_34",
+            "name": "عقلة بوزن الجسم واسعة (Wide-Grip Pull-ups)",
+            "muscle": "عضلات اللاتس وعرض الظهر",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/pull-up.gif",
+            "technique": "سحب الجسم للأعلى حتى يمر الذقن فوق العقلة، ثم النزول السلبي الكامل.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة واستخدام القدمين."
+          },
+          {
+            "id": "ppl_35",
             "name": "سحب أرضي بالكيبل جالس (Seated Cable Row)",
-            "muscle": "منتصف الظهر وسماكة اللاتس والترابيز",
+            "muscle": "سماكة منتصف الظهر والترابيز",
             "icon": "🚣‍♂️",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
-            "technique": "استقامة الظهر مع ثني بسيط بالركبتين، اسحب المقبض لأسفل البطن مع إرجاع الكتفين واعتصار لوحي الظهر للخلف بإحكام.",
-            "breathing": "زفير عند السحب، وشهيق عند فرد الذراعين ببطء للأمام.",
-            "mistakes": "المرجحة الشديدة للأمام والخلف مع كل تكرار."
+            "technique": "سحب المقبض لأسفل البطن مع إرجاع الكتفين واعتصار لوحي الظهر.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "الميل المفرط للأمام."
           },
           {
-            "id": "ppl_21",
-            "name": "منشار ظهر بالدمبل فردي (Single-Arm Dumbbell Row)",
-            "muscle": "اللاتس المعزول وجانبي الظهر",
-            "icon": "🏋️‍♂️",
+            "id": "ppl_36",
+            "name": "سحب عالي بالكيبل قبضة معكوسة (Underhand Pulldown)",
+            "muscle": "عضلات اللاتس السفلية والبايسبس",
+            "icon": "🧗‍♂️",
             "sets": 3,
             "reps": "10-12",
             "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/dumbbell-one-arm-bent-over-row.gif",
-            "technique": "ركبة ويد على المقعد مع استواء الظهر. اسحب الدمبل في مسار مقوس باتجاه الحوض مع قيادة الحركة بالكوع وليس بالمعصم.",
-            "breathing": "زفير عند السحب، وشهيق عند النزول والتمدد.",
-            "mistakes": "لف الجذع بشكل مبالغ فيه للأعلى أثناء السحب."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-underhand-pulldown.gif",
+            "technique": "قبضة باتساع الكتفين والكفان يواجهانك، سحب البار لأسفل الصدر.",
+            "breathing": "زفير عند السحب وشهيق عند الصعود.",
+            "mistakes": "الميل للخلف بشدة."
           },
           {
-            "id": "ppl_22",
-            "name": "تبادل بايسبس مائل بالدمبلز (Incline Dumbbell Curls)",
-            "muscle": "الرأس الطويل للبايسبس في وضعية أقصى تمدد",
-            "icon": "💪",
-            "sets": 3,
-            "reps": "10-12",
-            "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-alternate-biceps-curl.gif",
-            "technique": "اجلس على مقعد مائل 45 درجة، دع ذراعيك تتدليان للأسفل بالكامل لتمديد الباي ثم ارفع الدمبلز واعتصر في القمة.",
-            "breathing": "زفير عند الرفع، وشهيق في النزول السلبي.",
-            "mistakes": "رفع الكوعين للأمام بدلاً من عزلهما للخلف."
-          },
-          {
-            "id": "ppl_23",
-            "name": "سحب ترابيز بالدمبلز (Dumbbell Shrugs)",
-            "muscle": "عضلات الترابيز العلوية وسماكة الرقبة",
+            "id": "ppl_37",
+            "name": "رفرفة خلفية بالدمبلز (Rear Delt Flyes)",
+            "muscle": "عضلات الكتف الخلفي والترابيز",
             "icon": "🦅",
             "sets": 4,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/dumbbell-shrug.gif",
-            "technique": "ارفع الكتفين للأعلى باتجاه الأذنين في مسار رأسي مستقيم، واثبت في القمة لثانيتين ثم انزل ببطء.",
-            "breathing": "زفير عند الرفع، وشهيق عند النزول.",
-            "mistakes": "تدوير الكتفين في حركة دائرية (يسبب احتكاكاً مدمراً للمفصل)."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-rear-lateral-raise.gif",
+            "technique": "الانحناء بالجذع للأمام ورفع الدمبلز للجانبين كأجنحة النسر.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "استخدام أوزان ثقيلة تمنع العزل."
+          },
+          {
+            "id": "ppl_38",
+            "name": "بايسبس بالبار واقفاً (Barbell Biceps Curl)",
+            "muscle": "عضلة البايسبس",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/barbell-curl.gif",
+            "technique": "ثبات الكوعين وعصر البايسبس في قمة الحركة مع نزول بطيء 3 ثوان.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "أرجحة الظهر للأمام وللخلف."
+          },
+          {
+            "id": "ppl_39",
+            "name": "تبادل بايسبس مائل بالدمبلز (Incline Biceps Curl)",
+            "muscle": "الرأس الطويل للبايسبس بوضعية تمدد",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/barbell-prone-incline-curl.gif",
+            "technique": "مقعد مائل 45 درجة، ذراعان متدليتان للأسفل ثم رفع واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "رفع الكوعين للأعلى."
+          },
+          {
+            "id": "ppl_40",
+            "name": "سحب ترابيز بالبار (Barbell Shrugs)",
+            "muscle": "عضلات الترابيز العلوية",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/barbell-shrug.gif",
+            "technique": "رفع الكتفين للأعلى رأساً واعتصار لثانيتين في القمة.",
+            "breathing": "زفير في الأعلى وشهيق نزولاً.",
+            "mistakes": "تدوير الكتفين."
           }
         ]
       },
@@ -1042,63 +1263,115 @@
         "focus": "يوم الأرجل B (تركيز فخذ خلفي، طعنات وألوية، وعضلات الجذع) 🦵",
         "exercises": [
           {
-            "id": "ppl_24",
-            "name": "سكوات بلغاري بالدمبلز (Bulgarian Split Squat)",
-            "muscle": "الفخذ الأمامي والخلفي والألوية بشكل معزول",
-            "icon": "🦵",
-            "sets": 3,
-            "reps": "10-12",
-            "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
-            "technique": "قدم واحدة مستندة للخلف على مقعد، انزل بالركبة الخلفية باتجاه الأرض بزاوية 90 درجة مع دفع وزن الجسم بالقدم الأمامية.",
-            "breathing": "شهيق عند النزول، وزفير عند الصعود.",
-            "mistakes": "الميل المفرط للأمام أو عدم استقرار توازن الحوض."
+            "id": "ppl_41",
+            "name": "سكوات أمامي أو خلفي عميق (Barbell Squat)",
+            "muscle": "الكوادز والألوية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 120,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-full-squat.gif",
+            "technique": "نزول عميق ومدى حركي كامل لاستهداف ألياف الفخذ.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "انهيار الركبتين."
           },
           {
-            "id": "ppl_25",
-            "name": "ثني أرجل خلفي على الجهاز (Lying Leg Curls)",
-            "muscle": "عزل أوتار الفخذ الخلفية (Hamstrings)",
+            "id": "ppl_42",
+            "name": "ديدلفت روماني بالبار (Barbell Romanian Deadlift)",
+            "muscle": "أوتار الفخذ الخلفية والألوية",
             "icon": "🦵",
             "sets": 4,
             "reps": "10-12",
-            "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-lying-leg-curl.gif",
-            "technique": "تثبيت الحوض على المسند، اثنِ الساقين للأعلى واعتصر الفخذ الخلفي في القمة ثم انزل ببطء شديد.",
-            "breathing": "زفير عند الثني للأعلى، وشهيق عند النزول.",
-            "mistakes": "رفع الحوض والظهر عن المقعد للمساعدة في الرفع."
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
+            "technique": "إرجاع الحوض للخلف واستقامة الظهر لتمديد الهامسترينغ بالكامل.",
+            "breathing": "شهيق نزولاً وزفير عند الصعود.",
+            "mistakes": "تقوس أسفل الظهر."
           },
           {
-            "id": "ppl_26",
-            "name": "رفرفة أرجل أمامية على الجهاز (Leg Extensions)",
-            "muscle": "عزل وتحديد عضلات الكوادز (الفخذ الأمامي)",
+            "id": "ppl_43",
+            "name": "طعنات مشي بالدمبلز (Walking Lunges)",
+            "muscle": "الفخذ والألوية والتوازن الحركي",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12 خطوة لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
+            "technique": "خطوات واسعة ونزول متوازن بالركبة الخلفية بزاوية 90 درجة.",
+            "breathing": "تنفس منتظم وهادئ.",
+            "mistakes": "اصطدام الركبة بالأرض بقسوة."
+          },
+          {
+            "id": "ppl_44",
+            "name": "دفع أرجل زاوية 45 (Leg Press)",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
+            "technique": "نزول حتى 90 درجة ودفع بالكعبين دون قفل المفاصل.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل مفصل الركبة."
+          },
+          {
+            "id": "ppl_45",
+            "name": "ثني أرجل جالس على الجهاز (Seated Leg Curl)",
+            "muscle": "عزل الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-seated-leg-curl.gif",
+            "technique": "ثني الساقين للأسفل واعتصار الهامسترينغ ثم العودة ببطء.",
+            "breathing": "زفير عند الثني وشهيق عند الرجوع.",
+            "mistakes": "السرعة غير المحكومة."
+          },
+          {
+            "id": "ppl_46",
+            "name": "رفرفة أرجل أمامية على الجهاز (Leg Extension)",
+            "muscle": "عزل وتحديد الكوادز",
             "icon": "🦵",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/lever-leg-extension.gif",
-            "technique": "افرد الساقين للأعلى بالكامل واثبت لثانية لعصر ألياف الكوادز ثم انزل في 3 ثوان كاملة.",
-            "breathing": "زفير عند الفرد للأعلى، وشهيق عند النزول المحكوم.",
-            "mistakes": "الرفع السريع بالنتر المفاجئ."
+            "technique": "فرد الساقين للأعلى واعتصار الكوادز في القمة لثانية.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "النتر المفاجئ."
           },
           {
-            "id": "ppl_27",
-            "name": "بلانك بطن وجذع مع ثبات (Plank Hold)",
+            "id": "ppl_47",
+            "name": "رفع بطات جالساً على الجهاز (Seated Calf Raise)",
+            "muscle": "عضلة السمانة السفلية (Soleus)",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-seated-calf-raise-1371.gif",
+            "technique": "نزول كامل وصعود لأعلى نقطة مع ثبات لثانيتين.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "الارتداد السريع."
+          },
+          {
+            "id": "ppl_48",
+            "name": "بلانك بطن وجذع مع ثبات (Front Plank)",
             "muscle": "الجدار العضلي للبطن وثبات العمود الفقري",
             "icon": "⚡",
             "sets": 3,
             "reps": "45-60 ثانية",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
-            "technique": "استقامة الجسم كخط مستقيم من الرأس حتى الكعبين، شد البطن والمؤخرة بقوة مع ثبات التنفس الهادئ.",
-            "breathing": "تنفس هادئ ومستمر من البطن والأنف.",
-            "mistakes": "سقوط الحوض للأسفل أو رفعه للأعلى كالهرم."
+            "technique": "استقامة الجسم كلوح خشب وشد البطن والمؤخرة بقوة.",
+            "breathing": "تنفس هادئ ومستمر من الأنف.",
+            "mistakes": "سقوط الحوض للأسفل."
           }
         ]
       }
     }
   },
   "bro": {
-    "nameAr": "Bro-Split (كمال الأجسام الكلاسيكي 5 أيام)",
+    "nameAr": "Bro-Split (كمال الأجسام 5 أيام - عزل كامل)",
     "days": {
       "sat": {
         "isRest": true,
@@ -1107,20 +1380,20 @@
       },
       "sun": {
         "isRest": false,
-        "focus": "يوم الصدر المدمر (Chest Day) 💥",
+        "focus": "يوم الصدر المدمر الشامل (Chest Day) 💥",
         "exercises": [
           {
             "id": "bro_1",
-            "name": "بنش برس بالبار مستوي (Flat Bench Press)",
-            "muscle": "الصدر الأوسط",
+            "name": "بنش برس بالبار مستوي (Flat Barbell Bench Press)",
+            "muscle": "الصدر الأوسط والكتلة الأساسية",
             "icon": "🏋️‍♂️",
             "sets": 4,
             "reps": "8-10",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
-            "technique": "ثبت لوحي الكتف للخلف، انزل بالبار حتى ملامسة الصدر ثم ادفع للأعلى.",
-            "breathing": "شهيق نزولاً، وزفير دفعاً.",
-            "mistakes": "فرد الكوعين على استقامة الكتف."
+            "technique": "ثبات القدمين وسحب الكتفين للخلف، نزول لمنتصف الصدر ودفع انفجاري.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "فرد الكوعين 90 درجة."
           },
           {
             "id": "bro_2",
@@ -1131,44 +1404,83 @@
             "reps": "10-12",
             "rest": 75,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
-            "technique": "زاوية مقعد 30 درجة، انزل بالدمبلز بتحكم وادفع لعصر الصدر العلوي.",
-            "breathing": "شهيق بالنزول، وزفير بالدفع.",
-            "mistakes": "رفع المقعد لدرجة عالية."
+            "technique": "زاوية مقعد 30 درجة، نزول محكوم ودفع لعصر ألياف الصدر العلوي.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد للأعلى بشدة."
           },
           {
             "id": "bro_3",
-            "name": "تفتيح كيبل كروس أوفر (Cable Flyes)",
-            "muscle": "فصل وتحديد ألياف الصدر",
-            "icon": "🦅",
+            "name": "بنش برس بالدمبلز مستوي (Flat DB Press)",
+            "muscle": "الصدر بمدى حركي واسع وعميق",
+            "icon": "🏋️‍♂️",
             "sets": 3,
-            "reps": "12-15",
-            "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/cable-standing-up-straight-crossovers.gif",
-            "technique": "اثنِ الكوعين خفيفاً، افتح ذراعيك للخارج حتى تمدد الصدر ثم اجمعهما للأمام واعصر العضلة.",
-            "breathing": "زفير عند الضم، وشهيق عند الفتح.",
-            "mistakes": "ثني ومد الكوعين أثناء الحركة."
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-bench-press.gif",
+            "technique": "نزول عميق لزيادة التمدد العضلي مع ضغط قوي في القمة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "السرعة غير المحكومة."
           },
           {
             "id": "bro_4",
+            "name": "تفتيح كيبل كروس أوفر (Cable Flyes)",
+            "muscle": "فصل وتحديد ألياف الصدر الداخلية",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/cable-standing-up-straight-crossovers.gif",
+            "technique": "ثني الكوعين خفيفاً، ضم الذراعين واعتصار الصدر لثانيتين في القمة.",
+            "breathing": "زفير عند الضم وشهيق عند الفتح.",
+            "mistakes": "ثني ومد الكوعين أثناء الحركة."
+          },
+          {
+            "id": "bro_5",
             "name": "غطس متوازي للصدر (Chest Dips)",
-            "muscle": "الصدر السفلي",
+            "muscle": "الصدر السفلي والترايسبس",
             "icon": "🏋️‍♂️",
             "sets": 3,
             "reps": "10-12",
             "rest": 75,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/chest-dip.gif",
             "technique": "ميل الجذع للأمام 30 درجة والنزول حتى 90 درجة بالركبتين.",
-            "breathing": "شهيق نزولاً، وزفير صعوداً.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
             "mistakes": "النزول المفرط للأسفل."
+          },
+          {
+            "id": "bro_6",
+            "name": "أوفر بالدمبل على المقعد (DB Pullover)",
+            "muscle": "تمدد الصدر والقفص الصدري واللاتس",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-decline-pullover.gif",
+            "technique": "تمدد عميق بالدمبل خلف الرأس مع توسيع القفص الصدري ثم الرفع لأعلى الصدر.",
+            "breathing": "شهيق عميق عند النزول وزفير صعوداً.",
+            "mistakes": "ثني الكوعين بشدة."
+          },
+          {
+            "id": "bro_7",
+            "name": "تمرين الضغط للأرض حتى الفشل (Push-ups Burnout)",
+            "muscle": "حرق وضخ دم نهائي لعضلات الصدر",
+            "icon": "🔥",
+            "sets": 2,
+            "reps": "حتى الفشل العضلي",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/push-up.gif",
+            "technique": "أداء تكرارات سريعة ونظيفة لضخ أقصى كمية دم في أنسجة الصدر.",
+            "breathing": "تنفس مستمر.",
+            "mistakes": "تقوس أسفل الظهر."
           }
         ]
       },
       "mon": {
         "isRest": false,
-        "focus": "يوم الظهر والأجنحة (Back Day) 🦅",
+        "focus": "يوم الظهر والأجنحة الشامل (Back Day) 🦅",
         "exercises": [
           {
-            "id": "bro_5",
+            "id": "bro_8",
             "name": "ديدلفت كلاسيكي بالبار (Deadlift)",
             "muscle": "الجسم بالكامل وسلسلة الظهر الخلفية",
             "icon": "🏋️‍♂️",
@@ -1176,96 +1488,77 @@
             "reps": "6-8",
             "rest": 120,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-deadlift.gif",
-            "technique": "استقامة العمود الفقري تماماً، ادفع الأرض بقدميك وافرد جسمك في خط مستقيم.",
-            "breathing": "حبس النفس عند الرفع، وزفير في القمة.",
+            "technique": "استقامة العمود الفقري تماماً، دفع الأرض بالقدمين وفرد الجسم في خط مستقيم.",
+            "breathing": "حبس النفس صعوداً وزفير في القمة.",
             "mistakes": "تقوس أسفل الظهر."
           },
           {
-            "id": "bro_6",
-            "name": "سحب أمامي عالي واسع (Lat Pulldown)",
+            "id": "bro_9",
+            "name": "عقلة بوزن الجسم واسعة (Pull-ups)",
             "muscle": "عضلات اللاتس وعرض الظهر",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/pull-up.gif",
+            "technique": "سحب الجسم للأعلى حتى يمر الذقن فوق العقلة، ثم النزول السلبي الكامل.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة واستخدام القدمين."
+          },
+          {
+            "id": "bro_10",
+            "name": "سحب أمامي عالي واسع (Lat Pulldown)",
+            "muscle": "عضلات اللاتس وعرض شكل V",
             "icon": "🧗‍♂️",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-lat-pulldown-full-range-of-motion.gif",
             "technique": "سحب البار باتجاه أعلى الصدر مع إرجاع الكتفين للخلف.",
-            "breathing": "زفير أثناء السحب، وشهيق عند الصعود.",
+            "breathing": "زفير أثناء السحب وشهيق عند الصعود.",
             "mistakes": "سحب البار خلف الرقبة."
           },
           {
-            "id": "bro_7",
+            "id": "bro_11",
             "name": "سحب بار منحني (Barbell Row)",
-            "muscle": "سماكة منتصف الظهر",
+            "muscle": "سماكة منتصف الظهر والترابيز",
             "icon": "🏋️‍♂️",
             "sets": 4,
             "reps": "8-10",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/barbell-bent-over-row.gif",
             "technique": "ميل 45 درجة وسحب البار نحو السرة مع اعتصار لوحي الكتف.",
-            "breathing": "زفير عند السحب، وشهيق عند النزول.",
+            "breathing": "زفير عند السحب وشهيق عند النزول.",
             "mistakes": "المرجحة بالجذع."
           },
           {
-            "id": "bro_8",
-            "name": "سحب أرضي بالكيبل (Cable Row)",
+            "id": "bro_12",
+            "name": "سحب أرضي بالكيبل جالس (Cable Row)",
             "muscle": "الترابيز واللاتس السفلي",
             "icon": "🚣‍♂️",
-            "sets": 3,
+            "sets": 4,
             "reps": "10-12",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
             "technique": "سحب المقبض باتجاه الحوض مع ثبات الصدر للأمام.",
-            "breathing": "زفير عند السحب، وشهيق عند الإرجاع.",
+            "breathing": "زفير عند السحب وشهيق عند الإرجاع.",
             "mistakes": "الميل المفرط للأمام."
-          }
-        ]
-      },
-      "tue": {
-        "isRest": false,
-        "focus": "يوم الأكتاف والترابيز (Shoulders & Traps) 🎯",
-        "exercises": [
+          },
           {
-            "id": "bro_9",
-            "name": "ضغط أكتاف بالدمبلز جالساً (Seated DB Shoulder Press)",
-            "muscle": "الأكتاف الأمامية والجانبية",
+            "id": "bro_13",
+            "name": "منشار ظهر بالدمبل فردي (One-Arm DB Row)",
+            "muscle": "اللاتس المعزول",
             "icon": "🏋️‍♂️",
-            "sets": 4,
-            "reps": "8-10",
-            "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-seated-shoulder-press.gif",
-            "technique": "انزل بالدمبلز لمستوى الأذن ثم ادفع للأعلى دون تلامس الأوزان.",
-            "breathing": "شهيق نزولاً، وزفير دفعاً.",
-            "mistakes": "النزول أسفل من زاوية 90 درجة بشدة."
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/dumbbell-one-arm-bent-over-row.gif",
+            "technique": "سحب الدمبل باتجاه الحوض بقيادة الكوع مع استواء الظهر.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "لف الجذع للأعلى."
           },
           {
-            "id": "bro_10",
-            "name": "رفرفة جانبية بالدمبلز (Lateral Raises)",
-            "muscle": "عرض الكتف الجانبي",
-            "icon": "🦅",
-            "sets": 4,
-            "reps": "12-15",
-            "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
-            "technique": "رفع الدمبلز باستخدام الكوع حتى موازاة الكتف.",
-            "breathing": "زفير عند الرفع، وشهيق عند النزول.",
-            "mistakes": "استخدام الأوزان الثقيلة بأرجحة."
-          },
-          {
-            "id": "bro_11",
-            "name": "سحب وجه بالكيبل (Face Pulls)",
-            "muscle": "الكتف الخلفي",
-            "icon": "🎯",
-            "sets": 4,
-            "reps": "12-15",
-            "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-rear-delt-row-with-rope.gif",
-            "technique": "سحب الحبل للعينين وفصل اليدين للخارج.",
-            "breathing": "زفير عند السحب، وشهيق عند الإرجاع.",
-            "mistakes": "النزول بالحبل لأسفل."
-          },
-          {
-            "id": "bro_12",
+            "id": "bro_14",
             "name": "سحب ترابيز بالبار (Barbell Shrugs)",
             "muscle": "عضلات الترابيز العلوية",
             "icon": "🦅",
@@ -1274,18 +1567,115 @@
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/barbell-shrug.gif",
             "technique": "رفع الكتفين للأعلى رأساً واعتصار الترابيز لثانيتين.",
-            "breathing": "زفير في الأعلى، وشهيق نزولاً.",
+            "breathing": "زفير في الأعلى وشهيق نزولاً.",
             "mistakes": "تدوير الكتفين دائرية."
+          }
+        ]
+      },
+      "tue": {
+        "isRest": false,
+        "focus": "يوم الأكتاف والترابيز الشامل (Shoulders Day) 🎯",
+        "exercises": [
+          {
+            "id": "bro_15",
+            "name": "ضغط أكتاف بالدمبلز جالساً (Seated DB Press)",
+            "muscle": "الأكتاف الأمامية والجانبية",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-seated-shoulder-press.gif",
+            "technique": "انزل بالدمبلز لمستوى الأذن ثم ادفع للأعلى دون تلامس الأوزان.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "النزول أسفل من زاوية 90 درجة بشدة."
+          },
+          {
+            "id": "bro_16",
+            "name": "ضغط أكتاف عسكري بالبار (Military Press)",
+            "muscle": "قوة الأكتاف والجذع",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/barbell-standing-close-grip-military-press.gif",
+            "technique": "دفع البار مستقيماً فوق الرأس مع شد البطن.",
+            "breathing": "زفير عند الدفع للأعلى.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "bro_17",
+            "name": "رفرفة جانبية بالدمبلز (Lateral Raises)",
+            "muscle": "عرض الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
+            "technique": "رفع الدمبلز باستخدام الكوع حتى موازاة الكتف.",
+            "breathing": "زفير عند الرفع وشهيق عند النزول.",
+            "mistakes": "استخدام الأوزان الثقيلة بأرجحة."
+          },
+          {
+            "id": "bro_18",
+            "name": "رفرفة جانبية بالكيبل (Cable Lateral Raises)",
+            "muscle": "عزل الكتف الجانبي بمقاومة مستمرة",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-lateral-raise.gif",
+            "technique": "سحب الكيبل جانباً بقيادة الكوع للحفاظ على ضغط عضلي دائم.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "الميل بالجسم."
+          },
+          {
+            "id": "bro_19",
+            "name": "سحب وجه بالكيبل (Face Pulls)",
+            "muscle": "الكتف الخلفي وتصحيح انحناء القوام",
+            "icon": "🎯",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-rear-delt-row-with-rope.gif",
+            "technique": "سحب الحبل للعينين وفصل اليدين للخارج مع اعتصار الكتف الخلفي.",
+            "breathing": "زفير عند السحب وشهيق عند الإرجاع.",
+            "mistakes": "النزول بالحبل لأسفل."
+          },
+          {
+            "id": "bro_20",
+            "name": "رفرفة خلفية بالدمبلز (Rear Delt Raises)",
+            "muscle": "عزل الكتف الخلفي",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-rear-lateral-raise.gif",
+            "technique": "انحناء الجذع للأمام ورفع الدمبلز للجانبين كأجنحة النسر.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "رفع الجذع للأعلى."
+          },
+          {
+            "id": "bro_21",
+            "name": "سحب ترابيز بالدمبلز (Dumbbell Shrugs)",
+            "muscle": "عضلات الترابيز العلوية والرقبة",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/dumbbell-shrug.gif",
+            "technique": "رفع الكتفين للأعلى رأساً واعتصار لثانيتين في القمة.",
+            "breathing": "زفير في الأعلى وشهيق نزولاً.",
+            "mistakes": "تدوير الكتفين."
           }
         ]
       },
       "wed": {
         "isRest": false,
-        "focus": "يوم الأرجل الشامل (Legs Day) 🦵",
+        "focus": "يوم الأرجل الشامل المدمر (Legs Day) 🦵",
         "exercises": [
           {
-            "id": "bro_13",
-            "name": "سكوات بالبار حر (Barbell Squat)",
+            "id": "bro_22",
+            "name": "سكوات بالبار حر عميق (Barbell Squat)",
             "muscle": "الكوادز والألوية",
             "icon": "🏋️‍♂️",
             "sets": 4,
@@ -1297,7 +1687,7 @@
             "mistakes": "رفع الكعبين."
           },
           {
-            "id": "bro_14",
+            "id": "bro_23",
             "name": "دفع أرجل على الجهاز (Leg Press)",
             "muscle": "الفخذ الأمامي",
             "icon": "🦵",
@@ -1310,11 +1700,11 @@
             "mistakes": "قفل مفصل الركبة."
           },
           {
-            "id": "bro_15",
+            "id": "bro_24",
             "name": "ديدلفت روماني بالدمبلز (RDL)",
-            "muscle": "الفخذ الخلفي",
+            "muscle": "الفخذ الخلفي والألوية",
             "icon": "🦵",
-            "sets": 3,
+            "sets": 4,
             "reps": "10-12",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
@@ -1323,7 +1713,46 @@
             "mistakes": "تقوس الظهر."
           },
           {
-            "id": "bro_16",
+            "id": "bro_25",
+            "name": "سكوات بلغاري بالدمبلز (Bulgarian Squat)",
+            "muscle": "عزل الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12 لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة بالركبة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "bro_26",
+            "name": "رفرفة أرجل أمامية على الجهاز (Leg Extension)",
+            "muscle": "عزل الكوادز",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/lever-leg-extension.gif",
+            "technique": "فرد الساقين واعتصار الكوادز في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "bro_27",
+            "name": "ثني أرجل خلفي على الجهاز (Lying Leg Curl)",
+            "muscle": "عزل أوتار الفخذ الخلفية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-lying-leg-curl.gif",
+            "technique": "ثني الساقين واعتصار الهامسترينغ في القمة.",
+            "breathing": "زفير ثنياً وشهيق نزولاً.",
+            "mistakes": "رفع الحوض."
+          },
+          {
+            "id": "bro_28",
             "name": "رفع بطات واقفاً (Standing Calf Raises)",
             "muscle": "السمانة",
             "icon": "🦶",
@@ -1334,6 +1763,19 @@
             "technique": "مدى حركي كامل وثبات في الأعلى.",
             "breathing": "تنفس منتظم.",
             "mistakes": "القفز السريع."
+          },
+          {
+            "id": "bro_29",
+            "name": "رفع أرجل معلق على العقلة (Hanging Leg Raise)",
+            "muscle": "البطن والجذع",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "رفع الأرجل مع لف الحوض للأعلى لعصر عضلات البطن.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "المرجحة."
           }
         ]
       },
@@ -1342,9 +1784,9 @@
         "focus": "يوم الأذرع الأسطوري (بايسبس + ترايسبس سوبر سيت) 💪",
         "exercises": [
           {
-            "id": "bro_17",
+            "id": "bro_30",
             "name": "بايسبس بالبار واقفاً (Barbell Curl)",
-            "muscle": "عضلة البايسبس",
+            "muscle": "عضلة البايسبس الكتلة الأساسية",
             "icon": "💪",
             "sets": 4,
             "reps": "8-10",
@@ -1355,7 +1797,33 @@
             "mistakes": "أرجحة الجسم."
           },
           {
-            "id": "bro_18",
+            "id": "bro_31",
+            "name": "دفع ترايسبس بالحبل على الكيبل (Rope Pushdown)",
+            "muscle": "الترايسبس الرأس الخارجي",
+            "icon": "🦾",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/cable-pushdown-with-rope-attachment.gif",
+            "technique": "فتح الحبل للخارج في الأسفل وعصر العضلة.",
+            "breathing": "زفير دفعاً وشهيق رجوعاً.",
+            "mistakes": "تحريك الكوعين للأمام."
+          },
+          {
+            "id": "bro_32",
+            "name": "تبادل بايسبس بالدمبلز (Dumbbell Curls)",
+            "muscle": "البايسبس بمدى حركي كامل",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-alternate-biceps-curl.gif",
+            "technique": "تدوير المعصم للخارج في الثلث الأخير واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "استخدام الظهر."
+          },
+          {
+            "id": "bro_33",
             "name": "كسارة جمجمة بالبار المتعرج (Skull Crushers)",
             "muscle": "الترايسبس الرأس الطويل",
             "icon": "🦾",
@@ -1368,7 +1836,7 @@
             "mistakes": "تحريك الكوعين."
           },
           {
-            "id": "bro_19",
+            "id": "bro_34",
             "name": "شاكوش بالدمبلز (Hammer Curls)",
             "muscle": "البراكيس والساعد",
             "icon": "🔨",
@@ -1376,22 +1844,48 @@
             "reps": "10-12",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
-            "technique": "قبضة محايدة ورفع ثابت.",
+            "technique": "قبضة محايدة ورفع ثابت واعتصار في القمة.",
             "breathing": "زفير رفعاً وشهيق نزولاً.",
             "mistakes": "السرعة غير المحكومة."
           },
           {
-            "id": "bro_20",
-            "name": "دفع ترايسبس بالحبل (Rope Pushdown)",
-            "muscle": "الترايسبس الرأس الخارجي",
+            "id": "bro_35",
+            "name": "غطس ترايسبس على المقعد (Bench Dips)",
+            "muscle": "الترايسبس بوزن الجسم",
+            "icon": "🪑",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/bench-dip-knees-bent.gif",
+            "technique": "نزول حتى 90 درجة بالكوع ودفع للأعلى بقوة التراي.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "الابتعاد الزائد عن المقعد."
+          },
+          {
+            "id": "bro_36",
+            "name": "تبادل بايسبس مائل بالدمبلز (Incline Curls)",
+            "muscle": "استطالة الرأس الطويل للبايسبس",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/barbell-prone-incline-curl.gif",
+            "technique": "مقعد مائل 45 درجة ورفع الدمبلز واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "رفع الكوعين للأعلى."
+          },
+          {
+            "id": "bro_37",
+            "name": "دفع ترايسبس بالمسطرة (Straight Bar Pushdown)",
+            "muscle": "الترايسبس إنهاء عضلي كامل",
             "icon": "🦾",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/cable-pushdown-with-rope-attachment.gif",
-            "technique": "فتح الحبل للخارج في الأسفل وعصر العضلة.",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/cable-pushdown.gif",
+            "technique": "تثبيت الكوعين بجانب الأضلاع وفرد الذراعين لأسفل بالكامل.",
             "breathing": "زفير دفعاً وشهيق رجوعاً.",
-            "mistakes": "تحريك الكوعين للأمام."
+            "mistakes": "تحريك الكوعين."
           }
         ]
       },
@@ -1403,7 +1897,7 @@
     }
   },
   "upper_lower": {
-    "nameAr": "Upper & Lower (علوي وسفلي 4 أيام)",
+    "nameAr": "Upper & Lower (علوي وسفلي 4 أيام مكثف)",
     "days": {
       "sat": {
         "isRest": true,
@@ -1424,7 +1918,7 @@
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
             "technique": "ثبات القدمين وسحب الكتفين للخلف والنزول لمنتصف الصدر.",
-            "breathing": "شهيق نزولاً، وزفير دفعاً.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
             "mistakes": "رفع الحوض عن البنش."
           },
           {
@@ -1435,15 +1929,41 @@
             "sets": 4,
             "reps": "8-10",
             "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-lat-pulldown-full-range-of-motion.gif",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/barbell-bent-over-row.gif",
             "technique": "استقامة الظهر التامة والسحب باتجاه السرة.",
             "breathing": "شهيق نزولاً وزفير عند السحب.",
             "mistakes": "تقوس الظهر."
           },
           {
             "id": "ul_3",
+            "name": "تجميع دمبلز مائل عالي",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
+            "technique": "زاوية 30 درجة ونزول محكوم ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد للأعلى."
+          },
+          {
+            "id": "ul_4",
+            "name": "سحب أمامي عالي واسع",
+            "muscle": "عضلات اللاتس",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-lat-pulldown-full-range-of-motion.gif",
+            "technique": "سحب البار لأعلى الصدر مع رجوع الكتفين.",
+            "breathing": "زفير سحباً وشهيق صعوداً.",
+            "mistakes": "المرجحة الخلفية."
+          },
+          {
+            "id": "ul_5",
             "name": "ضغط أكتاف بالدمبلز جالساً",
-            "muscle": "الكتف الأمامي",
+            "muscle": "الكتف الأمامي والجانبي",
             "icon": "🏋️‍♂️",
             "sets": 3,
             "reps": "10-12",
@@ -1454,14 +1974,27 @@
             "mistakes": "تقوس الظهر."
           },
           {
-            "id": "ul_4",
-            "name": "سوبر سيت بايسبس + ترايسبس كيبل",
-            "muscle": "الأذرع",
+            "id": "ul_6",
+            "name": "رفرفة جانبية بالدمبلز",
+            "muscle": "الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
+            "technique": "رفع بالكوع حتى موازاة الكتف.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "استخدام وزن ثقيل."
+          },
+          {
+            "id": "ul_7",
+            "name": "تبادل بايسبس + دفع ترايسبس حبل",
+            "muscle": "الأذرع سوبر سيت",
             "icon": "💪",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-alternate-biceps-curl.gif",
             "technique": "تبادل سريع بين انقباض البايسبس والترايسبس.",
             "breathing": "تنفس مستمر.",
             "mistakes": "المرجحة الحركية."
@@ -1473,7 +2006,7 @@
         "focus": "الجزء السفلي A (كوادز، أوتار، بطات، بطن) 🦵",
         "exercises": [
           {
-            "id": "ul_5",
+            "id": "ul_8",
             "name": "سكوات بالبار حر خلفي",
             "muscle": "الفخذ الأمامي والألوية",
             "icon": "🦵",
@@ -1486,7 +2019,20 @@
             "mistakes": "رفع الكعبين."
           },
           {
-            "id": "ul_6",
+            "id": "ul_9",
+            "name": "دفع أرجل على الجهاز",
+            "muscle": "الكوادز والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
+            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل الركبة."
+          },
+          {
+            "id": "ul_10",
             "name": "ديدلفت روماني بالدمبلز",
             "muscle": "الفخذ الخلفي والألوية",
             "icon": "🦵",
@@ -1499,30 +2045,56 @@
             "mistakes": "تقوس الظهر."
           },
           {
-            "id": "ul_7",
-            "name": "دفع أرجل على الجهاز",
+            "id": "ul_11",
+            "name": "سكوات بلغاري بالدمبلز",
+            "muscle": "عزل الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12 لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة بالركبة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "ul_12",
+            "name": "رفرفة أرجل أمامية على الجهاز",
             "muscle": "الكوادز",
             "icon": "🦵",
             "sets": 3,
-            "reps": "10-12",
-            "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
-            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
-            "breathing": "شهيق نزولاً وزفير دفعاً.",
-            "mistakes": "قفل الركبة."
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/lever-leg-extension.gif",
+            "technique": "فرد الساقين واعتصار الكوادز في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "السرعة."
           },
           {
-            "id": "ul_8",
-            "name": "رفع بطات واقفاً + بلانك للبطن",
-            "muscle": "السمانة والجذع",
+            "id": "ul_13",
+            "name": "رفع بطات واقفاً على الجهاز",
+            "muscle": "السمانة",
             "icon": "🦶",
             "sets": 4,
-            "reps": "15 عدة / 45ث",
+            "reps": "15-20",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
-            "technique": "عصر السمانة في القمة وشد البطن بالبلانك.",
-            "breathing": "تنفس عميق.",
-            "mistakes": "السرعة."
+            "technique": "مدى حركي كامل وثبات في الأعلى.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "القفز السريع."
+          },
+          {
+            "id": "ul_14",
+            "name": "رفع أرجل معلق للبطن",
+            "muscle": "البطن السفلية",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "رفع الأرجل مع لف الحوض للأعلى.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة."
           }
         ]
       },
@@ -1533,10 +2105,23 @@
       },
       "wed": {
         "isRest": false,
-        "focus": "الجزء العلوي B (تركيز صدر علوي، سحب عالي، وأكتاف جانبية) ⚡",
+        "focus": "الجزء العلوي B (تركيز قوة، ظهر، أكتاف، وتراي) ⚡",
         "exercises": [
           {
-            "id": "ul_9",
+            "id": "ul_15",
+            "name": "ضغط أكتاف عسكري بالبار",
+            "muscle": "الأكتاف والجذع",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/barbell-standing-close-grip-military-press.gif",
+            "technique": "دفع رأسي مستقيم فوق الرأس مع شد البطن.",
+            "breathing": "شهيق قبل الدفع وزفير في القمة.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "ul_16",
             "name": "تجميع دمبلز مائل عالي",
             "muscle": "الصدر العلوي",
             "icon": "💪",
@@ -1549,52 +2134,78 @@
             "mistakes": "رفع المقعد للأعلى بشدة."
           },
           {
-            "id": "ul_10",
-            "name": "سحب أمامي عالي بالكيبل",
-            "muscle": "اللاتس وعرض الظهر",
-            "icon": "🧗‍♂️",
+            "id": "ul_17",
+            "name": "سحب أرضي بالكيبل جالس",
+            "muscle": "سماكة الظهر",
+            "icon": "🚣‍♂️",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-lat-pulldown-full-range-of-motion.gif",
-            "technique": "سحب البار لأعلى الصدر.",
-            "breathing": "زفير سحباً وشهيق صعوداً.",
-            "mistakes": "المرجحة الخلفية."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
+            "technique": "سحب المقبض لأسفل البطن واعتصار اللاتس.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "الانحناء للأمام."
           },
           {
-            "id": "ul_11",
-            "name": "رفرفة جانبية بالدمبلز",
+            "id": "ul_18",
+            "name": "عقلة واسعة بوزن الجسم",
+            "muscle": "عرض الظهر",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/pull-up.gif",
+            "technique": "سحب الذقن فوق العقلة ونزول سلبي كامل.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة."
+          },
+          {
+            "id": "ul_19",
+            "name": "رفرفة جانبية بالكيبل",
             "muscle": "الكتف الجانبي",
             "icon": "🦅",
             "sets": 4,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
-            "technique": "قيادة الحركة بالكوع.",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-lateral-raise.gif",
+            "technique": "سحب الكيبل جانباً بقيادة الكوع.",
             "breathing": "زفير رفعاً وشهيق نزولاً.",
             "mistakes": "استخدام وزن ثقيل."
           },
           {
-            "id": "ul_12",
-            "name": "غطس متوازي + تبادل شاكوش",
-            "muscle": "الترايسبس والباي",
+            "id": "ul_20",
+            "name": "كسارة جمجمة بالبار المتعرج",
+            "muscle": "الترايسبس",
             "icon": "🦾",
             "sets": 3,
             "reps": "10-12",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/chest-dip.gif",
-            "technique": "نزول محكوم وعصر الأذرع في القمة.",
-            "breathing": "تنفس منتظم.",
-            "mistakes": "السرعة الزائدة."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/barbell-lying-triceps-extension-skull-crusher.gif",
+            "technique": "نزول البار للجبهة بحذر ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "تحريك الكوعين."
+          },
+          {
+            "id": "ul_21",
+            "name": "شاكوش بالدمبلز للباي",
+            "muscle": "الساعد والبايسبس",
+            "icon": "🔨",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
+            "technique": "قبضة محايدة ورفع ثابت واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "السرعة."
           }
         ]
       },
       "thu": {
         "isRest": false,
-        "focus": "الجزء السفلي B (ديدلفت، طعنات بلغارية، عزل فخذ) 🦵",
+        "focus": "الجزء السفلي B (ديدلفت، طعنات بلغارية، عزل فخذ وبطن) 🦵",
         "exercises": [
           {
-            "id": "ul_13",
+            "id": "ul_22",
             "name": "ديدلفت كلاسيكي بالبار",
             "muscle": "الظهر السفلي والفخذ الخلفي",
             "icon": "🏋️‍♂️",
@@ -1607,20 +2218,33 @@
             "mistakes": "تقوس أسفل الظهر."
           },
           {
-            "id": "ul_14",
-            "name": "سكوات بلغاري بالدمبلز",
+            "id": "ul_23",
+            "name": "طعنات مشي بالدمبلز",
             "muscle": "الفخذ والألوية",
             "icon": "🦵",
             "sets": 3,
-            "reps": "10-12",
+            "reps": "12 خطوة لكل ساق",
             "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
-            "technique": "قدم مستندة للخلف ونزول عميق.",
-            "breathing": "شهيق نزولاً وزفير صعوداً.",
-            "mistakes": "الميل للأمام."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
+            "technique": "خطوات ثابتة ونزول متوازن بالركبة الخلفية.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "اصطدام الركبة."
           },
           {
-            "id": "ul_15",
+            "id": "ul_24",
+            "name": "دفع أرجل على الجهاز",
+            "muscle": "الكوادز",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
+            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل مفصل الركبة."
+          },
+          {
+            "id": "ul_25",
             "name": "ثني أرجل خلفي على الجهاز",
             "muscle": "الفخذ الخلفي",
             "icon": "🦵",
@@ -1628,34 +2252,60 @@
             "reps": "12-15",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-lying-leg-curl.gif",
-            "technique": "اعتصار العضلة في القمة.",
+            "technique": "اعتصار العضلة في القمة ونزول بطيء.",
             "breathing": "زفير عند الثني وشهيق نزولاً.",
             "mistakes": "رفع الحوض."
           },
           {
-            "id": "ul_16",
-            "name": "رفع أرجل معلق للبطن",
-            "muscle": "البطن السفلية",
-            "icon": "⚡",
+            "id": "ul_26",
+            "name": "رفرفة أرجل أمامية",
+            "muscle": "الكوادز",
+            "icon": "🦵",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
-            "technique": "رفع الأرجل مع لف الحوض.",
-            "breathing": "زفير صعوداً وشهيق نزولاً.",
-            "mistakes": "المرجحة."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/lever-leg-extension.gif",
+            "technique": "فرد الساقين بالكامل واعتصار لثانية.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "النتر."
+          },
+          {
+            "id": "ul_27",
+            "name": "رفع بطات جالساً على الجهاز",
+            "muscle": "السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-seated-calf-raise-1371.gif",
+            "technique": "مدى حركي كامل وثبات في القمة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "ul_28",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "الجدار العضلي للبطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "45-60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن والمؤخرة بقوة.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الظهر."
           }
         ]
       },
       "fri": {
         "isRest": true,
-        "focus": "راحة واستشفاء تام 🧘‍♂️",
+        "focus": "راحة تامة 🧘‍♂️",
         "exercises": []
       }
     }
   },
   "full_body": {
-    "nameAr": "Full Body (شامل للجسم 3 أيام)",
+    "nameAr": "Full Body (شامل للجسم 3 أيام مكثف)",
     "days": {
       "sat": {
         "isRest": true,
@@ -1664,7 +2314,7 @@
       },
       "sun": {
         "isRest": false,
-        "focus": "فول بودي 1 (مركبات القوة: سكوات، بنش برس، سحب بار) ⚡",
+        "focus": "فول بودي 1 (مركبات القوة الشاملة) ⚡",
         "exercises": [
           {
             "id": "fb_1",
@@ -1707,6 +2357,19 @@
           },
           {
             "id": "fb_4",
+            "name": "ضغط أكتاف بالدمبلز جالساً",
+            "muscle": "الكتف الأمامي",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-seated-shoulder-press.gif",
+            "technique": "دفع الدمبلز للأعلى بتحكم.",
+            "breathing": "زفير دفعاً وشهيق نزولاً.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "fb_5",
             "name": "رفرفة جانبية بالدمبلز",
             "muscle": "الكتف الجانبي",
             "icon": "🦅",
@@ -1717,6 +2380,32 @@
             "technique": "رفع بالكوع حتى موازاة الكتف.",
             "breathing": "زفير رفعاً وشهيق نزولاً.",
             "mistakes": "الأوزان الزائدة."
+          },
+          {
+            "id": "fb_6",
+            "name": "تبادل بايسبس بالدمبلز",
+            "muscle": "البايسبس",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-alternate-biceps-curl.gif",
+            "technique": "ثبات الكوعين وتدوير المعصم في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "أرجحة الجسم."
+          },
+          {
+            "id": "fb_7",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "عضلات البطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "45-60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن بالكامل.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الحوض."
           }
         ]
       },
@@ -1727,59 +2416,98 @@
       },
       "tue": {
         "isRest": false,
-        "focus": "فول بودي 2 (ديدلفت، ضغط أكتاف، دفع أرجل، أذرع) ⚡",
+        "focus": "فول بودي 2 (ديدلفت، تجميع مائل، أكتاف، وأذرع) ⚡",
         "exercises": [
           {
-            "id": "fb_5",
-            "name": "ديدلفت روماني بالدمبلز",
-            "muscle": "الفخذ الخلفي والألوية والظهر السفلي",
+            "id": "fb_8",
+            "name": "ديدلفت كلاسيكي بالبار",
+            "muscle": "سلسلة الظهر الخلفية والأرجل",
             "icon": "🏋️‍♂️",
             "sets": 4,
-            "reps": "8-10",
-            "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
-            "technique": "استقامة العمود الفقري وإرجاع الحوض للخلف.",
-            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-deadlift.gif",
+            "technique": "استقامة العمود الفقري والبار ملامس للساقين.",
+            "breathing": "حبس النفس صعوداً وزفير في القمة.",
             "mistakes": "تقوس الظهر."
           },
           {
-            "id": "fb_6",
-            "name": "ضغط أكتاف عسكري واقفاً بالبار",
-            "muscle": "الأكتاف والجذع",
+            "id": "fb_9",
+            "name": "تجميع دمبلز مائل عالي",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
+            "technique": "زاوية 30 درجة ونزول محكوم ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد للأعلى."
+          },
+          {
+            "id": "fb_10",
+            "name": "سحب بار منحني للظهر",
+            "muscle": "سماكة منتصف الظهر",
             "icon": "🏋️‍♂️",
             "sets": 4,
             "reps": "8-10",
             "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
-            "technique": "دفع رأسي مستقيم فوق الرأس مع شد البطن.",
-            "breathing": "شهيق قبل الدفع وزفير في القمة.",
-            "mistakes": "تقوس أسفل الظهر."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/barbell-bent-over-row.gif",
+            "technique": "ميل 45 درجة وسحب البار نحو السرة.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "المرجحة بالجذع."
           },
           {
-            "id": "fb_7",
-            "name": "سحب أرضي بالكيبل جالس",
-            "muscle": "سماكة منتصف الظهر",
-            "icon": "🚣‍♂️",
-            "sets": 3,
+            "id": "fb_11",
+            "name": "دفع أرجل على الجهاز",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 4,
             "reps": "10-12",
-            "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
-            "technique": "سحب لأسفل البطن واعتصار اللاتس.",
-            "breathing": "زفير سحباً وشهيق رجوعاً.",
-            "mistakes": "الانحناء للأمام."
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
+            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل الركبة."
           },
           {
-            "id": "fb_8",
-            "name": "تبادل بايسبس + دفع ترايسبس حبل",
-            "muscle": "عضلات الذراعين",
-            "icon": "💪",
+            "id": "fb_12",
+            "name": "سحب وجه بالكيبل بالحبل",
+            "muscle": "الكتف الخلفي والترابيز",
+            "icon": "🎯",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-rear-delt-row-with-rope.gif",
+            "technique": "سحب الحبل للعينين وفصل اليدين للخارج.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "النزول بالحبل."
+          },
+          {
+            "id": "fb_13",
+            "name": "دفع ترايسبس بالحبل على الكيبل",
+            "muscle": "الترايسبس",
+            "icon": "🦾",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/cable-pushdown-with-rope-attachment.gif",
-            "technique": "عصر العضلات في نهاية كل حركة.",
+            "technique": "فتح الحبل للخارج وعصر الترايسبس في الأسفل.",
+            "breathing": "زفير دفعاً وشهيق رجوعاً.",
+            "mistakes": "تحريك الكوعين."
+          },
+          {
+            "id": "fb_14",
+            "name": "رفع بطات واقفاً على الجهاز",
+            "muscle": "السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
+            "technique": "مدى حركي كامل وثبات في الأعلى.",
             "breathing": "تنفس منتظم.",
-            "mistakes": "السرعة."
+            "mistakes": "القفز السريع."
           }
         ]
       },
@@ -1790,59 +2518,98 @@
       },
       "thu": {
         "isRest": false,
-        "focus": "فول بودي 3 (ضخامة، تجميع مائل، سكوات بلغاري، بطن) ⚡",
+        "focus": "فول بودي 3 (ضخامة، تكرارات، وعضلات الجذع) ⚡",
         "exercises": [
           {
-            "id": "fb_9",
-            "name": "تجميع دمبلز مائل عالي",
-            "muscle": "الصدر العلوي",
-            "icon": "💪",
-            "sets": 4,
-            "reps": "10-12",
-            "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
-            "technique": "زاوية 30 درجة ونزول محكوم.",
-            "breathing": "شهيق نزولاً وزفير دفعاً.",
-            "mistakes": "رفع المقعد."
-          },
-          {
-            "id": "fb_10",
+            "id": "fb_15",
             "name": "سكوات بلغاري بالدمبلز",
             "muscle": "الفخذ والألوية",
             "icon": "🦵",
             "sets": 3,
-            "reps": "10-12",
+            "reps": "10-12 لكل ساق",
             "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
-            "technique": "قدم على المقعد ونزول بزاوية 90 درجة.",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة بالركبة.",
             "breathing": "شهيق نزولاً وزفير صعوداً.",
             "mistakes": "الميل للأمام."
           },
           {
-            "id": "fb_11",
-            "name": "سحب بار منحني للظهر",
+            "id": "fb_16",
+            "name": "بنش برس بالدمبلز مستوي",
+            "muscle": "الصدر بمدى حركي عميق",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-bench-press.gif",
+            "technique": "نزول عميق لزيادة استطالة الصدر ثم دفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "fb_17",
+            "name": "سحب أرضي بالكيبل جالس",
             "muscle": "عضلات الظهر",
+            "icon": "🚣‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
+            "technique": "سحب المقبض لأسفل البطن واعتصار اللاتس.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "الانحناء للأمام."
+          },
+          {
+            "id": "fb_18",
+            "name": "ضغط أكتاف عسكري بالبار",
+            "muscle": "الأكتاف والجذع",
             "icon": "🏋️‍♂️",
             "sets": 4,
             "reps": "8-10",
             "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/barbell-bent-over-row.gif",
-            "technique": "ميل الجذع 45 درجة وسحب للسرة.",
-            "breathing": "زفير سحباً وشهيق نزولاً.",
-            "mistakes": "تقوس الظهر."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/barbell-standing-close-grip-military-press.gif",
+            "technique": "دفع رأسي مستقيم فوق الرأس مع شد البطن.",
+            "breathing": "شهيق قبل الدفع وزفير في القمة.",
+            "mistakes": "تقوس أسفل الظهر."
           },
           {
-            "id": "fb_12",
-            "name": "بلانك + رفع أرجل للبطن",
-            "muscle": "عضلات الجذع والبطن",
+            "id": "fb_19",
+            "name": "ثني أرجل خلفي على الجهاز",
+            "muscle": "الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-lying-leg-curl.gif",
+            "technique": "اعتصار الهامسترينغ في القمة ونزول بطيء.",
+            "breathing": "زفير ثنياً وشهيق نزولاً.",
+            "mistakes": "رفع الحوض."
+          },
+          {
+            "id": "fb_20",
+            "name": "شاكوش بالدمبلز للباي",
+            "muscle": "البراكيس والساعد",
+            "icon": "🔨",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
+            "technique": "قبضة محايدة ورفع ثابت واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "fb_21",
+            "name": "رفع أرجل معلق على العقلة",
+            "muscle": "البطن السفلية",
             "icon": "⚡",
             "sets": 3,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
-            "technique": "ثبات الجسم وشد البطن بالكامل.",
-            "breathing": "تنفس هادئ.",
-            "mistakes": "تقوس الحوض."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "رفع الأرجل مع لف الحوض للأعلى لعصر عضلات البطن.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة."
           }
         ]
       },
@@ -1863,7 +2630,7 @@
       },
       "sun": {
         "isRest": false,
-        "focus": "صدر وظهر سوبر سيت (Chest & Back 1) 👑",
+        "focus": "صدر وظهر سوبر سيت 1 (Chest & Back Super-set) 👑",
         "exercises": [
           {
             "id": "arn_1",
@@ -1886,13 +2653,52 @@
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
             "technique": "سوبر سيت ضخ دم متواصل للصدر العلوي وعرض الظهر.",
             "breathing": "تنفس متوازن.",
             "mistakes": "الراحة بين التمرينين."
           },
           {
             "id": "arn_3",
+            "name": "بنش برس بالدمبلز مستوي",
+            "muscle": "الصدر بمدى حركي عميق",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-bench-press.gif",
+            "technique": "نزول عميق لزيادة استطالة الصدر ثم دفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "arn_4",
+            "name": "سحب أرضي بالكيبل جالس",
+            "muscle": "سماكة منتصف الظهر",
+            "icon": "🚣‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
+            "technique": "سحب المقبض لأسفل البطن واعتصار اللاتس.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "الانحناء للأمام."
+          },
+          {
+            "id": "arn_5",
+            "name": "تفتيح كيبل كروس أوفر",
+            "muscle": "عزل الصدر",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/cable-standing-up-straight-crossovers.gif",
+            "technique": "ضم اليدين واعتصار الصدر لثانيتين في القمة.",
+            "breathing": "زفير عند الضم وشهيق عند الفتح.",
+            "mistakes": "ثني ومد الكوعين."
+          },
+          {
+            "id": "arn_6",
             "name": "أوفر بالدمبل على البنش (DB Pullover)",
             "muscle": "تمدد الصدر والقفص الصدري واللاتس",
             "icon": "🦅",
@@ -1903,15 +2709,28 @@
             "technique": "تمدد عميق بالدمبل خلف الرأس مع توسيع القفص الصدري.",
             "breathing": "شهيق عميق عند النزول، وزفير صعوداً.",
             "mistakes": "ثني الكوعين بشدة."
+          },
+          {
+            "id": "arn_7",
+            "name": "غطس متوازي للصدر (Chest Dips)",
+            "muscle": "الصدر السفلي والترايسبس",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "8-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/chest-dip.gif",
+            "technique": "ميل الجذع للأمام والنزول بزاوية 90 درجة بالكوع.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "النزول المفرط."
           }
         ]
       },
       "mon": {
         "isRest": false,
-        "focus": "أكتاف وأذرع سوبر سيت (Shoulders & Arms 1) 🦾",
+        "focus": "أكتاف وأذرع سوبر سيت 1 (Shoulders & Arms Super-set) 🦾",
         "exercises": [
           {
-            "id": "arn_4",
+            "id": "arn_8",
             "name": "ضغط أكتاف آرنولد بالدمبلز (Arnold Press)",
             "muscle": "الأكتاف بالكامل بجميع رؤوسها",
             "icon": "💪",
@@ -1924,9 +2743,9 @@
             "mistakes": "تحريك الجذع."
           },
           {
-            "id": "arn_5",
+            "id": "arn_9",
             "name": "رفرفة جانبية بالدمبلز + سحب وجه كيبل",
-            "muscle": "الكتف الجانبي والخلفي",
+            "muscle": "الكتف الجانبي والخلفي سوبر سيت",
             "icon": "🦅",
             "sets": 4,
             "reps": "12-15",
@@ -1937,7 +2756,7 @@
             "mistakes": "استخدام وزن ثقيل."
           },
           {
-            "id": "arn_6",
+            "id": "arn_10",
             "name": "بايسبس بار متعرج + كسارة جمجمة ترايسبس",
             "muscle": "عضلات الذراعين سوبر سيت",
             "icon": "🦾",
@@ -1948,15 +2767,67 @@
             "technique": "تبادل مباشر دون راحة بين الباي والتراي.",
             "breathing": "تنفس إيقاعي.",
             "mistakes": "أرجحة الكوعين."
+          },
+          {
+            "id": "arn_11",
+            "name": "شاكوش بالدمبلز + دفع ترايسبس حبل",
+            "muscle": "عرض الذراعين سوبر سيت",
+            "icon": "🔨",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
+            "technique": "عصر العضلات في نهاية كل حركة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "arn_12",
+            "name": "تبادل بايسبس مائل بالدمبلز",
+            "muscle": "الرأس الطويل للبايسبس",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/barbell-prone-incline-curl.gif",
+            "technique": "مقعد مائل 45 درجة ورفع الدمبلز واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "رفع الكوعين."
+          },
+          {
+            "id": "arn_13",
+            "name": "غطس ترايسبس على المقعد (Bench Dips)",
+            "muscle": "الترايسبس",
+            "icon": "🪑",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/bench-dip-knees-bent.gif",
+            "technique": "نزول حتى 90 درجة بالكوع ثم الدفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "الابتعاد الزائد."
+          },
+          {
+            "id": "arn_14",
+            "name": "سحب ترابيز بالدمبلز (Shrugs)",
+            "muscle": "الترابيز والرقبة",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/dumbbell-shrug.gif",
+            "technique": "رفع الكتفين للأعلى رأساً واعتصار لثانيتين.",
+            "breathing": "زفير في القمة وشهيق نزولاً.",
+            "mistakes": "تدوير الكتفين."
           }
         ]
       },
       "tue": {
         "isRest": false,
-        "focus": "أرجل وبطن (Legs & Calves 1) 🦵",
+        "focus": "أرجل وبطن 1 (Legs & Calves Volume) 🦵",
         "exercises": [
           {
-            "id": "arn_7",
+            "id": "arn_15",
             "name": "سكوات بالبار حر عميق",
             "muscle": "الكوادز والألوية",
             "icon": "🏋️‍♂️",
@@ -1969,7 +2840,20 @@
             "mistakes": "الميل للأمام."
           },
           {
-            "id": "arn_8",
+            "id": "arn_16",
+            "name": "دفع أرجل على الجهاز (Leg Press)",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
+            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل مفصل الركبة."
+          },
+          {
+            "id": "arn_17",
             "name": "ديدلفت روماني بالدمبلز",
             "muscle": "الفخذ الخلفي",
             "icon": "🦵",
@@ -1982,29 +2866,81 @@
             "mistakes": "ثني الركبتين كثيراً."
           },
           {
-            "id": "arn_9",
-            "name": "دفع أرجل + رفع بطات واقفاً",
-            "muscle": "الفخذ والسمانة",
+            "id": "arn_18",
+            "name": "سكوات بلغاري بالدمبلز",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12 لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة بالركبة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "arn_19",
+            "name": "ثني أرجل خلفي على الجهاز",
+            "muscle": "الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-lying-leg-curl.gif",
+            "technique": "ثني الساقين واعتصار الهامسترينغ في القمة.",
+            "breathing": "زفير ثنياً وشهيق نزولاً.",
+            "mistakes": "رفع الحوض."
+          },
+          {
+            "id": "arn_20",
+            "name": "رفع بطات واقفاً على الجهاز",
+            "muscle": "السمانة",
             "icon": "🦶",
             "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
+            "technique": "مدى حركي كامل وثبات في الأعلى.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "القفز السريع."
+          },
+          {
+            "id": "arn_21",
+            "name": "رفع أرجل معلق على العقلة",
+            "muscle": "البطن السفلية",
+            "icon": "⚡",
+            "sets": 3,
             "reps": "12-15",
-            "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
-            "technique": "تكرارات عالية لضخ الدم.",
-            "breathing": "تنفس مستمر.",
-            "mistakes": "قفل الركبة."
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "رفع الأرجل مع لف الحوض للأعلى.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة."
           }
         ]
       },
       "wed": {
         "isRest": false,
-        "focus": "صدر وظهر (Chest & Back 2 - تركيز زوايا مختلفة) 👑",
+        "focus": "صدر وظهر سوبر سيت 2 (Chest & Back Super-set 2) 👑",
         "exercises": [
           {
-            "id": "arn_10",
-            "name": "تجميع دمبلز مستوي + سحب أرضي بالكيبل",
-            "muscle": "الصدر والظهر",
+            "id": "arn_22",
+            "name": "تجميع دمبلز مائل عالي + عقلة واسعة",
+            "muscle": "الصدر العلوي وعرض الظهر",
             "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
+            "technique": "سوبر سيت ضخ دم متواصل للصدر العلوي واللاتس.",
+            "breathing": "تنفس متوازن.",
+            "mistakes": "الراحة بين التمرينين."
+          },
+          {
+            "id": "arn_23",
+            "name": "بنش برس بالدمبلز مستوي + سحب أرضي كيبل",
+            "muscle": "الصدر وسماكة الظهر",
+            "icon": "💪",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
@@ -2014,9 +2950,9 @@
             "mistakes": "الأوزان المفرطة."
           },
           {
-            "id": "arn_11",
-            "name": "غطس متوازي + عقلة قبضة واسعة",
-            "muscle": "الصدر السفلي واللاتس",
+            "id": "arn_24",
+            "name": "غطس متوازي + سحب بار منحني",
+            "muscle": "الصدر السفلي وسماكة الظهر",
             "icon": "🦅",
             "sets": 3,
             "reps": "8-10",
@@ -2025,77 +2961,259 @@
             "technique": "تمارين كلاسيكية بوزن الجسم لبناء كثافة عضلية أسطورية.",
             "breathing": "تنفس قوي.",
             "mistakes": "السرعة غير المحكومة."
+          },
+          {
+            "id": "arn_25",
+            "name": "تفتيح كيبل كروس أوفر",
+            "muscle": "فصل وتحديد ألياف الصدر",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/cable-standing-up-straight-crossovers.gif",
+            "technique": "ضم اليدين واعتصار الصدر لثانيتين في القمة.",
+            "breathing": "زفير عند الضم وشهيق عند الفتح.",
+            "mistakes": "ثني ومد الكوعين."
+          },
+          {
+            "id": "arn_26",
+            "name": "منشار ظهر بالدمبل فردي",
+            "muscle": "اللاتس المعزول",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/dumbbell-one-arm-bent-over-row.gif",
+            "technique": "سحب الدمبل باتجاه الحوض بقيادة الكوع مع استواء الظهر.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "لف الجذع للأعلى."
+          },
+          {
+            "id": "arn_27",
+            "name": "أوفر بالدمبل على المقعد (Pullover)",
+            "muscle": "القفص الصدري واللاتس",
+            "icon": "🦅",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-decline-pullover.gif",
+            "technique": "تمدد عميق بالدمبل خلف الرأس مع توسيع القفص الصدري.",
+            "breathing": "شهيق عميق عند النزول وزفير صعوداً.",
+            "mistakes": "ثني الكوعين بشدة."
+          },
+          {
+            "id": "arn_28",
+            "name": "تمرين الضغط للأرض حتى الفشل",
+            "muscle": "حرق وضخ دم نهائي للصدر",
+            "icon": "🔥",
+            "sets": 2,
+            "reps": "حتى الفشل",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/push-up.gif",
+            "technique": "أداء تكرارات سريعة ونظيفة لضخ أقصى كمية دم.",
+            "breathing": "تنفس مستمر.",
+            "mistakes": "سقوط الحوض."
           }
         ]
       },
       "thu": {
         "isRest": false,
-        "focus": "أكتاف وأذرع (Shoulders & Arms 2) 🦾",
+        "focus": "أكتاف وأذرع سوبر سيت 2 (Shoulders & Arms Volume) 🦾",
         "exercises": [
           {
-            "id": "arn_12",
-            "name": "ضغط أكتاف عسكري بالبار + رفرفة خلفية",
-            "muscle": "الكتف الأمامي والخلفي",
+            "id": "arn_29",
+            "name": "ضغط أكتاف عسكري بالبار واقفاً",
+            "muscle": "الأكتاف وقوة الدفع الرأسية",
             "icon": "🏋️‍♂️",
             "sets": 4,
-            "reps": "10-12",
-            "rest": 75,
+            "reps": "8-10",
+            "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/barbell-standing-close-grip-military-press.gif",
-            "technique": "دفع رأسي مستقيم مع عزل الكتف الخلفي.",
-            "breathing": "تنفس إيقاعي.",
-            "mistakes": "تقوس الظهر."
+            "technique": "دفع رأسي مستقيم فوق الرأس مع شد البطن والمؤخرة.",
+            "breathing": "شهيق قبل الدفع وزفير في القمة.",
+            "mistakes": "تقوس أسفل الظهر."
           },
           {
-            "id": "arn_13",
-            "name": "شاكوش بايسبس + دفع ترايسبس بالحبل",
-            "muscle": "الأذرع والساعدين",
-            "icon": "🦾",
+            "id": "arn_30",
+            "name": "رفرفة جانبية بالدمبلز جالساً",
+            "muscle": "عزل الكتف الجانبي",
+            "icon": "🦅",
             "sets": 4,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/cable-pushdown-with-rope-attachment.gif",
-            "technique": "عصر الترايسبس والبايسبس في قمة الحركة.",
-            "breathing": "تنفس عميق.",
-            "mistakes": "المرجحة."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
+            "technique": "الجلوس على مقعد ورفع الدمبلز بالكوع حتى موازاة الكتف.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "المرجحة بالجذع."
+          },
+          {
+            "id": "arn_31",
+            "name": "سحب وجه بالكيبل بالحبل",
+            "muscle": "الكتف الخلفي والترابيز",
+            "icon": "🎯",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-rear-delt-row-with-rope.gif",
+            "technique": "سحب الحبل للعينين وفصل اليدين للخارج.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "النزول بالحبل."
+          },
+          {
+            "id": "arn_32",
+            "name": "بايسبس بالبار واقفاً + دفع ترايسبس بالمسطرة",
+            "muscle": "الأذرع سوبر سيت",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/barbell-curl.gif",
+            "technique": "تبادل مباشر دون راحة بين الباي والتراي.",
+            "breathing": "تنفس إيقاعي.",
+            "mistakes": "أرجحة الكوعين."
+          },
+          {
+            "id": "arn_33",
+            "name": "شاكوش بالدمبلز + كسارة جمجمة ترايسبس",
+            "muscle": "عرض الذراعين سوبر سيت",
+            "icon": "🔨",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
+            "technique": "عصر العضلات في نهاية كل حركة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "arn_34",
+            "name": "تبادل بايسبس بالدمبلز واقفاً",
+            "muscle": "البايسبس",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-alternate-biceps-curl.gif",
+            "technique": "تدوير المعصم للخارج في الأعلى واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "أرجحة الجسم."
+          },
+          {
+            "id": "arn_35",
+            "name": "سحب ترابيز بالبار (Barbell Shrugs)",
+            "muscle": "عضلات الترابيز العلوية",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/barbell-shrug.gif",
+            "technique": "رفع الكتفين للأعلى رأساً واعتصار لثانيتين.",
+            "breathing": "زفير في الأعلى وشهيق نزولاً.",
+            "mistakes": "تدوير الكتفين."
           }
         ]
       },
       "fri": {
         "isRest": false,
-        "focus": "أرجل وبطات ومعدة (Legs 2) 🦵",
+        "focus": "أرجل وبطات ومعدة 2 (Legs Hypertrophy & Core) 🦵",
         "exercises": [
           {
-            "id": "arn_14",
-            "name": "دفع أرجل + ثني خلفي على الجهاز",
-            "muscle": "الفخذ الأمامي والخلفي",
+            "id": "arn_36",
+            "name": "دفع أرجل على الجهاز (Leg Press)",
+            "muscle": "الفخذ والألوية",
             "icon": "🦵",
             "sets": 4,
-            "reps": "12-15",
-            "rest": 75,
+            "reps": "10-12",
+            "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
-            "technique": "حرق دهون وضخ دم مكثف للأرجل.",
-            "breathing": "تنفس منتظم.",
-            "mistakes": "عدم إكمال المدى."
+            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل مفصل الركبة."
           },
           {
-            "id": "arn_15",
+            "id": "arn_37",
+            "name": "ديدلفت روماني بالبار",
+            "muscle": "الفخذ الخلفي والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
+            "technique": "إرجاع الحوض للخلف واستقامة الظهر لتمديد الهامسترينغ.",
+            "breathing": "شهيق نزولاً وزفير عند الصعود.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "arn_38",
             "name": "طعنات مشي بالدمبلز (Walking Lunges)",
             "muscle": "الأرجل والألوية",
             "icon": "🦵",
             "sets": 3,
-            "reps": "12 خطوة",
-            "rest": 75,
+            "reps": "12 خطوة لكل ساق",
+            "rest": 90,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
             "technique": "خطوات واسعة ونزول متوازن بالركبة الخلفية.",
             "breathing": "تنفس هادئ.",
             "mistakes": "ملامسة الركبة للأرض بقسوة."
+          },
+          {
+            "id": "arn_39",
+            "name": "سكوات كؤوس بالدمبل (Goblet Squat)",
+            "muscle": "الفخذ الأمامي والجذع",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-goblet-squat.gif",
+            "technique": "إمساك دمبل رأسي أمام الصدر ونزول سكوات عميق.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "ميل الصدر للأسفل."
+          },
+          {
+            "id": "arn_40",
+            "name": "ثني أرجل خلفي على الجهاز",
+            "muscle": "الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/lever-lying-leg-curl.gif",
+            "technique": "ثني الساقين واعتصار الهامسترينغ في القمة.",
+            "breathing": "زفير عند الثني وشهيق نزولاً.",
+            "mistakes": "رفع الحوض."
+          },
+          {
+            "id": "arn_41",
+            "name": "رفع بطات جالساً على الجهاز",
+            "muscle": "عضلة السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-seated-calf-raise-1371.gif",
+            "technique": "مدى حركي كامل وثبات لثانيتين في القمة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "arn_42",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "عضلات البطن والجذع",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "45-60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن والمؤخرة بقوة.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الظهر."
           }
         ]
       }
     }
   },
   "phul": {
-    "nameAr": "PHUL (قوة وضخامة عضلية 4 أيام)",
+    "nameAr": "PHUL (قوة وضخامة عضلية 4 أيام مكثف)",
     "days": {
       "sat": {
         "isRest": true,
@@ -2108,8 +3226,8 @@
         "exercises": [
           {
             "id": "phul_1",
-            "name": "بنش برس مستوي بالبار (أوزان ثقيلة للقوة)",
-            "muscle": "الصدر والقوة العضلية",
+            "name": "بنش برس مستوي بالبار (أوزان ثقيلة)",
+            "muscle": "الصدر وقوة الدفع الأساسية",
             "icon": "🏋️‍♂️",
             "sets": 4,
             "reps": "3-5",
@@ -2134,6 +3252,32 @@
           },
           {
             "id": "phul_3",
+            "name": "تجميع دمبلز مائل عالي",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
+            "technique": "زاوية 30 درجة ونزول محكوم ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد للأعلى."
+          },
+          {
+            "id": "phul_4",
+            "name": "سحب عالي بالكيبل واسع",
+            "muscle": "اللاتس وعرض الظهر",
+            "icon": "🧗‍♂️",
+            "sets": 4,
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-lat-pulldown-full-range-of-motion.gif",
+            "technique": "سحب البار لأعلى الصدر مع رجوع الكتفين.",
+            "breathing": "زفير سحباً وشهيق صعوداً.",
+            "mistakes": "المرجحة للخلف."
+          },
+          {
+            "id": "phul_5",
             "name": "ضغط أكتاف عسكري بالبار",
             "muscle": "قوة الأكتاف",
             "icon": "🏋️‍♂️",
@@ -2144,6 +3288,32 @@
             "technique": "دفع رأسي مستقيم مع ثبات الجذع.",
             "breathing": "زفير عند الدفع وشهيق عند النزول.",
             "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "phul_6",
+            "name": "بايسبس بالبار واقفاً (أوزان ثقيلة)",
+            "muscle": "قوة البايسبس",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "6-8",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/barbell-curl.gif",
+            "technique": "ثبات الكوعين وعصر البايسبس في قمة الحركة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "أرجحة الجسم."
+          },
+          {
+            "id": "phul_7",
+            "name": "كسارة جمجمة بالبار المتعرج",
+            "muscle": "قوة الترايسبس",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "6-8",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/barbell-lying-triceps-extension-skull-crusher.gif",
+            "technique": "النزول بالبار باتجاه الجبهة ودفع الساعدين للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "تحريك الكوعين."
           }
         ]
       },
@@ -2152,7 +3322,7 @@
         "focus": "الجزء السفلي - قوة ثقيلة (Lower Power 3-5 reps) ⚡",
         "exercises": [
           {
-            "id": "phul_4",
+            "id": "phul_8",
             "name": "سكوات خلفي بالبار (أوزان قوة ثقيلة)",
             "muscle": "قوة الكوادز والألوية",
             "icon": "🏋️‍♂️",
@@ -2165,8 +3335,8 @@
             "mistakes": "انهيار الركبتين."
           },
           {
-            "id": "phul_5",
-            "name": "ديدلفت كلاسيكي بالبار",
+            "id": "phul_9",
+            "name": "ديدلفت كلاسيكي بالبار (أوزان ثقيلة)",
             "muscle": "سلسلة الظهر الخلفية",
             "icon": "🏋️‍♂️",
             "sets": 4,
@@ -2176,6 +3346,58 @@
             "technique": "استقامة الظهر والبار ملامس للساقين.",
             "breathing": "حبس النفس صعوداً وزفير في القمة.",
             "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "phul_10",
+            "name": "دفع أرجل على الجهاز ثقيل",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
+            "technique": "نزول حتى 90 درجة ودفع دون قفل الركبة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "قفل مفصل الركبة."
+          },
+          {
+            "id": "phul_11",
+            "name": "ديدلفت روماني بالبار",
+            "muscle": "الفخذ الخلفي",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "6-8",
+            "rest": 120,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
+            "technique": "إرجاع الحوض للخلف واستقامة الظهر لتمديد الهامسترينغ.",
+            "breathing": "شهيق نزولاً وزفير عند الصعود.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "phul_12",
+            "name": "رفع بطات واقفاً على الجهاز",
+            "muscle": "قوة السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "8-10",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
+            "technique": "مدى حركي كامل وثبات في الأعلى.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "القفز السريع."
+          },
+          {
+            "id": "phul_13",
+            "name": "رفع أرجل معلق على العقلة",
+            "muscle": "البطن وقوة الجذع",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "رفع الأرجل مع لف الحوض للأعلى.",
+            "breathing": "زفير صعوداً وشهيق نزولاً.",
+            "mistakes": "المرجحة."
           }
         ]
       },
@@ -2189,8 +3411,8 @@
         "focus": "الجزء العلوي - تضخيم وحجم عضلي (Hypertrophy 8-12 reps) 💪",
         "exercises": [
           {
-            "id": "phul_6",
-            "name": "تجميع دمبلز مائل عالي",
+            "id": "phul_14",
+            "name": "تجميع دمبلز مائل عالي (ضخامة)",
             "muscle": "الصدر العلوي",
             "icon": "💪",
             "sets": 4,
@@ -2202,23 +3424,49 @@
             "mistakes": "رفع المقعد للأعلى."
           },
           {
-            "id": "phul_7",
-            "name": "سحب عالي بالكيبل + تفتيح كيبل",
-            "muscle": "اللاتس والألياف الداخلية للصدر",
+            "id": "phul_15",
+            "name": "تفتيح كيبل كروس أوفر",
+            "muscle": "فصل وتحديد ألياف الصدر",
             "icon": "🦅",
             "sets": 4,
             "reps": "10-12",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/cable-standing-up-straight-crossovers.gif",
             "technique": "عصر العضلة لثانيتين في نهاية الحركة.",
-            "breathing": "تنفس منتظم.",
-            "mistakes": "السرعة."
+            "breathing": "زفير عند الضم وشهيق عند الفتح.",
+            "mistakes": "ثني ومد الكوعين."
           },
           {
-            "id": "phul_8",
-            "name": "رفرفة جانبية دمبلز + تبادل بايسبس",
-            "muscle": "الكتف الجانبي والباي",
-            "icon": "💪",
+            "id": "phul_16",
+            "name": "سحب أرضي بالكيبل جالس",
+            "muscle": "سماكة منتصف الظهر",
+            "icon": "🚣‍♂️",
+            "sets": 4,
+            "reps": "8-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/cable-seated-row.gif",
+            "technique": "سحب المقبض لأسفل البطن واعتصار اللاتس.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "الانحناء للأمام."
+          },
+          {
+            "id": "phul_17",
+            "name": "منشار ظهر بالدمبل فردي",
+            "muscle": "اللاتس المعزول",
+            "icon": "🏋️‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/dumbbell-one-arm-bent-over-row.gif",
+            "technique": "سحب الدمبل باتجاه الحوض بقيادة الكوع مع استواء الظهر.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "لف الجذع للأعلى."
+          },
+          {
+            "id": "phul_18",
+            "name": "رفرفة جانبية بالدمبلز",
+            "muscle": "الكتف الجانبي (ضخ دم)",
+            "icon": "🦅",
             "sets": 4,
             "reps": "12-15",
             "rest": 60,
@@ -2226,6 +3474,32 @@
             "technique": "ضخ دم هائل مع تكرارات عالية.",
             "breathing": "تنفس هادئ.",
             "mistakes": "استخدام الظهر."
+          },
+          {
+            "id": "phul_19",
+            "name": "سحب وجه بالكيبل بالحبل",
+            "muscle": "الكتف الخلفي والترابيز",
+            "icon": "🎯",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/cable-rear-delt-row-with-rope.gif",
+            "technique": "سحب الحبل للعينين وفصل اليدين للخارج.",
+            "breathing": "زفير سحباً وشهيق رجوعاً.",
+            "mistakes": "النزول بالحبل."
+          },
+          {
+            "id": "phul_20",
+            "name": "شاكوش دمبلز + دفع ترايسبس حبل",
+            "muscle": "الأذرع تضخيم سوبر سيت",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
+            "technique": "عصر العضلات في نهاية كل حركة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
           }
         ]
       },
@@ -2234,30 +3508,95 @@
         "focus": "الجزء السفلي - تضخيم وعزل عضلي (Lower Hypertrophy) 🦵",
         "exercises": [
           {
-            "id": "phul_9",
-            "name": "دفع أرجل Leg Press + ديدلفت روماني",
-            "muscle": "الفخذ الأمامي والخلفي",
+            "id": "phul_21",
+            "name": "دفع أرجل تكرارات عالية",
+            "muscle": "الكوادز وضخ الدم",
             "icon": "🦵",
             "sets": 4,
             "reps": "10-12",
             "rest": 90,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/sled-45-leg-press.gif",
             "technique": "مدى حركي كامل بدون قفل المفاصل.",
             "breathing": "تنفس إيقاعي.",
             "mistakes": "قفل الركبة."
           },
           {
-            "id": "phul_10",
-            "name": "رفرفة أمامية وخلفية سوبر سيت + سمانة",
-            "muscle": "عزل الكوادز والهامسترينغ والبطات",
-            "icon": "🦶",
+            "id": "phul_22",
+            "name": "ديدلفت روماني بالدمبلز",
+            "muscle": "الفخذ الخلفي والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/hamstrings/barbell-straight-leg-deadlift.gif",
+            "technique": "إرجاع الحوض للخلف واستقامة الظهر.",
+            "breathing": "شهيق نزولاً وزفير عند الصعود.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "phul_23",
+            "name": "سكوات بلغاري بالدمبلز",
+            "muscle": "عزل الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12 لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة بالركبة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "phul_24",
+            "name": "رفرفة أمامية وخلفية سوبر سيت",
+            "muscle": "عزل الكوادز والهامسترينغ",
+            "icon": "🦵",
             "sets": 4,
             "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-full-squat.gif",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/lever-leg-extension.gif",
             "technique": "عصر العضلات في قمة الحركة.",
             "breathing": "تنفس هادئ.",
             "mistakes": "السرعة."
+          },
+          {
+            "id": "phul_25",
+            "name": "طعنات مشي بالدمبلز",
+            "muscle": "الفخذ والألوية والتوازن",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12 خطوة لكل ساق",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
+            "technique": "خطوات واسعة ونزول متوازن بالركبة الخلفية.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "ملامسة الركبة للأرض."
+          },
+          {
+            "id": "phul_26",
+            "name": "رفع بطات جالساً على الجهاز",
+            "muscle": "السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-seated-calf-raise-1371.gif",
+            "technique": "مدى حركي كامل وثبات في الأعلى.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "phul_27",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "عضلات البطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "45-60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن بالكامل.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الحوض."
           }
         ]
       },
@@ -2269,7 +3608,7 @@
     }
   },
   "home": {
-    "nameAr": "تمارين منزلية وزن الجسم (Calisthenics 4 أيام)",
+    "nameAr": "تمارين منزلية وزن الجسم (Calisthenics 4 أيام مكثف)",
     "days": {
       "sat": {
         "isRest": true,
@@ -2308,6 +3647,19 @@
           },
           {
             "id": "hm_3",
+            "name": "ضغط أرجل مرتفعة (Decline Push-ups)",
+            "muscle": "الصدر العلوي والأكتاف",
+            "icon": "🤸‍♂️",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/decline-push-up.gif",
+            "technique": "وضع القدمين على كرسي أو حافة والنزول بالصدر للأرض.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "hm_4",
             "name": "سحب خلفي تحت الطاولة (Inverted Rows)",
             "muscle": "عضلات الظهر واللاتس والبايسبس",
             "icon": "🧗‍♂️",
@@ -2318,65 +3670,9 @@
             "technique": "الاستلقاء تحت طاولة متينة، التمسك بالحافة وسحب الصدر نحو الطاولة.",
             "breathing": "زفير عند السحب وشهيق نزولاً.",
             "mistakes": "ثني الحوض."
-          }
-        ]
-      },
-      "mon": {
-        "isRest": false,
-        "focus": "أرجل وبطن بالمنزل (Lower & Core) 🦵",
-        "exercises": [
-          {
-            "id": "hm_4",
-            "name": "سكوات وزن الجسم مع ثبات (Air Squats)",
-            "muscle": "الكوادز والألوية",
-            "icon": "🦵",
-            "sets": 4,
-            "reps": "20-25",
-            "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-full-squat.gif",
-            "technique": "نزول عميق حتى زاوية 90 درجة مع ثبات ثانية في الأسفل.",
-            "breathing": "شهيق نزولاً وزفير صعوداً.",
-            "mistakes": "رفع الكعبين."
           },
           {
             "id": "hm_5",
-            "name": "طعنات الساقين متناوبة (Walking Lunges)",
-            "muscle": "الفخذ والألوية والتوازن",
-            "icon": "🦵",
-            "sets": 3,
-            "reps": "15 لكل ساق",
-            "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
-            "technique": "خطوات واسعة ونزول متوازن بالركبة الخلفية.",
-            "breathing": "تنفس منتظم.",
-            "mistakes": "اصطدام الركبة بالأرض."
-          },
-          {
-            "id": "hm_6",
-            "name": "بلانك وتويست روسي للبطن (Plank & Twists)",
-            "muscle": "عضلات البطن والجوانب",
-            "icon": "⚡",
-            "sets": 4,
-            "reps": "45 ثانية",
-            "rest": 45,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
-            "technique": "شد البطن بإحكام مع تدوير الجذع ببطء.",
-            "breathing": "تنفس هادئ.",
-            "mistakes": "تقوس الظهر."
-          }
-        ]
-      },
-      "tue": {
-        "isRest": true,
-        "focus": "راحة واستشفاء عضلي 🧘‍♂️",
-        "exercises": []
-      },
-      "wed": {
-        "isRest": false,
-        "focus": "أكتاف وترايسبس ولياقة متفجرة (Shoulders & Dips) ⚡",
-        "exercises": [
-          {
-            "id": "hm_7",
             "name": "ضغط بيك للأكتاف (Pike Push-ups)",
             "muscle": "الأكتاف الأمامية والجذع",
             "icon": "🤸‍♂️",
@@ -2389,8 +3685,8 @@
             "mistakes": "النزول السريع."
           },
           {
-            "id": "hm_8",
-            "name": "غطس ترايسبس على حافة السرير أو الكرسي (Chair Dips)",
+            "id": "hm_6",
+            "name": "غطس ترايسبس على المقعد (Chair Dips)",
             "muscle": "عضلة الترايسبس",
             "icon": "🪑",
             "sets": 4,
@@ -2400,15 +3696,177 @@
             "technique": "الكفان على الحافة، النزول حتى زاوية 90 بالكوع ودفع للأعلى.",
             "breathing": "شهيق نزولاً وزفير دفعاً.",
             "mistakes": "الابتعاد المفرط عن الكرسي."
+          },
+          {
+            "id": "hm_7",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "عضلات البطن والجذع",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "45-60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن بالكامل.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الحوض."
           }
         ]
       },
-      "thu": {
+      "mon": {
         "isRest": false,
-        "focus": "شامل لكامل الجسم وحرق دهون مكثف (Full Body HIIT) 🔥",
+        "focus": "أرجل وبطن بالمنزل (Lower Body & Core) 🦵",
         "exercises": [
           {
+            "id": "hm_8",
+            "name": "سكوات وزن الجسم مع ثبات (Air Squats)",
+            "muscle": "الكوادز والألوية",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "20-25",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/barbell-full-squat.gif",
+            "technique": "نزول عميق حتى زاوية 90 درجة مع ثبات ثانية في الأسفل.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "رفع الكعبين."
+          },
+          {
             "id": "hm_9",
+            "name": "طعنات الساقين متناوبة (Walking Lunges)",
+            "muscle": "الفخذ والألوية والتوازن",
+            "icon": "🦵",
+            "sets": 4,
+            "reps": "15 لكل ساق",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
+            "technique": "خطوات واسعة ونزول متوازن بالركبة الخلفية.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "اصطدام الركبة بالأرض."
+          },
+          {
+            "id": "hm_10",
+            "name": "قفز سكوات متفجر (Jump Squats)",
+            "muscle": "قوة الساقين والتحمل العضلي",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "15 عدة",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/jump-squat.gif",
+            "technique": "نزول سكوات كامل يليه قفزة للأعلى وهبوط ناعم على أطراف القدم.",
+            "breathing": "تنفس إيقاعي.",
+            "mistakes": "الهبوط القاسي على الكعبين."
+          },
+          {
+            "id": "hm_11",
+            "name": "سكوات بلغاري بوزن الجسم",
+            "muscle": "عزل الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12 لكل ساق",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة بالركبة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "hm_12",
+            "name": "رفع بطات على الحافة أو الدرج",
+            "muscle": "السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "20-25",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
+            "technique": "نزول الكعبين لأسفل الدرج وصعود لأعلى نقطة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "hm_13",
+            "name": "رفع أرجل مستقيمة أرضاً",
+            "muscle": "عضلات البطن السفلية",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "الاستلقاء ورفع الساقين للأعلى مع تثبيت أسفل الظهر بالأرض.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "تقوس أسفل الظهر."
+          },
+          {
+            "id": "hm_14",
+            "name": "بلانك وتويست روسي للبطن",
+            "muscle": "عضلات البطن والجوانب",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "45 ثانية",
+            "rest": 45,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "شد البطن بإحكام مع تدوير الجذع ببطء.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الظهر."
+          }
+        ]
+      },
+      "wed": {
+        "isRest": false,
+        "focus": "أكتاف وترايسبس ولياقة متفجرة (Shoulders & Dips HIIT) ⚡",
+        "exercises": [
+          {
+            "id": "hm_15",
+            "name": "ضغط بيك للأكتاف (Pike Push-ups)",
+            "muscle": "الأكتاف الأمامية والجذع",
+            "icon": "🤸‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/exercise-ball-pike-push-up.gif",
+            "technique": "رفع الحوض للأعلى كشكل رقم 8 ونزول الرأس نحو الأرض ودفع.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "النزول السريع."
+          },
+          {
+            "id": "hm_16",
+            "name": "غطس ترايسبس على حافة السرير أو الكرسي",
+            "muscle": "عضلة الترايسبس",
+            "icon": "🪑",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/bench-dip-knees-bent.gif",
+            "technique": "الكفان على الحافة، النزول حتى زاوية 90 بالكوع ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "الابتعاد المفرط عن الكرسي."
+          },
+          {
+            "id": "hm_17",
+            "name": "تمرين الضغط القياسي",
+            "muscle": "الصدر والترايسبس",
+            "icon": "🤸‍♂️",
+            "sets": 3,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/push-up.gif",
+            "technique": "استقامة الجسم كلوح خشب ودفع للأعلى بقوة.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "سقوط الحوض."
+          },
+          {
+            "id": "hm_18",
+            "name": "ضغط يدين ضيقة ماسي",
+            "muscle": "الترايسبس",
+            "icon": "💎",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/band-close-grip-push-up.gif",
+            "technique": "الكفان على شكل ماسة والنزول ببطء.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "فرد الكوعين بشدة."
+          },
+          {
+            "id": "hm_19",
             "name": "بيربيز متفجر (Burpees)",
             "muscle": "كامل الجسم واللياقة القلبية",
             "icon": "🔥",
@@ -2418,20 +3876,130 @@
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/jump-squat.gif",
             "technique": "نزول للضغط، دفع للأعلى، وقفزة متفجرة مع رفع اليدين.",
             "breathing": "تنفس سريع وعميق.",
-            "mistakes": "فقدان استقامة الظهر عند النزول."
+            "mistakes": "فقدان استقامة الظهر."
           },
           {
-            "id": "hm_10",
+            "id": "hm_20",
+            "name": "سحب خلفي تحت الطاولة",
+            "muscle": "الظهر والبايسبس",
+            "icon": "🧗‍♂️",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/barbell-bent-over-row.gif",
+            "technique": "سحب الصدر نحو حافة الطاولة واعتصار الظهر.",
+            "breathing": "زفير سحباً وشهيق نزولاً.",
+            "mistakes": "ثني الحوض."
+          },
+          {
+            "id": "hm_21",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "عضلات البطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن بالكامل.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الظهر."
+          }
+        ]
+      },
+      "thu": {
+        "isRest": false,
+        "focus": "شامل لكامل الجسم وحرق دهون مكثف (Full Body Conditioning) 🔥",
+        "exercises": [
+          {
+            "id": "hm_22",
+            "name": "بيربيز متفجر (Burpees)",
+            "muscle": "كامل الجسم واللياقة القلبية",
+            "icon": "🔥",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/jump-squat.gif",
+            "technique": "نزول للضغط، دفع للأعلى، وقفزة متفجرة مع رفع اليدين.",
+            "breathing": "تنفس سريع وعميق.",
+            "mistakes": "فقدان استقامة الظهر."
+          },
+          {
+            "id": "hm_23",
             "name": "قفز سكوات متفجر (Jump Squats)",
             "muscle": "قوة الساقين والتحمل",
             "icon": "⚡",
-            "sets": 3,
+            "sets": 4,
             "reps": "15 عدة",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/glutes/jump-squat.gif",
-            "technique": "نزول سكوات كامل يليه قفزة للأعلى وهبوط ناعم على أطراف القدم.",
+            "technique": "نزول سكوات كامل يليه قفزة للأعلى وهبوط ناعم.",
             "breathing": "تنفس إيقاعي.",
-            "mistakes": "الهبوط القاسي على الكعبين."
+            "mistakes": "الهبوط القاسي."
+          },
+          {
+            "id": "hm_24",
+            "name": "تمرين الضغط القياسي",
+            "muscle": "الصدر والترايسبس",
+            "icon": "🤸‍♂️",
+            "sets": 3,
+            "reps": "15-20",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/push-up.gif",
+            "technique": "نزول الصدر حتى ملامسة الأرض ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "سقوط الحوض."
+          },
+          {
+            "id": "hm_25",
+            "name": "طعنات الساقين متناوبة",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "12 لكل ساق",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
+            "technique": "خطوات ثابتة ونزول متوازن بالركبة الخلفية.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "اصطدام الركبة."
+          },
+          {
+            "id": "hm_26",
+            "name": "غطس ترايسبس على كرسي",
+            "muscle": "الترايسبس",
+            "icon": "🪑",
+            "sets": 3,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/bench-dip-knees-bent.gif",
+            "technique": "النزول حتى زاوية 90 بالكوع ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "الابتعاد عن الكرسي."
+          },
+          {
+            "id": "hm_27",
+            "name": "رفع بطات على الحافة",
+            "muscle": "السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "20 عدة",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
+            "technique": "مدى حركي كامل وثبات في الأعلى.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "hm_28",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "عضلات البطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن بالكامل.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الظهر."
           }
         ]
       },
@@ -2443,7 +4011,7 @@
     }
   },
   "dumbbells": {
-    "nameAr": "جدول الدمبلز فقط (Dumbbell Only 3 أيام)",
+    "nameAr": "جدول الدمبلز فقط (Dumbbell Only 3 أيام مكثف)",
     "days": {
       "sat": {
         "isRest": true,
@@ -2452,23 +4020,36 @@
       },
       "sun": {
         "isRest": false,
-        "focus": "علوي بالدمبلز (صدر، ظهر، أكتاف، أذرع) 🏋️‍♂️",
+        "focus": "علوي بالدمبلز الشامل (صدر، ظهر، أكتاف، أذرع) 🏋️‍♂️",
         "exercises": [
           {
             "id": "db_1",
-            "name": "بنش برس بالدمبلز على الأرض أو المقعد (DB Floor Press)",
+            "name": "بنش برس بالدمبلز على الأرض أو المقعد (DB Press)",
             "muscle": "الصدر والترايسبس",
             "icon": "💪",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/barbell-bench-press.gif",
-            "technique": "الاستلقاء مع ثني الركبتين، النزول حتى ملامسة الكوع للأرض بلطف ثم الدفع.",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-bench-press.gif",
+            "technique": "النزول حتى ملامسة الكوع للأرض بلطف أو تمدد الصدر ثم الدفع للأعلى.",
             "breathing": "شهيق نزولاً وزفير دفعاً.",
             "mistakes": "ارتطام الكوعين بقوة بالأرض."
           },
           {
             "id": "db_2",
+            "name": "تجميع دمبلز مائل عالي (Incline DB Press)",
+            "muscle": "الصدر العلوي",
+            "icon": "💪",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-incline-bench-press.gif",
+            "technique": "زاوية 30 درجة ونزول محكوم ودفع للأعلى مع عصر الصدر.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "رفع المقعد للأعلى."
+          },
+          {
+            "id": "db_3",
             "name": "منشار ظهر بالدمبل (Single-Arm DB Row)",
             "muscle": "الظهر واللاتس",
             "icon": "🧗‍♂️",
@@ -2481,30 +4062,56 @@
             "mistakes": "لف الجذع بشكل مبالغ فيه."
           },
           {
-            "id": "db_3",
+            "id": "db_4",
             "name": "ضغط أكتاف بالدمبلز جالساً",
             "muscle": "الكتف الأمامي والجانبي",
             "icon": "🏋️‍♂️",
-            "sets": 3,
+            "sets": 4,
             "reps": "10-12",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-seated-shoulder-press.gif",
-            "technique": "دفع الدمبلز للأعلى بتحكم.",
+            "technique": "دفع الدمبلز للأعلى بتحكم دون ملامسة الأوزان في القمة.",
             "breathing": "زفير دفعاً وشهيق نزولاً.",
             "mistakes": "تقوس الظهر."
           },
           {
-            "id": "db_4",
-            "name": "تبادل بايسبس + مد ترايسبس دمبل خلف الرأس",
-            "muscle": "الأذرع",
-            "icon": "🦾",
-            "sets": 3,
+            "id": "db_5",
+            "name": "رفرفة جانبية بالدمبلز",
+            "muscle": "الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 4,
             "reps": "12-15",
             "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
+            "technique": "رفع بالكوع حتى موازاة الكتف.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "استخدام وزن ثقيل."
+          },
+          {
+            "id": "db_6",
+            "name": "تبادل بايسبس بالدمبلز",
+            "muscle": "البايسبس",
+            "icon": "💪",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-alternate-biceps-curl.gif",
-            "technique": "ثبات الكوعين والتركيز على العصر في القمة.",
-            "breathing": "تنفس منتظم.",
-            "mistakes": "المرجحة."
+            "technique": "ثبات الكوعين وتدوير المعصم للخارج في الأعلى.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "أرجحة الجسم."
+          },
+          {
+            "id": "db_7",
+            "name": "مد ترايسبس بالدمبل خلف الرأس",
+            "muscle": "الترايسبس الرأس الطويل",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/barbell-lying-triceps-extension-skull-crusher.gif",
+            "technique": "ثبات الكوعين للأعلى ونزول الدمبل خلف الرأس ودفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "فتح الكوعين للخارج."
           }
         ]
       },
@@ -2515,10 +4122,10 @@
       },
       "tue": {
         "isRest": false,
-        "focus": "سفلي بالدمبلز (سكوات جوبلت، ديدلفت، طعنات) 🦵",
+        "focus": "سفلي بالدمبلز (سكوات جوبلت، ديدلفت، طعنات، وبطن) 🦵",
         "exercises": [
           {
-            "id": "db_5",
+            "id": "db_8",
             "name": "سكوات كؤوس بالدمبل (DB Goblet Squat)",
             "muscle": "الكوادز والألوية",
             "icon": "🦵",
@@ -2531,8 +4138,8 @@
             "mistakes": "ميل الصدر للأسفل."
           },
           {
-            "id": "db_6",
-            "name": "ديدلفت روماني بالدمبلز (DB Romanian Deadlift)",
+            "id": "db_9",
+            "name": "ديدلفت روماني بالدمبلز (DB RDL)",
             "muscle": "الفخذ الخلفي والألوية",
             "icon": "🦵",
             "sets": 4,
@@ -2544,17 +4151,69 @@
             "mistakes": "تقوس أسفل الظهر."
           },
           {
-            "id": "db_7",
-            "name": "طعنات بالدمبلز + رفع بطات واقفاً",
-            "muscle": "الساقين والسمانة",
-            "icon": "🦶",
+            "id": "db_10",
+            "name": "طعنات مشي بالدمبلز (Walking Lunges)",
+            "muscle": "الفخذ والألوية",
+            "icon": "🦵",
             "sets": 3,
-            "reps": "12-15",
+            "reps": "12 خطوة لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/barbell-squat-jump-step-rear-lunge.gif",
+            "technique": "خطوات ثابتة ونزول متوازن بالركبة الخلفية.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "اصطدام الركبة."
+          },
+          {
+            "id": "db_11",
+            "name": "سكوات بلغاري بالدمبلز",
+            "muscle": "عزل الفخذ والألوية",
+            "icon": "🦵",
+            "sets": 3,
+            "reps": "10-12 لكل ساق",
+            "rest": 90,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/quads/dumbbell-single-leg-split-squat.gif",
+            "technique": "قدم على المقعد ونزول بزاوية 90 درجة بالركبة.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "الميل للأمام."
+          },
+          {
+            "id": "db_12",
+            "name": "رفع بطات بالدمبل واقفاً",
+            "muscle": "السمانة",
+            "icon": "🦶",
+            "sets": 4,
+            "reps": "15-20",
             "rest": 60,
             "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/calves/barbell-floor-calf-raise.gif",
-            "technique": "خطوات ثابتة ورفع على أطراف الأصابع.",
-            "breathing": "تنفس مستمر.",
-            "mistakes": "فقدان التوازن."
+            "technique": "مدى حركي كامل وثبات لثانيتين في القمة.",
+            "breathing": "تنفس منتظم.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "db_13",
+            "name": "رفع أرجل مستقيمة للبطن",
+            "muscle": "البطن والجذع",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "15 عدة",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/hanging-leg-raise.gif",
+            "technique": "رفع الأرجل مع تثبيت أسفل الظهر بالأرض.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "تقوس الظهر."
+          },
+          {
+            "id": "db_14",
+            "name": "بلانك بطن وجذع مع ثبات",
+            "muscle": "عضلات البطن",
+            "icon": "⚡",
+            "sets": 3,
+            "reps": "60 ثانية",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
+            "technique": "استقامة الجسم وشد البطن بالكامل.",
+            "breathing": "تنفس هادئ.",
+            "mistakes": "تقوس الظهر."
           }
         ]
       },
@@ -2565,10 +4224,10 @@
       },
       "thu": {
         "isRest": false,
-        "focus": "شامل بالدمبلز (قوة، تحمل، وعضلات البطن) ⚡",
+        "focus": "شامل بالدمبلز (قوة، تضخيم، وعضلات الجذع) ⚡",
         "exercises": [
           {
-            "id": "db_8",
+            "id": "db_15",
             "name": "ضغط أكتاف آرنولد بالدمبل (Arnold Press)",
             "muscle": "الأكتاف بالكامل",
             "icon": "💪",
@@ -2581,30 +4240,82 @@
             "mistakes": "السرعة."
           },
           {
-            "id": "db_9",
-            "name": "سحب دمبلز ثنائي منحني (Bent-over DB Row)",
+            "id": "db_16",
+            "name": "بنش برس بالدمبلز مستوي",
+            "muscle": "الصدر والترايسبس",
+            "icon": "🏋️‍♂️",
+            "sets": 4,
+            "reps": "10-12",
+            "rest": 75,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/pectorals/dumbbell-bench-press.gif",
+            "technique": "نزول عميق لزيادة استطالة الصدر ثم دفع للأعلى.",
+            "breathing": "شهيق نزولاً وزفير صعوداً.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "db_17",
+            "name": "سحب دمبلز ثنائي منحني (Bent-over Row)",
             "muscle": "منتصف الظهر",
             "icon": "🧗‍♂️",
             "sets": 4,
             "reps": "10-12",
             "rest": 75,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/lats/cable-lat-pulldown-full-range-of-motion.gif",
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/upper-back/dumbbell-one-arm-bent-over-row.gif",
             "technique": "ميل 45 درجة وسحب الدمبلز معاً باتجاه الحوض.",
             "breathing": "زفير سحباً وشهيق نزولاً.",
             "mistakes": "تقوس الظهر."
           },
           {
-            "id": "db_10",
-            "name": "بلانك مع لمس الكتف بالدمبل (Renegade Rows)",
-            "muscle": "الجذع والظهر وعضلات البطن",
-            "icon": "⚡",
-            "sets": 3,
-            "reps": "10 لكل يد",
+            "id": "db_18",
+            "name": "رفرفة جانبية بالدمبلز",
+            "muscle": "الكتف الجانبي",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
             "rest": 60,
-            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/abs/front-plank-with-twist.gif",
-            "technique": "وضعية الضغط على الدمبلز، سحب يد واحدة نحو الحوض مع ثبات الحوض.",
-            "breathing": "تنفس هادئ وثابت.",
-            "mistakes": "تمايل الحوض يميناً ويساراً."
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/delts/dumbbell-lateral-raise.gif",
+            "technique": "رفع بالكوع حتى موازاة الكتف.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "استخدام وزن ثقيل."
+          },
+          {
+            "id": "db_19",
+            "name": "شاكوش بالدمبلز للباي",
+            "muscle": "الساعد والبايسبس",
+            "icon": "🔨",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/biceps/dumbbell-hammer-curl.gif",
+            "technique": "قبضة محايدة ورفع ثابت واعتصار في القمة.",
+            "breathing": "زفير رفعاً وشهيق نزولاً.",
+            "mistakes": "السرعة."
+          },
+          {
+            "id": "db_20",
+            "name": "كسارة جمجمة بالدمبلز على المقعد",
+            "muscle": "الترايسبس",
+            "icon": "🦾",
+            "sets": 3,
+            "reps": "10-12",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/triceps/barbell-lying-triceps-extension-skull-crusher.gif",
+            "technique": "نزول الدمبلز بجانب الرأس ودفع للأعلى بقوة التراي.",
+            "breathing": "شهيق نزولاً وزفير دفعاً.",
+            "mistakes": "تحريك الكوعين."
+          },
+          {
+            "id": "db_21",
+            "name": "سحب ترابيز بالدمبلز (Shrugs)",
+            "muscle": "الترابيز والرقبة",
+            "icon": "🦅",
+            "sets": 4,
+            "reps": "12-15",
+            "rest": 60,
+            "image": "https://cdn.jsdelivr.net/gh/JahelCuadrado/ExerciseGymGifsDB@main/traps/dumbbell-shrug.gif",
+            "technique": "رفع الكتفين للأعلى رأساً واعتصار لثانيتين.",
+            "breathing": "زفير في الأعلى وشهيق نزولاً.",
+            "mistakes": "تدوير الكتفين."
           }
         ]
       },
@@ -3562,8 +5273,9 @@
         const savedCustomPrograms = localStorage.getItem('al_tabiee_workout_programs');
         if (savedCustomPrograms) {
           const parsed = JSON.parse(savedCustomPrograms);
+          const sunExCount = parsed?.ppl?.days?.sun?.exercises?.length || 0;
           const firstEx = parsed?.ppl?.days?.sun?.exercises?.[0];
-          if (firstEx && firstEx.image && firstEx.image.includes('.gif')) {
+          if (sunExCount >= 7 && firstEx && firstEx.image && firstEx.image.includes('.gif')) {
             Object.assign(workoutPrograms, parsed);
           } else {
             localStorage.removeItem('al_tabiee_workout_programs');
